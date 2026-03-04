@@ -1,11 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {{> head}}
+    {{> partials/base/head}}
   </head>
 
   <body class="page page--main">
-    {{> header}} {{> main}} {{> footer}} {{> popup-request}}
+    {{> partials/base/header}}
+
+    <main class="main">{{> pages/main/main}}</main>
+
+    {{> partials/base/footer}} {{> partials/base/popup-request}}
 
     <script type="module" src="/src/js/main.js"></script>
   </body>

@@ -1,0 +1,54 @@
+@use "../utils/variables" as *;
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: $ff-main;
+  background: $color-bg;
+  color: $color-dark;
+}
+
+// * темна тема для модалок
+.theme-dark {
+  background: $color-dark;
+  color: $color-white;
+}
+
+//* Container
+.container {
+  width: 100%;
+  max-width: $container-max;
+  margin-inline: auto;
+  padding-inline: $container-pad-375;
+
+  @media (min-width: $bp-768) {
+    padding-inline: $container-pad-768;
+  }
+
+  @media (min-width: $bp-1024) {
+    padding-inline: $container-pad-1024;
+  }
+
+  @media (min-width: $bp-1440) {
+    padding-inline: $container-pad-1440;
+  }
+
+  @media (min-width: $bp-1920) {
+    padding-inline: $container-pad-1920;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+}

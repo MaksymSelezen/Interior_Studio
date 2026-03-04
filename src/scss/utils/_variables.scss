@@ -1,0 +1,41 @@
+//* Breakpoints
+$bp-375: 375px;
+$bp-768: 768px;
+$bp-1024: 1024px;
+$bp-1440: 1440px;
+$bp-1920: 1920px;
+
+//* Container
+$container-max: 1312px;
+
+$container-pad-375: 25px;
+$container-pad-768: 48px;
+$container-pad-1024: 56px;
+$container-pad-1440: 64px;
+$container-pad-1920: 80px;
+
+//* Fonts
+$ff-main: "Montserrat", sans-serif;
+$ff-ui: "Roboto", $ff-main;
+
+$ff-accent: "Adieu", $ff-main;
+$ff-serif: "Freight Big Pro", $ff-main;
+
+//* Colors
+$color-white: #ffffff;
+$color-bg: #fafafa;
+$color-dark: #080808;
+$color-black: #000000;
+
+$color-gray: #828282;
+$color-border: rgba(0, 0, 0, 0.16);
+
+$color-surface: #f2f2f2;
+$color-btn: #3a3e4b;
+$color-link: #007aff;
+
+$color-overlay: rgba(0, 0, 0, 0.65);
+
+//*
+$z-header: 50;
+$z-popup: 1000;

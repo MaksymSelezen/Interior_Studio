@@ -1,10 +1,17 @@
 <header class="header">
   <div class="header__container">
-    <a class="header__logo" href="/" aria-label="Interior Studio">
+    <a class="header__logo" href="/">
       <span class="header__logo-text">LOGO</span>
     </a>
 
-    <nav class="header__nav" aria-label="Primary navigation">
+    <button class="header__menu-toggle" type="button">
+      <svg class="header__menu-icon" width="32" height="32">
+        <use href="/src/assets/icons/sprite.svg#icon-burger"></use>
+      </svg>
+      <span class="header__menu-text">Menu</span>
+    </button>
+
+    <nav class="header__nav">
       <ul class="header__menu">
         <li class="header__item">
           <a class="header__link" href="/pages/projects.html">Projects</a>
@@ -21,8 +28,13 @@
       </ul>
     </nav>
 
-    <div class="header__actions">
-      <span class="header__lang" lang="en">En</span>
+    <div class="header__controls">
+      <div class="header__lang">
+        <select class="header__lang-select" name="language">
+          <option value="en" selected>En</option>
+          <option value="uk">Ua</option>
+        </select>
+      </div>
 
       <button class="header__cta js-open-request" type="button">
         Send Request

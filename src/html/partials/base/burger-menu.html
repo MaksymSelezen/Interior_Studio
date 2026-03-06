@@ -1,0 +1,151 @@
+<div class="burger-menu" id="burger-menu">
+  <div class="burger-menu__overlay js-burger-close"></div>
+
+  <div class="burger-menu__panel">
+    <div class="burger-menu__top">
+      <a class="burger-menu__logo" href="/">
+        <span class="burger-menu__logo-text">LOGO</span>
+      </a>
+
+      <div class="burger-menu__lang">
+        <button class="burger-menu__lang-current js-lang-toggle" type="button">
+          En
+        </button>
+
+        <div class="burger-menu__lang-menu">
+          <button
+            class="burger-menu__lang-option is-active js-lang-option"
+            type="button"
+            data-lang="en"
+          >
+            En
+          </button>
+          <button
+            class="burger-menu__lang-option js-lang-option"
+            type="button"
+            data-lang="uk"
+          >
+            Ua
+          </button>
+        </div>
+      </div>
+
+      <button
+        class="burger-menu__cta burger-menu__cta_top js-open-request"
+        type="button"
+      >
+        Send Request
+      </button>
+
+      <button class="burger-menu__close js-burger-close" type="button">
+        <svg class="burger-menu__close-icon" width="24" height="24">
+          <use href="/src/images/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="burger-menu__main">
+      <nav class="burger-menu__nav" aria-label="Burger menu navigation">
+        <ul class="burger-menu__list">
+          <li class="burger-menu__item">
+            <a
+              class="burger-menu__link burger-menu__link_current js-burger-link"
+              href="/"
+              >Home</a
+            >
+          </li>
+          <li class="burger-menu__item">
+            <a
+              class="burger-menu__link js-burger-link"
+              href="/pages/projects.html"
+              >Projects</a
+            >
+          </li>
+          <li class="burger-menu__item">
+            <a class="burger-menu__link js-burger-link" href="/pages/about.html"
+              >About us</a
+            >
+          </li>
+          <li class="burger-menu__item">
+            <a class="burger-menu__link js-burger-link" href="/pages/blog.html"
+              >Blog</a
+            >
+          </li>
+          <li class="burger-menu__item">
+            <a
+              class="burger-menu__link js-burger-link"
+              href="/pages/contacts.html"
+              >Contacts</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <button
+        class="burger-menu__cta burger-menu__cta_main js-open-request"
+        type="button"
+      >
+        Send Request
+      </button>
+    </div>
+
+    <div class="burger-menu__footer">
+      <div class="burger-menu__social">
+        <a
+          class="burger-menu__social-link"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          >Fb</a
+        >
+        <a
+          class="burger-menu__social-link"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          >In</a
+        >
+        <a
+          class="burger-menu__social-link"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          >Be</a
+        >
+      </div>
+
+      <button class="burger-menu__city" type="button">
+        <span class="burger-menu__city-icon" aria-hidden="true">
+          <svg width="14" height="14">
+            <use href="/src/images/sprite.svg#icon-location"></use>
+          </svg>
+        </span>
+
+        <span class="burger-menu__city-text">Berlin</span>
+
+        <span class="burger-menu__city-arrow" aria-hidden="true">
+          <svg
+            width="8"
+            height="5"
+            viewBox="0 0 8 5"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.49512 0.494873L3.99512 3.99487L0.495117 0.494873"
+              stroke="white"
+              stroke-width="1.4"
+            />
+          </svg>
+        </span>
+      </button>
+
+      <div class="burger-menu__contacts">
+        <a class="burger-menu__phone" href="tel:+380935705222">+380935705222</a>
+        <a class="burger-menu__email" href="mailto:info@hi-light.pl"
+          >info@hi-light.pl</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,53 +1,194 @@
 @use "../utils/variables" as *;
 
 .header {
-  padding-top: 21px;
-  padding-inline: $container-pad-375;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: $z-header;
+  padding-top: 92px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding-inline: $container-pad-375;
+  }
+
+  &__logo-text {
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: $color-white;
+  }
+
+  &__menu-toggle {
+    display: flex;
+    order: 1;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-left: 54px;
+    cursor: pointer;
+  }
+
+  &__menu-icon {
+    fill: $color-white;
+  }
+
+  &__menu-text {
+    display: none;
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  &__controls {
+    margin-left: auto;
+  }
+
+  &__lang-select {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    color: $color-white;
+  }
+
+  &__cta {
+    display: none;
+  }
 }
 
-.header__nav,
-.header__cta,
-.header__menu-text {
-  display: none;
+//* ========== 768 ==========
+@media screen and (min-width: $bp-768) {
+  .header {
+    padding-top: 90px;
+
+    &__container {
+      padding-inline: $container-pad-768;
+    }
+
+    &__menu-text {
+      display: block;
+      color: $color-white;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+    }
+
+    &__cta {
+      display: inline-block;
+      color: $color-white;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      border: 1px solid $color-white;
+      padding: 14px 35px 17px 36px;
+    }
+
+    &__menu-toggle {
+      order: 0;
+      gap: 20px;
+      margin-left: 96px;
+    }
+
+    &__controls {
+      display: flex;
+      align-items: center;
+      gap: 56px;
+    }
+  }
 }
 
-.header__container {
-  display: flex;
-  align-items: center;
+//* ========== 1024 ==========
+@media screen and (min-width: $bp-1024) {
+  .header {
+    padding-top: 80px;
+
+    &__container {
+      padding-inline: $container-pad-1024;
+    }
+    &__menu-toggle {
+      gap: 23px;
+    }
+  }
 }
 
-.header__controls {
-  margin-left: auto;
+//* ========== 1440 ==========
+@media screen and (min-width: $bp-1440) {
+  .header {
+    padding-top: 25px;
+
+    &__container {
+      padding-inline: $container-pad-1440;
+    }
+
+    &__menu-toggle {
+      display: none;
+    }
+
+    &__nav {
+      display: block;
+    }
+
+    &__menu {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      margin-left: 140px;
+    }
+
+    &__link {
+      color: $color-white;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+    }
+
+    &__controls {
+      gap: 83px;
+    }
+
+    &__cta {
+      padding: 17px 48px;
+    }
+  }
 }
 
-.header__menu-toggle {
-  order: 1;
-  background: transparent;
-  border: none;
-  padding: 0;
+//* ========== 1920 ==========
+@media screen and (min-width: $bp-1920) {
+  .header {
+    padding-top: 36px;
 
-  margin-left: 54px;
-}
+    &__container {
+      padding-inline: $container-pad-1920;
+    }
 
-.header__lang-select {
-  appearance: none;
+    &__logo-text {
+      font-size: 18px;
+    }
 
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  line-height: 1;
-  cursor: pointer;
-}
+    &__menu {
+      gap: 52px;
+      margin-left: 180px;
+    }
 
-.header__logo-text {
-  font-weight: 400;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+    &__link {
+      font-size: 18px;
+    }
+
+    &__lang-select {
+      font-size: 16px;
+    }
+
+    &__cta {
+      font-size: 16px;
+      padding: 20px 52px;
+    }
+  }
 }

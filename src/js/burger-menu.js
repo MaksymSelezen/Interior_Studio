@@ -7,15 +7,28 @@ const refs = {
 const body = document.body;
 
 function openMenu() {
-  if (!refs.menu) return;
+  if (!refs.menu || !refs.openBtn) return;
   refs.menu.classList.add("is-open");
+  refs.openBtn.setAttribute("aria-expanded", "true");
   body.classList.add("page_lock");
 }
 
 function closeMenu() {
-  if (!refs.menu) return;
+  if (!refs.menu || !refs.openBtn) return;
   refs.menu.classList.remove("is-open");
+  refs.openBtn.setAttribute("aria-expanded", "false");
   body.classList.remove("page_lock");
+}
+
+function toggleMenu() {
+  if (!refs.menu) return;
+
+  if (refs.menu.classList.contains("is-open")) {
+    closeMenu();
+    return;
+  }
+
+  openMenu();
 }
 
 function onKeyDown(e) {
@@ -25,7 +38,8 @@ function onKeyDown(e) {
 function initBurgerMenu() {
   if (!refs.openBtn || !refs.menu) return;
 
-  refs.openBtn.addEventListener("click", openMenu);
+  refs.openBtn.setAttribute("aria-expanded", "false");
+  refs.openBtn.addEventListener("click", toggleMenu);
 
   refs.closeEls.forEach((el) => {
     el.addEventListener("click", closeMenu);

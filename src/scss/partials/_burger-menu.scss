@@ -31,9 +31,15 @@
     height: 100%;
     width: 100%;
     color: $color-white;
+    pointer-events: none;
   }
 
-  /* TOP */
+  &__top,
+  &__main,
+  &__footer {
+    pointer-events: auto;
+  }
+
   &__top {
     display: flex;
     align-items: center;
@@ -59,7 +65,6 @@
     fill: $color-white;
   }
 
-  /* LANG (custom select) */
   &__lang {
     position: relative;
     margin-left: auto;
@@ -115,7 +120,6 @@
     }
   }
 
-  /* CTA variants */
   &__cta {
     border: 1px solid $color-white;
     background: transparent;
@@ -128,21 +132,21 @@
   }
 
   &__cta_top {
-    display: none; /* з'явиться з 768 */
+    display: none;
     margin-left: 24px;
     padding: 14px 36px 17px;
   }
 
   &__cta_main {
-    display: inline-block; /* є на 375 */
-    margin-top: 40px; /* підженеш 1:1 */
+    display: inline-block;
+    margin-top: 40px;
     padding: 14px 36px 17px;
   }
 
   /* MAIN */
   &__main {
     padding-inline: $container-pad-375;
-    padding-top: 120px; /* підженеш 1:1 */
+    padding-top: 120px;
   }
 
   &__list {
@@ -152,7 +156,7 @@
   }
 
   &__item + &__item {
-    margin-top: 22px; /* підженеш 1:1 */
+    margin-top: 22px;
   }
 
   &__link {

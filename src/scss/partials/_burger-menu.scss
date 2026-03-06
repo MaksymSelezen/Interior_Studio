@@ -43,6 +43,16 @@
     align-items: center;
     padding-top: 10px;
     padding-inline: 24px;
+
+    @media screen and (min-width: 768px) {
+      padding-inline: $container-pad-768;
+      padding-top: 25px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding-inline: $container-pad-1024;
+      padding-top: 32px;
+    }
   }
 
   &__logo-text {
@@ -51,6 +61,21 @@
 
   &__close {
     margin-left: 42px;
+
+    @media screen and (min-width: 768px) {
+      order: -1;
+      margin-left: 70px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-left: 85px;
+    }
+  }
+
+  &__logo {
+    @media screen and (min-width: 768px) {
+      order: -2;
+    }
   }
 
   &__close-icon {
@@ -107,15 +132,40 @@
 
   &__cta_top {
     display: none;
+
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+      padding: 14px 35px;
+
+      margin-left: 56px;
+
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+    }
   }
 
   &__cta_main {
     margin-top: 50px;
     padding: 13px 34px 13px 35px;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
 
   &__main {
     padding-top: 105px;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 290px;
+      padding-left: 188px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding-top: 138px;
+      padding-left: 211px;
+    }
   }
 
   &__list {
@@ -123,11 +173,20 @@
     align-items: center;
     flex-direction: column;
     gap: 30px;
+
+    @media screen and (min-width: 768px) {
+      align-items: start;
+      gap: 36px;
+    }
   }
 
   &__link {
     font-weight: 700;
     font-size: 26px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 32px;
+    }
   }
 
   &__footer {
@@ -136,10 +195,36 @@
     justify-content: space-between;
     padding-inline: 24px;
     padding-top: 99px;
+
+    @media screen and (min-width: 768px) {
+      justify-content: flex-start;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding-top: 165px;
+      padding-left: 56px;
+    }
+  }
+
+  &__footer-info {
+    @media screen and (min-width: 768px) {
+    }
   }
 
   &__social {
     display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      gap: 15px;
+      margin-right: 79px;
+    }
+  }
+
+  &__social-link {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.06em;
   }
 
   &__city {
@@ -161,8 +246,12 @@
   &__contacts {
     display: flex;
     flex-direction: column;
-    gap: 8px;
     text-align: right;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      text-align: left;
+    }
   }
 
   &__phone,
@@ -171,50 +260,3 @@
     letter-spacing: 0.07em;
   }
 }
-
-// @media screen and (min-width: 768px) {
-//   .burger-menu {
-//     &__top {
-//       padding-inline: $container-pad-768;
-//       padding-top: 25px;
-//     }
-
-//     &__main {
-//       padding-inline: $container-pad-768;
-//     }
-
-//     &__cta_top {
-//       display: inline-block;
-//     }
-
-//     &__cta_main {
-//       display: none;
-//     }
-
-//     &__social {
-//       display: flex;
-//     }
-
-//     &__contacts {
-//       flex-direction: row;
-//       gap: 24px;
-//       text-align: left;
-//     }
-
-//     &__footer {
-//       padding-inline: $container-pad-768;
-//       justify-content: flex-start;
-//       gap: 28px;
-//     }
-//   }
-// }
-
-// @media screen and (min-width: 1024px) {
-//   .burger-menu {
-//     &__top,
-//     &__main,
-//     &__footer {
-//       padding-inline: $container-pad-1024;
-//     }
-//   }
-// }

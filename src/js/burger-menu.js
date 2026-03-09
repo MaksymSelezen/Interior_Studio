@@ -1,91 +1,61 @@
-const refs = {
-  openBtn: document.querySelector(".header__menu-toggle"),
-  menu: document.querySelector("#burger-menu"),
-  closeEls: document.querySelectorAll(".js-burger-close"),
-};
+const burgerBtn = document.querySelector(".header__menu-toggle");
+const burgerMenu = document.querySelector("#burger-menu");
+const burgerCloseItems = document.querySelectorAll(".js-burger-close");
 
-const body = document.body;
+const langWrap = document.querySelector(".burger-menu__lang");
+const langToggle = langWrap?.querySelector(".js-lang-toggle");
+const langOptionsWrap = langWrap?.querySelector(".burger-menu__lang-menu");
+const langOptions = langWrap?.querySelectorAll(".js-lang-option");
 
 function openMenu() {
-  if (!refs.menu || !refs.openBtn) return;
-  refs.menu.classList.add("is-open");
-  refs.openBtn.setAttribute("aria-expanded", "true");
-  body.classList.add("page_lock");
+  burgerMenu.classList.add("is-open");
+  document.body.classList.add("page_lock");
 }
 
 function closeMenu() {
-  if (!refs.menu || !refs.openBtn) return;
-  refs.menu.classList.remove("is-open");
-  refs.openBtn.setAttribute("aria-expanded", "false");
-  body.classList.remove("page_lock");
+  burgerMenu.classList.remove("is-open");
+  document.body.classList.remove("page_lock");
 }
 
-function toggleMenu() {
-  if (!refs.menu) return;
+function selectLanguage(lang) {
+  const activeOption = langWrap.querySelector(
+    `.js-lang-option[data-lang="${lang}"]`,
+  );
+  if (!activeOption) return;
 
-  if (refs.menu.classList.contains("is-open")) {
-    closeMenu();
-    return;
-  }
-
-  openMenu();
+  langOptions.forEach((option) => option.classList.remove("is-active"));
+  activeOption.classList.add("is-active");
+  langToggle.textContent = activeOption.textContent.trim();
+  langWrap.classList.remove("is-open");
 }
 
-function onKeyDown(e) {
-  if (e.key === "Escape") closeMenu();
-}
-
-function initBurgerMenu() {
-  if (!refs.openBtn || !refs.menu) return;
-
-  refs.openBtn.setAttribute("aria-expanded", "false");
-  refs.openBtn.addEventListener("click", toggleMenu);
-
-  refs.closeEls.forEach((el) => {
-    el.addEventListener("click", closeMenu);
+if (burgerBtn && burgerMenu) {
+  burgerBtn.addEventListener("click", () => {
+    const isOpen = burgerMenu.classList.contains("is-open");
+    if (isOpen) closeMenu();
+    else openMenu();
   });
 
-  refs.menu.addEventListener("click", (e) => {
-    const link = e.target.closest(".js-burger-link");
-    if (link) closeMenu();
-  });
+  burgerCloseItems.forEach((item) => item.addEventListener("click", closeMenu));
 
-  document.addEventListener("keydown", onKeyDown);
-}
-
-initBurgerMenu();
-function initBurgerLang() {
-  const lang = document.querySelector(".burger-menu__lang");
-  if (!lang) return;
-
-  const toggle = lang.querySelector(".js-lang-toggle");
-  const options = lang.querySelectorAll(".js-lang-option");
-
-  function closeLang() {
-    lang.classList.remove("is-open");
-  }
-
-  toggle.addEventListener("click", () => {
-    lang.classList.toggle("is-open");
-  });
-
-  options.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      options.forEach((b) => b.classList.remove("is-active"));
-      btn.classList.add("is-active");
-
-      toggle.textContent = btn.textContent.trim();
-      closeLang();
-    });
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!lang.contains(e.target)) closeLang();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeLang();
+  burgerMenu.addEventListener("click", (event) => {
+    if (event.target.closest(".js-burger-link")) closeMenu();
   });
 }
 
-initBurgerLang();
+if (langWrap && langToggle && langOptionsWrap && langOptions?.length) {
+  langToggle.addEventListener("click", () => {
+    langWrap.classList.toggle("is-open");
+  });
+
+  langOptionsWrap.addEventListener("click", (event) => {
+    const option = event.target.closest(".js-lang-option");
+    if (!option) return;
+
+    selectLanguage(option.dataset.lang);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!langWrap.contains(event.target)) langWrap.classList.remove("is-open");
+  });
+}

@@ -1,0 +1,184 @@
+<div class="popup popup-request" id="popup-request">
+  <div class="popup__overlay js-popup-overlay"></div>
+
+  <div class="popup__dialog popup-request__dialog">
+    <button
+      class="popup__close js-popup-close"
+      type="button"
+      aria-label="Close popup"
+    >
+      <svg class="popup__close-icon" width="32" height="32" aria-hidden="true">
+        <use href="/src/assets/icons/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <form class="popup-request__form js-request-form" action="#" method="post">
+      <div class="popup-request__top">
+        <h2 class="popup-request__title">Make request</h2>
+
+        <label class="popup-request__field">
+          <input
+            class="popup-request__input"
+            type="text"
+            name="firstName"
+            placeholder="Name"
+            autocomplete="given-name"
+            required
+          />
+        </label>
+
+        <label class="popup-request__field">
+          <input
+            class="popup-request__input"
+            type="text"
+            name="lastName"
+            placeholder="Last name"
+            autocomplete="family-name"
+            required
+          />
+        </label>
+
+        <label class="popup-request__field">
+          <input
+            class="popup-request__input"
+            type="tel"
+            name="phone"
+            placeholder="Phone"
+            autocomplete="tel"
+            required
+          />
+        </label>
+
+        <label class="popup-request__field">
+          <input
+            class="popup-request__input"
+            type="email"
+            name="email"
+            placeholder="Email"
+            autocomplete="email"
+            required
+          />
+        </label>
+
+        <label class="popup-request__field">
+          <input
+            class="popup-request__input"
+            type="text"
+            name="city"
+            placeholder="Your city"
+            autocomplete="address-level2"
+          />
+        </label>
+
+        <label class="popup-request__field popup-request__field--select">
+          <select class="popup-request__select" name="propertyType" required>
+            <option value="" selected disabled>Property type</option>
+            <option value="apartment">Apartment</option>
+            <option value="house">House</option>
+            <option value="office">Office</option>
+          </select>
+        </label>
+
+        <label class="popup-request__field popup-request__field--textarea">
+          <textarea
+            class="popup-request__textarea"
+            name="comment"
+            placeholder="Your comment"
+            rows="1"
+          ></textarea>
+        </label>
+      </div>
+
+      <div class="popup-request__bottom">
+        <fieldset class="popup-request__area">
+          <legend class="popup-request__legend">Area (m2)</legend>
+
+          <label class="popup-request__option">
+            <input
+              class="popup-request__radio"
+              type="radio"
+              name="area"
+              value="to-50"
+            />
+            <span class="popup-request__option-text">to 50</span>
+          </label>
+
+          <label class="popup-request__option">
+            <input
+              class="popup-request__radio"
+              type="radio"
+              name="area"
+              value="50-150"
+              checked
+            />
+            <span class="popup-request__option-text">50-150</span>
+          </label>
+
+          <label class="popup-request__option">
+            <input
+              class="popup-request__radio"
+              type="radio"
+              name="area"
+              value="150-250"
+            />
+            <span class="popup-request__option-text">150-250</span>
+          </label>
+
+          <label class="popup-request__option">
+            <input
+              class="popup-request__radio"
+              type="radio"
+              name="area"
+              value="250-400"
+            />
+            <span class="popup-request__option-text">250-400</span>
+          </label>
+
+          <label class="popup-request__option">
+            <input
+              class="popup-request__radio"
+              type="radio"
+              name="area"
+              value="400-600"
+            />
+            <span class="popup-request__option-text">400-600</span>
+          </label>
+
+          <label class="popup-request__option">
+            <input
+              class="popup-request__radio"
+              type="radio"
+              name="area"
+              value="600-800"
+            />
+            <span class="popup-request__option-text">600-800</span>
+          </label>
+
+          <label class="popup-request__option">
+            <input
+              class="popup-request__radio"
+              type="radio"
+              name="area"
+              value="800-1000"
+            />
+            <span class="popup-request__option-text">800-1000</span>
+          </label>
+
+          <label class="popup-request__option">
+            <input
+              class="popup-request__radio"
+              type="radio"
+              name="area"
+              value="1000-plus"
+            />
+            <span class="popup-request__option-text">1000 +</span>
+          </label>
+        </fieldset>
+
+        <button class="popup-request__submit" type="submit">
+          Send Request
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

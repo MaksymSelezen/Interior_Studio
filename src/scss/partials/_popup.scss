@@ -1,0 +1,99 @@
+@use "../utils/variables" as *;
+
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 1);
+  }
+
+  &__dialog {
+    position: relative;
+    z-index: 1;
+    max-width: 87.2%;
+    margin: 64px auto 0;
+    background-color: $color-dark;
+
+    @media screen and (min-width: 768px) {
+      max-width: 72.66%;
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 78.9%;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    fill: $color-white;
+    position: absolute;
+    top: -48px;
+    right: -8px;
+    z-index: 2;
+  }
+}
+
+.popup-request {
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    color: $color-btn;
+
+    margin: 0 auto 33px;
+    max-width: 184px;
+    transform: translateX(19px);
+  }
+
+  &__input,
+  &__textarea,
+  &__select {
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: #313131;
+    padding-bottom: 11px;
+    margin-bottom: 35px;
+
+    width: 279px;
+    border: none;
+    border-bottom: 1px solid #d9d9d9;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  &__input::placeholder,
+  &__textarea::placeholder {
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: $color-btn;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__top,
+  &__bottom {
+    background: $color-white;
+    padding: 24px 22px 0;
+  }
+}

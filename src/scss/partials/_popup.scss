@@ -4,10 +4,10 @@
   position: fixed;
   inset: 0;
   z-index: 2000;
-
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  overflow: auto;
 
   &.is-open {
     opacity: 1;
@@ -91,9 +91,123 @@
     gap: 8px;
   }
 
-  &__top,
-  &__bottom {
+  &__top {
     background: $color-white;
     padding: 24px 22px 0;
+  }
+
+  &__bottom {
+    background: $color-white;
+    padding: 42px 24px;
+  }
+
+  &__area {
+    margin: 0;
+    padding: 0;
+    border: none;
+    margin-bottom: 24px;
+  }
+
+  &__legend {
+    margin: 0 0 24px;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: $color-btn;
+  }
+
+  &__options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+    row-gap: 25px;
+    margin-left: -10px;
+  }
+
+  &__option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    position: relative;
+  }
+
+  &__option::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+  }
+
+  &__option-text {
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: rgba(58, 62, 75, 0.45);
+    white-space: nowrap;
+  }
+
+  &__radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__radio-mark {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #ececec;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  &__radio-mark::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 67px;
+    height: 1px;
+    background: rgba(214, 214, 214, 0.3);
+    transform: translateY(-50%);
+  }
+
+  &__option:nth-child(4n) .popup-request__radio-mark::after {
+    display: none;
+  }
+
+  &__radio-mark::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+    transform: translate(-50%, -50%);
+  }
+
+  &__radio:checked + &__radio-mark {
+    background-color: $color-btn;
+  }
+
+  &__radio:checked + &__radio-mark::before {
+    background-color: $color-white;
+  }
+
+  &__submit {
+    display: block;
+    margin: 0 auto;
+
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: #fff;
+    background: $color-btn;
+    padding: 14px 34px 17px;
   }
 }

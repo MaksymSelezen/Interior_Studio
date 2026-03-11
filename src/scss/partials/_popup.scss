@@ -134,7 +134,7 @@
     }
 
     @media screen and (min-width: $bp-1024) {
-      padding: 44px 50px 0;
+      padding: 44px 50px;
 
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -149,6 +149,10 @@
 
     @media screen and (min-width: $bp-768) {
       padding: 50px 56px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding: 44px 52px;
     }
   }
 
@@ -169,6 +173,10 @@
     font-size: 11px;
     letter-spacing: 0.06em;
     color: $color-btn;
+
+    @media screen and (min-width: $bp-1024) {
+      margin: 0 0 22px;
+    }
   }
 
   &__options {
@@ -181,6 +189,12 @@
     @media screen and (min-width: $bp-768) {
       column-gap: 74px;
       row-gap: 30px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      display: flex;
+      gap: 45px;
+      transform: translateX(16px);
     }
   }
 
@@ -261,6 +275,10 @@
     color: #fff;
     background: $color-btn;
     padding: 14px 34px 17px;
+
+    @media screen and (min-width: $bp-1024) {
+      padding: 14px 48px 17px;
+    }
   }
 
   &__field {

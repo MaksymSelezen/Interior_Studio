@@ -64,7 +64,6 @@
     font-weight: 700;
     font-size: 24px;
     color: $color-btn;
-
     margin: 0 auto 33px;
     max-width: 184px;
     transform: translateX(19px);
@@ -83,18 +82,17 @@
   &__input,
   &__textarea,
   &__select {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #d9d9d9;
+    background-color: transparent;
+    outline: none;
     font-weight: 500;
     font-size: 11px;
     letter-spacing: 0.06em;
     color: #313131;
     padding-bottom: 11px;
     margin-bottom: 35px;
-
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #d9d9d9;
-    background-color: transparent;
-    outline: none;
 
     @media screen and (min-width: $bp-1024) {
       margin-bottom: 0;
@@ -134,12 +132,11 @@
     }
 
     @media screen and (min-width: $bp-1024) {
-      padding: 44px 50px;
-
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 28px;
       row-gap: 32px;
+      padding: 44px 50px;
     }
   }
 
@@ -157,10 +154,9 @@
   }
 
   &__area {
-    margin: 0;
+    margin: 0 0 24px;
     padding: 0;
     border: none;
-    margin-bottom: 24px;
 
     @media screen and (min-width: $bp-768) {
       margin-bottom: 36px;
@@ -181,7 +177,7 @@
 
   &__options {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     column-gap: 40px;
     row-gap: 25px;
     margin-left: -10px;
@@ -204,6 +200,43 @@
     align-items: center;
     gap: 9px;
     position: relative;
+    width: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(100% - 10px);
+      left: calc(50% + 10px);
+      width: calc(100% - 20px + 40px);
+      height: 1px;
+      background: rgba(214, 214, 214, 0.3);
+    }
+
+    @media screen and (min-width: $bp-768) {
+      &::after {
+        width: calc(100% - 20px + 74px);
+      }
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      &::after {
+        width: calc(100% - 20px + 50px);
+      }
+    }
+  }
+
+  &__option:nth-child(4n)::after {
+    display: none;
+  }
+
+  @media screen and (min-width: $bp-1024) {
+    &__option:nth-child(4n)::after {
+      display: block;
+    }
+
+    &__option:last-child::after {
+      display: none;
+    }
   }
 
   &__option-text {
@@ -229,21 +262,6 @@
     position: relative;
   }
 
-  &__radio-mark::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    width: 67px;
-    height: 1px;
-    background: rgba(214, 214, 214, 0.3);
-    transform: translateY(-50%);
-  }
-
-  &__option:nth-child(4n) .popup-request__radio-mark::after {
-    display: none;
-  }
-
   &__radio-mark::before {
     content: "";
     position: absolute;
@@ -267,7 +285,6 @@
   &__submit {
     display: block;
     margin: 0 auto;
-
     font-weight: 600;
     font-size: 11px;
     letter-spacing: 0.06em;

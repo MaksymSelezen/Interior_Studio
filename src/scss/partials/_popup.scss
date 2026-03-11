@@ -16,7 +16,7 @@
   }
 
   &__overlay {
-    position: absolute;
+    position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 1);
   }
@@ -35,6 +35,7 @@
 
     @media screen and (min-width: $bp-1024) {
       max-width: 78.9%;
+      margin: 43px auto 0;
     }
   }
 
@@ -48,6 +49,11 @@
 
     @media screen and (min-width: $bp-768) {
       top: -14px;
+      right: -74px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      top: -9px;
       right: -74px;
     }
   }
@@ -66,6 +72,12 @@
     @media screen and (min-width: $bp-768) {
       transform: translateX(5px);
     }
+
+    @media screen and (min-width: $bp-1024) {
+      grid-column: 1 / -1;
+      margin: 0 auto;
+      transform: none;
+    }
   }
 
   &__input,
@@ -78,14 +90,14 @@
     padding-bottom: 11px;
     margin-bottom: 35px;
 
-    width: 279px;
+    width: 100%;
     border: none;
     border-bottom: 1px solid #d9d9d9;
     background-color: transparent;
     outline: none;
 
-    @media screen and (min-width: $bp-768) {
-      width: 366px;
+    @media screen and (min-width: $bp-1024) {
+      margin-bottom: 0;
     }
   }
 
@@ -107,6 +119,10 @@
       padding: 32px 40px;
       gap: 6px;
     }
+
+    @media screen and (min-width: $bp-1024) {
+      padding: 32px 51px;
+    }
   }
 
   &__top {
@@ -115,6 +131,15 @@
 
     @media screen and (min-width: $bp-768) {
       padding: 45px 55px 0;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding: 44px 50px 0;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 28px;
+      row-gap: 32px;
     }
   }
 
@@ -152,6 +177,11 @@
     column-gap: 40px;
     row-gap: 25px;
     margin-left: -10px;
+
+    @media screen and (min-width: $bp-768) {
+      column-gap: 74px;
+      row-gap: 30px;
+    }
   }
 
   &__option {
@@ -178,8 +208,8 @@
   }
 
   &__radio-mark {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: #ececec;
     position: relative;
@@ -231,5 +261,15 @@
     color: #fff;
     background: $color-btn;
     padding: 14px 34px 17px;
+  }
+
+  &__field {
+    display: block;
+  }
+
+  &__field--textarea {
+    @media screen and (min-width: $bp-1024) {
+      grid-column: 1 / -1;
+    }
   }
 }

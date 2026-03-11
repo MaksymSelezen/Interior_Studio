@@ -28,11 +28,12 @@
     margin: 64px auto 0;
     background-color: $color-dark;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       max-width: 72.66%;
+      margin: 45px auto 0;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       max-width: 78.9%;
     }
   }
@@ -44,6 +45,11 @@
     top: -48px;
     right: -8px;
     z-index: 2;
+
+    @media screen and (min-width: $bp-768) {
+      top: -14px;
+      right: -74px;
+    }
   }
 }
 
@@ -56,6 +62,10 @@
     margin: 0 auto 33px;
     max-width: 184px;
     transform: translateX(19px);
+
+    @media screen and (min-width: $bp-768) {
+      transform: translateX(5px);
+    }
   }
 
   &__input,
@@ -73,8 +83,10 @@
     border-bottom: 1px solid #d9d9d9;
     background-color: transparent;
     outline: none;
-    box-shadow: none;
-    border-radius: 0;
+
+    @media screen and (min-width: $bp-768) {
+      width: 366px;
+    }
   }
 
   &__input::placeholder,
@@ -89,16 +101,30 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    @media screen and (min-width: $bp-768) {
+      background-color: $color-bg;
+      padding: 32px 40px;
+      gap: 6px;
+    }
   }
 
   &__top {
     background: $color-white;
     padding: 24px 22px 0;
+
+    @media screen and (min-width: $bp-768) {
+      padding: 45px 55px 0;
+    }
   }
 
   &__bottom {
     background: $color-white;
     padding: 42px 24px;
+
+    @media screen and (min-width: $bp-768) {
+      padding: 50px 56px;
+    }
   }
 
   &__area {
@@ -106,6 +132,10 @@
     padding: 0;
     border: none;
     margin-bottom: 24px;
+
+    @media screen and (min-width: $bp-768) {
+      margin-bottom: 36px;
+    }
   }
 
   &__legend {
@@ -132,13 +162,6 @@
     position: relative;
   }
 
-  &__option::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-  }
-
   &__option-text {
     font-weight: 500;
     font-size: 9px;
@@ -160,7 +183,6 @@
     border-radius: 50%;
     background-color: #ececec;
     position: relative;
-    flex-shrink: 0;
   }
 
   &__radio-mark::after {

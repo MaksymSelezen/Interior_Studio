@@ -44,12 +44,12 @@
     padding-top: 10px;
     padding-inline: 24px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       padding-inline: $container-pad-768;
       padding-top: 25px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       padding-inline: $container-pad-1024;
       padding-top: 32px;
     }
@@ -62,18 +62,18 @@
   &__close {
     margin-left: 42px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       order: -1;
       margin-left: 70px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       margin-left: 85px;
     }
   }
 
   &__logo {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       order: -2;
     }
   }
@@ -132,12 +132,10 @@
   &__cta_top {
     display: none;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       display: inline-block;
       padding: 14px 35px;
-
       margin-left: 56px;
-
       font-weight: 600;
       font-size: 11px;
       letter-spacing: 0.06em;
@@ -149,7 +147,7 @@
     margin: 50px auto 0;
     padding: 13px 34px 13px 35px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       display: none;
     }
   }
@@ -157,12 +155,12 @@
   &__main {
     padding-top: 105px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       padding-top: 290px;
       padding-left: 188px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       padding-top: 138px;
       padding-left: 211px;
     }
@@ -174,7 +172,7 @@
     flex-direction: column;
     gap: 30px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       align-items: start;
       gap: 36px;
     }
@@ -184,7 +182,7 @@
     font-weight: 700;
     font-size: 26px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       font-size: 32px;
     }
   }
@@ -196,11 +194,11 @@
     padding-inline: 24px;
     padding-top: 99px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       justify-content: flex-start;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       padding-top: 165px;
       padding-left: 56px;
     }
@@ -209,7 +207,7 @@
   &__social {
     display: none;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       display: flex;
       gap: 15px;
       margin-right: 79px;
@@ -229,11 +227,11 @@
     padding: 5px 11px;
     border-radius: 88px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       margin-right: 32px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       margin-right: 42px;
     }
   }
@@ -252,13 +250,13 @@
     gap: 8px;
     text-align: right;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       flex-direction: row;
       gap: 32px;
       text-align: left;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       gap: 41px;
     }
   }

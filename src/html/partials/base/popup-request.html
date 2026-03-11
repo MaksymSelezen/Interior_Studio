@@ -15,6 +15,9 @@
     <form class="popup-request__form js-request-form" action="#" method="post">
       <div class="popup-request__top">
         <h2 class="popup-request__title">Make request</h2>
+        <h2 class="popup-request__title popup-request__title_desctop">
+          Calculate the cost of work
+        </h2>
 
         <label class="popup-request__field">
           <input
@@ -185,9 +188,38 @@
           </div>
         </fieldset>
 
-        <button class="popup-request__submit" type="submit">
-          Send Request
-        </button>
+        <div class="popup-request__desktop-extra">
+          <label class="popup-request__file">
+            <input
+              class="popup-request__file-input"
+              type="file"
+              name="file"
+              accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+            />
+            <span class="popup-request__file-icon" aria-hidden="true">
+              <svg width="39" height="39">
+                <use href="/src/assets/icons/sprite.svg#icon-add-file"></use>
+              </svg>
+            </span>
+            <span class="popup-request__file-content">
+              <span class="popup-request__file-title">Attach your file</span>
+              <span class="popup-request__file-text"
+                >File size not more than 10 MB</span
+              >
+            </span>
+          </label>
+          <button class="popup-request__submit" type="submit">
+            Send Request
+          </button>
+        </div>
+
+        <p class="popup-request__desktop-note">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here, content here', making it
+          look like readable English.
+        </p>
       </div>
     </form>
   </div>

@@ -8,7 +8,8 @@
 @use "./partials/header";
 @use "./partials/footer";
 @use "./partials/buttons";
-@use "./partials/popup";
+@use "./partials/popup-request";
+@use "./partials/popup-success";
 @use "./partials/burger-menu";
 
 @use "./pages/main/main-page";

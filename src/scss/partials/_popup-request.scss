@@ -18,7 +18,8 @@
   &__overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 1);
+    background: $color-dark;
+    opacity: 0.96;
   }
 
   &__dialog {
@@ -116,7 +117,7 @@
     font-size: 24px;
     color: $color-btn;
     margin: 0 auto 33px;
-    max-width: 100%;
+    max-width: 184px;
     transform: translateX(19px);
 
     @media screen and (min-width: $bp-768) {
@@ -139,6 +140,7 @@
       @media screen and (min-width: $bp-1440) {
         display: inline-block;
         font-size: 22px;
+        max-width: 100%;
       }
     }
   }
@@ -420,11 +422,7 @@
     text-align: center;
     color: $color-white;
     background: $color-btn;
-    padding: 14px 34px 17px;
-
-    @media screen and (min-width: $bp-1024) {
-      padding: 14px 48px 17px;
-    }
+    padding: 14px 48px 17px;
 
     @media screen and (min-width: $bp-1440) {
       margin: 0;

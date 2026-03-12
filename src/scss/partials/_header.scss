@@ -9,7 +9,7 @@
   padding-top: 92px;
 
   @media screen and (min-width: $bp-768) {
-    padding-top: 90px;
+    padding-top: 86px;
   }
 
   @media screen and (min-width: $bp-1024) {
@@ -64,11 +64,12 @@
     @media screen and (min-width: $bp-768) {
       order: 0;
       gap: 20px;
-      margin-left: 98px;
+      margin-left: 95px;
     }
 
     @media screen and (min-width: $bp-1024) {
       gap: 25px;
+      margin-left: 99px;
     }
 
     @media screen and (min-width: $bp-1440) {
@@ -137,7 +138,7 @@
     }
 
     @media screen and (min-width: $bp-1440) {
-      gap: 83px;
+      gap: 80px;
     }
   }
 

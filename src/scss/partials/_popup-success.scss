@@ -1,0 +1,116 @@
+@use "../utils/variables" as *;
+
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: $z-popup;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  overflow: auto;
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    background: $color-dark;
+    opacity: 0.96;
+  }
+}
+
+.popup-success {
+  &__dialog {
+    position: relative;
+    z-index: 1;
+    background-color: $color-white;
+    max-width: 87.2%;
+    margin: 164px auto 0;
+    background: $color-white;
+    padding: 40px 24px;
+
+    @media screen and (min-width: $bp-768) {
+      max-width: 67.71%;
+      margin: 365px auto 0;
+      padding: 55px 36px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      max-width: 68.95%;
+      margin: 181px auto 0;
+      padding-block: 108px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      max-width: 72%;
+    }
+  }
+
+  .popup__close {
+    top: -148px;
+    right: -8px;
+    fill: $color-white;
+    position: absolute;
+
+    @media screen and (min-width: $bp-768) {
+      top: -333px;
+      right: -92px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      top: -145px;
+      right: -123px;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: $color-btn;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.7066;
+    text-align: center;
+    color: $color-btn;
+    opacity: 0.7;
+    margin-bottom: 22px;
+
+    @media screen and (min-width: $bp-1024) {
+      max-width: 448px;
+      margin-bottom: 28px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      max-width: 620px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__submit {
+    display: block;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    background: $color-btn;
+    color: $color-white;
+    padding: 14px 56px 17px;
+  }
+}

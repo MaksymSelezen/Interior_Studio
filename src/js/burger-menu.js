@@ -14,7 +14,7 @@ function openMenu() {
 
 function closeMenu() {
   burgerMenu.classList.remove("is-open");
-  document.body.classList.remove("page_lock");
+  document.body.classList.remove("page_lock"); //* блоку скролу сторінки
 }
 
 function selectLanguage(lang) {

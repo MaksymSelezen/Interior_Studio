@@ -149,7 +149,7 @@
     display: block;
   }
 
-  &__field--textarea {
+  &__field_textarea {
     @media screen and (min-width: $bp-1024) {
       grid-column: 1 / -1;
     }

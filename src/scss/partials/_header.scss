@@ -6,15 +6,7 @@
   left: 0;
   width: 100%;
   z-index: $z-header;
-  padding-top: 92px;
-
-  @media screen and (min-width: $bp-768) {
-    padding-top: 86px;
-  }
-
-  @media screen and (min-width: $bp-1024) {
-    padding-top: 80px;
-  }
+  padding-top: 21px;
 
   @media screen and (min-width: $bp-1440) {
     padding-top: 25px;

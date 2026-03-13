@@ -1,3 +1,5 @@
+import { lock, unlock } from "./utils/scrollLock";
+
 const openBtns = document.querySelectorAll(".js-open-request");
 
 const requestPopup = document.getElementById("popup-request");
@@ -9,12 +11,22 @@ const closes = document.querySelectorAll(".js-popup-close");
 const form = document.querySelector(".js-request-form");
 const sendAgainBtn = document.querySelector(".js-send-again");
 
+function getScrollableContainer(popup) {
+  return popup?.querySelector(".js-scroll-lock-scrollable") || null;
+}
+
 function openPopup(popup) {
+  if (!popup) return;
+
   popup.classList.add("is-open");
+  lock(getScrollableContainer(popup));
 }
 
 function closePopup(popup) {
+  if (!popup) return;
+
   popup.classList.remove("is-open");
+  unlock(getScrollableContainer(popup));
 }
 
 openBtns.forEach((btn) => {
@@ -37,14 +49,14 @@ closes.forEach((btn) => {
   });
 });
 
-form.addEventListener("submit", (e) => {
+form?.addEventListener("submit", (e) => {
   e.preventDefault();
 
   closePopup(requestPopup);
   openPopup(successPopup);
 });
 
-sendAgainBtn.addEventListener("click", () => {
+sendAgainBtn?.addEventListener("click", () => {
   closePopup(successPopup);
   openPopup(requestPopup);
 });

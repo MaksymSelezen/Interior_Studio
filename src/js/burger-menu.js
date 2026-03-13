@@ -1,6 +1,11 @@
+import { lock, unlock } from "./utils/scrollLock";
+
 const burgerBtn = document.querySelector(".header__menu-toggle");
 const burgerMenu = document.querySelector("#burger-menu");
 const burgerCloseItems = document.querySelectorAll(".js-burger-close");
+const burgerScrollable = burgerMenu?.querySelector(
+  ".js-scroll-lock-scrollable",
+);
 
 const langWrap = document.querySelector(".burger-menu__lang");
 const langToggle = langWrap?.querySelector(".js-lang-toggle");
@@ -9,10 +14,12 @@ const langOptions = langWrap?.querySelectorAll(".js-lang-option");
 
 function openMenu() {
   burgerMenu.classList.add("is-open");
+  lock(burgerScrollable);
 }
 
 function closeMenu() {
   burgerMenu.classList.remove("is-open");
+  unlock(burgerScrollable);
 }
 
 function selectLanguage(lang) {

@@ -1,4 +1,4 @@
-import { lock, unlock } from "./utils/scrollLock";
+import { lock, unlock } from "./scrollLock";
 
 const burgerBtn = document.querySelector(".header__menu-toggle");
 const burgerMenu = document.querySelector("#burger-menu");

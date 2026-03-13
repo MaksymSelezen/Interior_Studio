@@ -1,4 +1,4 @@
-import { lock, unlock } from "./utils/scrollLock";
+import { lock, unlock } from "./scrollLock";
 
 const openBtns = document.querySelectorAll(".js-open-request");
 

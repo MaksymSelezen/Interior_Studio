@@ -9,12 +9,10 @@ const langOptions = langWrap?.querySelectorAll(".js-lang-option");
 
 function openMenu() {
   burgerMenu.classList.add("is-open");
-  document.body.classList.add("page_lock");
 }
 
 function closeMenu() {
   burgerMenu.classList.remove("is-open");
-  document.body.classList.remove("page_lock"); //* блоку скролу сторінки
 }
 
 function selectLanguage(lang) {

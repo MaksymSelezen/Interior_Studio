@@ -11,12 +11,10 @@ const sendAgainBtn = document.querySelector(".js-send-again");
 
 function openPopup(popup) {
   popup.classList.add("is-open");
-  document.body.classList.add("is-modal-open");
 }
 
 function closePopup(popup) {
   popup.classList.remove("is-open");
-  document.body.classList.remove("is-modal-open");
 }
 
 openBtns.forEach((btn) => {

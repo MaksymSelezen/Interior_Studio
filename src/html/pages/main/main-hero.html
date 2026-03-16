@@ -1,5 +1,186 @@
-<section class="hero">
-  <div class="container">
-    <div class="hero__content"></div>
+<section class="hero" aria-label="Hero section">
+  <div class="hero__slider swiper js-hero-swiper">
+    <div class="hero__slider-wrapper swiper-wrapper">
+      <div class="hero__slide swiper-slide">
+        <picture class="hero__picture">
+          <source
+            media="(min-width: 1440px)"
+            srcset="
+              /src/assets/images/main/section_hero/section1-hero-photo1-1440.png
+            "
+          />
+          <source
+            media="(min-width: 1024px)"
+            srcset="
+              /src/assets/images/main/section_hero/section1-hero-photo1-1024.png
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              /src/assets/images/main/section_hero/section1-hero-photo1-768.png
+            "
+          />
+          <img
+            class="hero__image"
+            src="/src/assets/images/main/section_hero/section1-hero-photo1-375.png"
+            alt="Modern kitchen interior"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </picture>
+      </div>
+
+      <div class="hero__slide swiper-slide">
+        <picture class="hero__picture">
+          <source
+            media="(min-width: 1440px)"
+            srcset="
+              /src/assets/images/main/section_hero/section1-hero-photo2-1440.png
+            "
+          />
+          <source
+            media="(min-width: 1024px)"
+            srcset="
+              /src/assets/images/main/section_hero/section1-hero-photo2-1024.png
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              /src/assets/images/main/section_hero/section1-hero-photo2-768.png
+            "
+          />
+          <img
+            class="hero__image"
+            src="/src/assets/images/main/section_hero/section1-hero-photo2-375.png"
+            alt="Dining zone interior"
+            loading="lazy"
+          />
+        </picture>
+      </div>
+
+      <div class="hero__slide swiper-slide">
+        <picture class="hero__picture">
+          <source
+            media="(min-width: 1440px)"
+            srcset="
+              /src/assets/images/main/section_hero/section1-hero-photo3-1440.png
+            "
+          />
+          <source
+            media="(min-width: 1024px)"
+            srcset="
+              /src/assets/images/main/section_hero/section1-hero-photo3-1024.png
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              /src/assets/images/main/section_hero/section1-hero-photo3-768.png
+            "
+          />
+          <img
+            class="hero__image"
+            src="/src/assets/images/main/section_hero/section1-hero-photo3-375.png"
+            alt="Living room interior"
+            loading="lazy"
+          />
+        </picture>
+      </div>
+
+      <div class="hero__slide swiper-slide">
+        <picture class="hero__picture">
+          <source
+            media="(min-width: 1440px)"
+            srcset="
+              /src/assets/images/main/section_hero/section1-hero-photo4-1440.png
+            "
+          />
+          <source
+            media="(min-width: 1024px)"
+            srcset="
+              /src/assets/images/main/section_hero/section1-hero-photo4-1024.png
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              /src/assets/images/main/section_hero/section1-hero-photo4-768.png
+            "
+          />
+          <img
+            class="hero__image"
+            src="/src/assets/images/main/section_hero/section1-hero-photo4-375.png"
+            alt="Minimal kitchen interior"
+            loading="lazy"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__overlay">
+    <div class="container hero__overlay-container">
+      <h1 class="hero__title">Thoughtful making of space</h1>
+
+      <a class="hero__discover" href="/pages/projects.html">
+        <span class="hero__discover-line" aria-hidden="true"></span>
+        <span>Discover more</span>
+        <span class="hero__discover-line" aria-hidden="true"></span>
+      </a>
+
+      <div
+        class="hero__pagination js-hero-pagination"
+        aria-label="Hero slider controls"
+      >
+        <button
+          class="hero__arrow js-hero-prev"
+          type="button"
+          aria-label="Previous slide"
+        >
+          <span aria-hidden="true">‹</span>
+        </button>
+
+        <span class="hero__pagination-number js-hero-current">01</span>
+
+        <span class="hero__pagination-progress">
+          <span class="hero__pagination-progress-line js-hero-progress"></span>
+        </span>
+
+        <span class="hero__pagination-number js-hero-total">04</span>
+
+        <button
+          class="hero__arrow js-hero-next"
+          type="button"
+          aria-label="Next slide"
+        >
+          <span aria-hidden="true">›</span>
+        </button>
+      </div>
+
+      <div class="hero__side-label" aria-hidden="true">
+        <span class="hero__side-note">Next project</span>
+        <span class="hero__side-text">Perfect proportions</span>
+      </div>
+
+      <div class="hero__bottom-row">
+        <ul class="hero__socials" aria-label="Social links">
+          <li><a href="#" aria-label="Facebook">Fb</a></li>
+          <li><a href="#" aria-label="LinkedIn">In</a></li>
+          <li><a href="#" aria-label="Behance">Be</a></li>
+        </ul>
+
+        <a class="hero__location" href="/pages/contacts.html">
+          <span class="hero__location-pin" aria-hidden="true">◉</span>
+          <span>Berlin</span>
+        </a>
+
+        <div class="hero__contacts">
+          <a href="tel:+380935705222">+380935705222</a>
+          <a href="mailto:info@hi-light.pl">info@hi-light.pl</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

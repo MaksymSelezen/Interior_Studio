@@ -7,6 +7,10 @@
   color: $color-white;
   overflow: hidden;
 
+  @media screen and (min-width: $bp-768) {
+    aspect-ratio: 768 / 959;
+  }
+
   &__slider,
   &__slider-wrapper,
   &__slide,
@@ -26,7 +30,6 @@
   &__image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
   }
 
   &__overlay {
@@ -62,9 +65,11 @@
     color: $color-white;
 
     @media (min-width: $bp-768) {
-      left: $container-pad-768;
+      top: 465px;
+      left: 125px;
       max-width: 261px;
       font-size: 44px;
+      line-height: 1.23;
     }
 
     @media (min-width: $bp-1024) {
@@ -103,8 +108,8 @@
     pointer-events: auto;
 
     @media (min-width: $bp-768) {
-      left: $container-pad-768;
-      top: 62%;
+      left: 124px;
+      top: 575px;
     }
 
     @media (min-width: $bp-1024) {
@@ -145,6 +150,8 @@
     opacity: 0.88;
 
     @media (min-width: $bp-768) {
+      top: 573px;
+      left: 396px;
     }
 
     @media (min-width: $bp-1024) {
@@ -211,20 +218,23 @@
   &__side-label {
     position: absolute;
     right: 19px;
-    top: 85%;
-
+    top: 420px;
     transform: translateY(-50%) rotate(180deg);
-    writing-mode: vertical-lr;
+    writing-mode: vertical-rl;
     pointer-events: none;
 
     @media (min-width: $bp-768) {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      top: 750px;
+      right: 29px;
     }
 
     @media (min-width: $bp-1024) {
     }
 
     @media (min-width: $bp-1440) {
-      gap: 48px;
     }
   }
 
@@ -246,6 +256,7 @@
     line-height: 0.9752;
     letter-spacing: 0.04em;
     color: $color-white;
+    white-space: nowrap;
 
     @media (min-width: $bp-768) {
       font-size: 32px;
@@ -267,9 +278,21 @@
     .bottom-nav__city {
       margin-right: 0;
     }
+  }
+
+  @media screen and (min-width: $bp-768) {
+    &__bottom-nav {
+      left: 47px;
+      bottom: 30px;
+      gap: 32px;
+    }
 
     .bottom-nav__contacts {
-      gap: 6px;
+      gap: 32px;
+    }
+
+    .bottom-nav__social {
+      margin-right: 34px;
     }
   }
 }

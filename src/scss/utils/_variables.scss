@@ -14,6 +14,9 @@ $container-pad-1024: 55px;
 $container-pad-1440: 64px;
 $container-pad-1920: 80px;
 
+//* Hero
+$hero-side-offset-mobile: $container-pad-375;
+
 //* Fonts
 $ff-main: "Montserrat", sans-serif;
 $ff-ui: "Roboto", $ff-main;

@@ -121,25 +121,20 @@
 
   &__pagination {
     position: absolute;
-    top: 28%;
-    left: $hero-side-offset-mobile;
+    top: 138px;
+    left: 17px;
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    // gap: 12px;
     pointer-events: auto;
 
     @media (min-width: $bp-768) {
-      top: 31%;
-      left: $container-pad-768;
     }
 
     @media (min-width: $bp-1024) {
-      left: $container-pad-1024;
     }
 
     @media (min-width: $bp-1440) {
-      left: $container-pad-1440;
-      top: 51%;
     }
   }
 
@@ -148,8 +143,13 @@
     place-items: center;
     width: 20px;
     height: 20px;
-    font-size: 24px;
     color: inherit;
+  }
+
+  &__arrow-icon {
+    display: block;
+    fill: none;
+    stroke: currentcolor;
   }
 
   &__pagination-number {

@@ -170,10 +170,21 @@
     color: #313131;
     padding-bottom: 11px;
     margin-bottom: 35px;
+    appearance: none;
+
+    &:focus {
+      outline: none;
+    }
 
     @media screen and (min-width: $bp-1024) {
       margin-bottom: 0;
     }
+  }
+
+  &__input:autofill,
+  &__select:autofill,
+  &__textarea:autofill {
+    box-shadow: inset 0 0 0 1000px $color-white;
   }
 
   &__input::placeholder,

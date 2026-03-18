@@ -11,6 +11,14 @@
     aspect-ratio: 768 / 959;
   }
 
+  @media screen and (min-width: $bp-1024) {
+    aspect-ratio: 1024 / 710;
+  }
+
+  @media screen and (min-width: $bp-1440) {
+    aspect-ratio: 1440 / 744;
+  }
+
   &__slider,
   &__slider-wrapper,
   &__slide,
@@ -73,16 +81,16 @@
     }
 
     @media (min-width: $bp-1024) {
-      top: 50%;
-      left: $container-pad-1024;
+      top: 340px;
+      left: 160px;
       max-width: 440px;
       font-size: 48px;
     }
 
     @media (min-width: $bp-1440) {
-      top: 56%;
-      left: $container-pad-1440;
-      max-width: 647px;
+      top: 350px;
+      left: 262px;
+      max-width: 488px;
       font-size: 56px;
     }
   }
@@ -113,12 +121,13 @@
     }
 
     @media (min-width: $bp-1024) {
-      left: $container-pad-1024;
+      left: 160px;
+      top: 430px;
     }
 
     @media (min-width: $bp-1440) {
-      left: $container-pad-1440;
-      top: 68%;
+      left: 265px;
+      top: 455px;
     }
   }
 
@@ -155,9 +164,13 @@
     }
 
     @media (min-width: $bp-1024) {
+      top: 430px;
+      left: 626px;
     }
 
     @media (min-width: $bp-1440) {
+      top: 455px;
+      left: 995px;
     }
   }
 
@@ -188,7 +201,7 @@
     margin: 0;
 
     font-weight: 400;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1;
     letter-spacing: 0;
     color: $color-white;
@@ -204,6 +217,11 @@
     @media (min-width: $bp-768) {
       width: 145px;
       flex-basis: 145px;
+    }
+
+    @media (min-width: $bp-1440) {
+      width: 186px;
+      flex-basis: 186px;
     }
   }
 
@@ -232,9 +250,14 @@
     }
 
     @media (min-width: $bp-1024) {
+      top: 565px;
+      right: 39px;
     }
 
     @media (min-width: $bp-1440) {
+      top: 536px;
+      right: 52px;
+      gap: 10px;
     }
   }
 
@@ -260,6 +283,12 @@
 
     @media (min-width: $bp-768) {
       font-size: 32px;
+      color: transparent;
+      -webkit-text-stroke: 1px $color-white;
+    }
+
+    @media (min-width: $bp-1024) {
+      white-space: wrap;
     }
 
     @media (min-width: $bp-1440) {
@@ -293,6 +322,38 @@
 
     .bottom-nav__social {
       margin-right: 34px;
+    }
+  }
+
+  @media screen and (min-width: $bp-1024) {
+    &__bottom-nav {
+      left: 56px;
+      bottom: 30px;
+      gap: 40px;
+    }
+
+    .bottom-nav__contacts {
+      gap: 42px;
+    }
+
+    .bottom-nav__social {
+      margin-right: 40px;
+    }
+  }
+
+  @media screen and (min-width: $bp-1440) {
+    &__bottom-nav {
+      left: 65px;
+      bottom: 38px;
+      gap: 72px;
+    }
+
+    .bottom-nav__contacts {
+      gap: 42px;
+    }
+
+    .bottom-nav__social {
+      margin-right: 50px;
     }
   }
 }

@@ -309,6 +309,29 @@
     }
   }
 
+  &__contacts-1440 {
+    display: none;
+    pointer-events: auto;
+
+    @media screen and (min-width: $bp-1440) {
+      position: absolute;
+      left: 452px;
+      bottom: 43px;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+
+  &__contacts-1440-link {
+    color: $color-white;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 0.07em;
+    white-space: nowrap;
+  }
+
   @media screen and (min-width: $bp-768) {
     &__bottom-nav {
       left: 47px;
@@ -349,11 +372,19 @@
     }
 
     .bottom-nav__contacts {
-      gap: 42px;
+      display: none;
     }
 
     .bottom-nav__social {
       margin-right: 50px;
+    }
+
+    .bottom-nav__city {
+      backdrop-filter: blur(2px);
+      box-shadow:
+        inset 0 -0px 0px 0 rgba(255, 255, 255, 0.23),
+        0 1px 1px 0 rgba(0, 0, 0, 0.2);
+      background: rgba(255, 255, 255, 0.5);
     }
   }
 }

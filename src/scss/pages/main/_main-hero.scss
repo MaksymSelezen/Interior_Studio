@@ -19,6 +19,10 @@
     aspect-ratio: 1440 / 744;
   }
 
+  @media screen and (min-width: $bp-1920) {
+    aspect-ratio: 1920 / 900;
+  }
+
   &__slider,
   &__slider-wrapper,
   &__slide,
@@ -93,6 +97,13 @@
       max-width: 488px;
       font-size: 56px;
     }
+
+    @media (min-width: $bp-1920) {
+      top: 420px;
+      left: 350px;
+      max-width: 620px;
+      font-size: 68px;
+    }
   }
 
   &__discover {
@@ -129,6 +140,13 @@
       left: 265px;
       top: 455px;
     }
+
+    @media (min-width: $bp-1920) {
+      left: 354px;
+      top: 555px;
+      width: 228px;
+      font-size: 11px;
+    }
   }
 
   &__discover-line {
@@ -145,6 +163,18 @@
     &:last-of-type {
       width: 56px;
       margin-left: 9px;
+    }
+
+    @media (min-width: $bp-1920) {
+      &:first-of-type {
+        width: 12px;
+        margin-right: 12px;
+      }
+
+      &:last-of-type {
+        width: 72px;
+        margin-left: 12px;
+      }
     }
   }
 
@@ -171,6 +201,12 @@
     @media (min-width: $bp-1440) {
       top: 455px;
       left: 995px;
+    }
+
+    @media (min-width: $bp-1920) {
+      top: 556px;
+      left: 1330px;
+      gap: 16px;
     }
   }
 
@@ -205,6 +241,11 @@
     line-height: 1;
     letter-spacing: 0;
     color: $color-white;
+
+    @media (min-width: $bp-1920) {
+      width: 20px;
+      font-size: 12px;
+    }
   }
 
   &__pagination-progress {
@@ -222,6 +263,11 @@
     @media (min-width: $bp-1440) {
       width: 186px;
       flex-basis: 186px;
+    }
+
+    @media (min-width: $bp-1920) {
+      width: 244px;
+      flex-basis: 244px;
     }
   }
 
@@ -259,6 +305,12 @@
       right: 52px;
       gap: 10px;
     }
+
+    @media (min-width: $bp-1920) {
+      top: 646px;
+      right: 78px;
+      gap: 12px;
+    }
   }
 
   &__side-note {
@@ -270,6 +322,10 @@
       font-size: 11px;
       letter-spacing: 0.06em;
       color: $color-white;
+    }
+
+    @media (min-width: $bp-1920) {
+      font-size: 12px;
     }
   }
 
@@ -293,6 +349,10 @@
 
     @media (min-width: $bp-1440) {
       font-size: 48px;
+    }
+
+    @media (min-width: $bp-1920) {
+      font-size: 56px;
     }
   }
 
@@ -322,6 +382,12 @@
       align-items: center;
       gap: 32px;
     }
+
+    @media screen and (min-width: $bp-1920) {
+      left: 612px;
+      bottom: 53px;
+      gap: 40px;
+    }
   }
 
   &__contacts-1440-link {
@@ -330,6 +396,10 @@
     font-size: 11px;
     letter-spacing: 0.07em;
     white-space: nowrap;
+
+    @media screen and (min-width: $bp-1920) {
+      font-size: 12px;
+    }
   }
 
   @media screen and (min-width: $bp-768) {
@@ -385,6 +455,18 @@
         inset 0 -0px 0px 0 rgba(255, 255, 255, 0.23),
         0 1px 1px 0 rgba(0, 0, 0, 0.2);
       background: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  @media screen and (min-width: $bp-1920) {
+    &__bottom-nav {
+      left: 81px;
+      bottom: 48px;
+      gap: 88px;
+    }
+
+    .bottom-nav__social {
+      margin-right: 64px;
     }
   }
 }

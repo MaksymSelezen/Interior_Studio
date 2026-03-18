@@ -7,24 +7,6 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  aspect-ratio: 375 / 667;
-  overflow: auto;
-
-  @media screen and (min-width: $bp-768) {
-    aspect-ratio: 768 / 1024;
-  }
-
-  @media screen and (min-width: $bp-1024) {
-    aspect-ratio: 1024 / 768;
-  }
-
-  @media screen and (min-width: $bp-1440) {
-    aspect-ratio: 1440 / 971;
-  }
-
-  @media screen and (min-width: $bp-1920) {
-    aspect-ratio: 1920 / 900;
-  }
 
   transition:
     opacity 200ms ease,
@@ -209,11 +191,6 @@
   &__footer {
     padding-inline: 24px;
     padding-top: 99px;
-
-    @media screen and (min-width: $bp-768) {
-      padding-top: 290px;
-      padding-left: 48px;
-    }
 
     @media screen and (min-width: $bp-1024) {
       padding-top: 165px;

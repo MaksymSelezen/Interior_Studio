@@ -149,6 +149,7 @@
 
   &__field {
     display: block;
+    position: relative;
   }
 
   &__field_textarea {
@@ -171,9 +172,17 @@
     padding-bottom: 11px;
     margin-bottom: 35px;
     appearance: none;
+    transition:
+      border-color 0.2s ease,
+      color 0.2s ease;
 
     &:focus {
       outline: none;
+      border-bottom-color: $color-btn;
+    }
+
+    &.is-invalid {
+      border-bottom-color: #c45d48;
     }
 
     @media screen and (min-width: $bp-1024) {
@@ -193,6 +202,21 @@
     font-size: 11px;
     letter-spacing: 0.06em;
     color: $color-btn;
+  }
+
+  &__error-label {
+    display: block;
+    margin-top: -27px;
+    margin-bottom: 18px;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    color: #c45d48;
+
+    @media screen and (min-width: $bp-1024) {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
   }
 
   &__bottom {

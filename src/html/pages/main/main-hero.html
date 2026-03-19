@@ -124,11 +124,8 @@
     <div class="hero__overlay-container">
       <h1 class="hero__title">Thoughtful making of space</h1>
 
-      <a class="hero__discover" href="/pages/projects.html">
-        <span class="hero__discover-line"></span>
-        <span>Discover more</span>
-        <span class="hero__discover-line"></span>
-      </a>
+      {{> partials/ui/btn-discover class="hero__discover"
+      href="/pages/projects.html" text="Discover more"}}
 
       <div class="hero__pagination js-hero-pagination">
         <button

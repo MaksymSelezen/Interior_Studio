@@ -1,0 +1,102 @@
+<section class="philosophy">
+  <div class="container philosophy-container">
+    <div class="philosophy__inner">
+      <div class="philosophy__content">
+        <h2 class="philosophy__title">Company Philosophy</h2>
+
+        <div class="philosophy__text">
+          <p class="philosophy__paragraph">
+            The basic philosophy of our studio is to create individual,
+            aesthetically stunning solutions for our customers by lightning-fast
+            development of projects employing unique styles and architecture.
+            Even if you don't have a ready sketch of what you want - we will
+            help you get the result.
+          </p>
+
+          <p class="philosophy__paragraph">
+            We can also help you create harmony out of seemingly completely
+            incompatible elements in the interior or the exterior design. Do you
+            want to combine classics and abstract art? Modern and retro? Love
+            everything associated with the 1940's? No problem!
+          </p>
+        </div>
+
+        <div class="philosophy__action">
+          {{> partials/ui/btn-discover class="philosophy__discover"
+          href="/pages/projects.html" text="Discover more"}}
+        </div>
+      </div>
+
+      <div class="philosophy__media">
+        <div class="philosophy__image philosophy__image_primary">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                /src/assets/images/main/section_philosophy/section2-philosophy-photo2-1440.png
+              "
+            />
+            <source
+              media="(min-width: 1024px)"
+              srcset="
+                /src/assets/images/main/section_philosophy/section2-philosophy-photo2-1024.png
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                /src/assets/images/main/section_philosophy/section2-philosophy-photo2-768.png
+              "
+            />
+            <img
+              class="philosophy__img"
+              src="/src/assets/images/main/section_philosophy/section2-philosophy-photo2-375.png"
+              alt="Modern interior design project"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+
+        <div class="philosophy__image philosophy__image_secondary">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                /src/assets/images/main/section_philosophy/section2-philosophy-photo3-1440.png
+              "
+            />
+            <source
+              media="(min-width: 1024px)"
+              srcset="
+                /src/assets/images/main/section_philosophy/section2-philosophy-photo3-1024.png
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                /src/assets/images/main/section_philosophy/section2-philosophy-photo3-768.png
+              "
+            />
+            <img
+              class="philosophy__img"
+              src="/src/assets/images/main/section_philosophy/section2-philosophy-photo3-375.png"
+              alt="Interior design details"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <div class="philosophy__quote">
+        <svg class="philosophy__quote-icon" width="13" height="31">
+          <use href="/src/assets/icons/sprite.svg#icon-quote"></use>
+        </svg>
+
+        <p class="philosophy__quote-text">
+          We can also help you create harmony out of seemingly completely
+          incompatible elements in the interior or the exterior design.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

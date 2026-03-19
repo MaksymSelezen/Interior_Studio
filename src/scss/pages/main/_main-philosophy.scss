@@ -1,0 +1,141 @@
+@use "../../utils/variables" as *;
+
+.philosophy {
+  padding-top: 80px;
+  padding-bottom: 64px;
+
+  @media screen and (min-width: $bp-768) {
+    padding-top: 104px;
+
+    .philosophy-container {
+      padding-inline: 124px;
+    }
+  }
+
+  &__inner {
+  }
+
+  &__content {
+  }
+
+  &__title {
+    margin-bottom: 19px;
+    font-weight: 700;
+    font-size: 26px;
+    color: $color-dark;
+
+    @media screen and (min-width: $bp-768) {
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+  }
+
+  &__paragraph {
+    margin-bottom: 12px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.7066;
+    color: $color-dark;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__action {
+  }
+
+  &__discover {
+    margin-top: 34px;
+    margin-bottom: 80px;
+    color: $color-dark;
+
+    .btn-discover__label {
+      color: $color-dark;
+    }
+
+    .btn-discover__line {
+      background-color: rgba(49, 49, 49, 0.4);
+    }
+  }
+
+  &__media {
+    position: relative;
+    width: 100%;
+    margin-bottom: 75px;
+    aspect-ratio: 324 / 286;
+
+    @media screen and (min-width: $bp-768) {
+      aspect-ratio: 520 / 355;
+      margin-bottom: 96px;
+    }
+  }
+
+  &__image {
+    &_primary {
+      position: relative;
+      z-index: 2;
+      width: 80%;
+      margin-left: auto;
+
+      @media screen and (min-width: $bp-768) {
+        width: 74%;
+        bottom: 18px;
+      }
+    }
+
+    &_secondary {
+      position: absolute;
+      left: 0;
+      top: 41%;
+      z-index: 1;
+      width: 40%;
+
+      @media screen and (min-width: $bp-768) {
+        top: 35%;
+        width: 29.42%;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__quote {
+    display: flex;
+    align-items: flex-start;
+    gap: 29px;
+
+    @media screen and (min-width: $bp-768) {
+      max-width: 319px;
+      margin-top: -117px;
+      margin-left: 201px;
+      gap: 16px;
+    }
+  }
+
+  &__quote-icon {
+    flex-shrink: 0;
+    width: 13px;
+    height: 31px;
+  }
+
+  &__quote-mark {
+  }
+
+  &__quote-text {
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.7066;
+    color: $color-dark;
+  }
+
+  @media screen and (min-width: $bp-768) {
+  }
+}

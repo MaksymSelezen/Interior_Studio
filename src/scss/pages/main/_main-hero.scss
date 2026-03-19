@@ -99,15 +99,6 @@
     position: absolute;
     top: 375px;
     left: $hero-side-offset-mobile;
-    display: inline-flex;
-    align-items: center;
-    width: 187px;
-    pointer-events: auto;
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
 
     @media (min-width: $bp-768) {
       top: 575px;
@@ -127,35 +118,6 @@
     @media (min-width: $bp-1920) {
       top: 555px;
       left: 354px;
-      width: 228px;
-      font-size: 11px;
-    }
-  }
-
-  &__discover-line {
-    height: 1px;
-    background-color: rgba($color-white, 0.4);
-
-    &:first-of-type {
-      width: 8px;
-      margin-right: 8px;
-    }
-
-    &:last-of-type {
-      width: 56px;
-      margin-left: 9px;
-    }
-
-    @media (min-width: $bp-1920) {
-      &:first-of-type {
-        width: 12px;
-        margin-right: 12px;
-      }
-
-      &:last-of-type {
-        width: 72px;
-        margin-left: 12px;
-      }
     }
   }
 

@@ -129,6 +129,15 @@ function initRequestFormValidation() {
     ])
     .addField('[name="city"]', [
       {
+        rule: "required",
+        errorMessage: "Please enter your city",
+      },
+      {
+        rule: "customRegexp",
+        value: /^\s*[A-Za-z]+(?:\s+[A-Za-z]+)*\s*$/,
+        errorMessage: "City must contain only English letters",
+      },
+      {
         rule: "maxLength",
         value: 40,
         errorMessage: "Enter no more than 40 characters",

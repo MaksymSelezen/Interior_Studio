@@ -12,24 +12,68 @@
     }
   }
 
+  @media screen and (min-width: $bp-1024) {
+    padding-top: 180px;
+
+    .philosophy-container {
+      padding-inline: 159px;
+      padding-right: 0;
+    }
+  }
+
+  @media screen and (min-width: $bp-1440) {
+    padding-top: 221px;
+
+    .philosophy-container {
+      padding-inline: 198px;
+      padding-right: 0;
+    }
+  }
+
   &__inner {
+    @media screen and (min-width: $bp-1024) {
+      position: relative;
+      min-height: 711px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      min-height: 860px;
+    }
   }
 
   &__content {
+    @media screen and (min-width: $bp-1024) {
+      width: 60.42%;
+      max-width: 551px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      width: 41.98%;
+      max-width: 551px;
+    }
   }
 
   &__title {
     margin-bottom: 19px;
     font-weight: 700;
     font-size: 26px;
+    line-height: 1;
     color: $color-dark;
 
     @media screen and (min-width: $bp-768) {
       font-size: 32px;
     }
+
+    @media screen and (min-width: $bp-1440) {
+      margin-bottom: 32px;
+      font-size: 36px;
+    }
   }
 
   &__text {
+    @media screen and (min-width: $bp-1024) {
+      max-width: 551px;
+    }
   }
 
   &__paragraph {
@@ -42,9 +86,26 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    @media screen and (min-width: $bp-1024) {
+      max-width: 448px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      max-width: 515px;
+    }
   }
 
-  &__action {
+  &__break-1024 {
+    display: none;
+
+    @media screen and (min-width: $bp-1024) {
+      display: block;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      display: none;
+    }
   }
 
   &__discover {
@@ -59,6 +120,15 @@
     .btn-discover__line {
       background-color: rgba(49, 49, 49, 0.4);
     }
+
+    @media screen and (min-width: $bp-1024) {
+      margin-top: 40px;
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      margin-top: 60px;
+    }
   }
 
   &__media {
@@ -71,6 +141,18 @@
       aspect-ratio: 520 / 355;
       margin-bottom: 96px;
     }
+
+    @media screen and (min-width: $bp-1024) {
+      aspect-ratio: auto;
+      min-height: 451px;
+      margin-top: 96px;
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      min-height: 650px;
+      margin-top: 104px;
+    }
   }
 
   &__image {
@@ -81,29 +163,67 @@
       margin-left: auto;
 
       @media screen and (min-width: $bp-768) {
+        top: -12px;
+        left: 2px;
         width: 74%;
-        bottom: 18px;
+      }
+
+      @media screen and (min-width: $bp-1024) {
+        position: absolute;
+        top: 0;
+        left: 155px;
+        width: 190px;
+        margin-left: 0;
+      }
+
+      @media screen and (min-width: $bp-1440) {
+        top: 35px;
+        left: 238px;
+        width: 279px;
       }
     }
 
     &_secondary {
       position: absolute;
-      left: 0;
       top: 41%;
+      left: 0;
       z-index: 1;
       width: 40%;
 
       @media screen and (min-width: $bp-768) {
-        top: 35%;
+        top: 36%;
         width: 29.42%;
       }
-    }
-  }
 
-  &__img {
-    display: block;
-    width: 100%;
-    height: auto;
+      @media screen and (min-width: $bp-1024) {
+        top: 98px;
+        width: 190px;
+      }
+
+      @media screen and (min-width: $bp-1440) {
+        top: 160px;
+        width: 316px;
+      }
+    }
+
+    &_tertiary {
+      display: none;
+
+      @media screen and (min-width: $bp-1024) {
+        position: absolute;
+        top: -502px;
+        right: 0;
+        z-index: 1;
+        display: block;
+        width: 349px;
+      }
+
+      @media screen and (min-width: $bp-1440) {
+        top: -525px;
+        right: 0;
+        width: 513px;
+      }
+    }
   }
 
   &__quote {
@@ -112,10 +232,27 @@
     gap: 29px;
 
     @media screen and (min-width: $bp-768) {
-      max-width: 319px;
-      margin-top: -117px;
+      // width: 100%;
+      // max-width: 319px;
       margin-left: 201px;
+      transform: translateY(-117px);
       gap: 16px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      position: absolute;
+      top: 600px;
+      left: 366px;
+      margin-left: 0;
+      transform: none;
+      gap: 22px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      top: 755px;
+      left: 600px;
+      // max-width: 380px;
+      gap: 32px;
     }
   }
 
@@ -123,9 +260,16 @@
     flex-shrink: 0;
     width: 13px;
     height: 31px;
-  }
 
-  &__quote-mark {
+    @media screen and (min-width: $bp-1024) {
+      width: 10px;
+      height: 24px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      width: 18px;
+      height: 44px;
+    }
   }
 
   &__quote-text {
@@ -134,8 +278,14 @@
     font-size: 16px;
     line-height: 1.7066;
     color: $color-dark;
-  }
 
-  @media screen and (min-width: $bp-768) {
+    @media screen and (min-width: $bp-1024) {
+      max-width: 315px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      font-size: 20px;
+      max-width: 380px;
+    }
   }
 }

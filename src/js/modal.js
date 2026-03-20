@@ -126,6 +126,11 @@ function initRequestFormValidation() {
         rule: "email",
         errorMessage: "Enter a valid email",
       },
+      {
+        rule: "maxLength",
+        value: 50,
+        errorMessage: "Enter no more than 50 characters",
+      },
     ])
     .addField('[name="city"]', [
       {
@@ -134,8 +139,8 @@ function initRequestFormValidation() {
       },
       {
         rule: "customRegexp",
-        value: /^\s*[A-Za-z]+(?:\s+[A-Za-z]+)*\s*$/,
-        errorMessage: "City must contain only English letters",
+        value: /^[\p{L}\s'-]+$/u,
+        errorMessage: "City contains invalid characters",
       },
       {
         rule: "maxLength",

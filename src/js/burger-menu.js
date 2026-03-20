@@ -7,26 +7,32 @@ const burgerScrollable = burgerMenu?.querySelector(
   ".js-scroll-lock-scrollable",
 );
 
-const langWrap = document.querySelector(".burger-menu__lang");
+const langWrap = burgerMenu?.querySelector(".burger-menu__lang");
 const langToggle = langWrap?.querySelector(".js-lang-toggle");
 const langOptionsWrap = langWrap?.querySelector(".burger-menu__lang-menu");
 const langOptions = langWrap?.querySelectorAll(".js-lang-option");
 
 function openMenu() {
+  if (!burgerMenu || !burgerScrollable) return;
+
+  burgerScrollable.scrollTop = 0;
   burgerMenu.classList.add("is-open");
   lock(burgerScrollable);
 }
 
 function closeMenu() {
+  if (!burgerMenu) return;
+
   burgerMenu.classList.remove("is-open");
+  langWrap?.classList.remove("is-open");
   unlock(burgerScrollable);
 }
 
 function selectLanguage(lang) {
-  const activeOption = langWrap.querySelector(
+  const activeOption = langWrap?.querySelector(
     `.js-lang-option[data-lang="${lang}"]`,
   );
-  if (!activeOption) return;
+  if (!activeOption || !langWrap || !langToggle || !langOptions) return;
 
   langOptions.forEach((option) => option.classList.remove("is-active"));
   activeOption.classList.add("is-active");

@@ -53,11 +53,16 @@
     );
   }
 
+  &__overlay-container {
+    position: relative;
+    height: 100%;
+  }
+
   &__title {
     position: absolute;
-    top: 276px;
+    top: 50.92%;
     left: $hero-side-offset-mobile;
-    max-width: 285px;
+    max-width: 76%;
     transform: translateY(-50%);
     pointer-events: none;
     font-size: 40px;
@@ -66,64 +71,64 @@
     color: $color-white;
 
     @media (min-width: $bp-768) {
-      top: 465px;
-      left: 125px;
-      max-width: 261px;
+      top: 48.49%;
+      left: 16.28%;
+      max-width: 33.98%;
       font-size: 44px;
       line-height: 1.23;
     }
 
     @media (min-width: $bp-1024) {
-      top: 340px;
-      left: 160px;
-      max-width: 440px;
+      top: 47.89%;
+      left: 15.63%;
+      max-width: 42.97%;
       font-size: 48px;
     }
 
     @media (min-width: $bp-1440) {
-      top: 350px;
-      left: 262px;
-      max-width: 488px;
+      top: 47.04%;
+      left: 18.19%;
+      max-width: 33.89%;
       font-size: 56px;
     }
 
     @media (min-width: $bp-1920) {
-      top: 420px;
-      left: 350px;
-      max-width: 620px;
+      top: 46.67%;
+      left: 18.23%;
+      max-width: 32.29%;
       font-size: 68px;
     }
   }
 
   &__discover {
     position: absolute;
-    top: 375px;
+    top: 69.19%;
     left: $hero-side-offset-mobile;
 
     @media (min-width: $bp-768) {
-      top: 575px;
-      left: 124px;
+      top: 59.96%;
+      left: 16.15%;
     }
 
     @media (min-width: $bp-1024) {
-      top: 430px;
-      left: 160px;
+      top: 60.56%;
+      left: 15.63%;
     }
 
     @media (min-width: $bp-1440) {
-      top: 455px;
-      left: 265px;
+      top: 61.16%;
+      left: 18.4%;
     }
 
     @media (min-width: $bp-1920) {
-      top: 555px;
-      left: 354px;
+      top: 61.67%;
+      left: 18.44%;
     }
   }
 
   &__pagination {
     position: absolute;
-    top: 142px;
+    top: 26.2%;
     left: $hero-side-offset-mobile;
     display: inline-flex;
     align-items: center;
@@ -132,23 +137,23 @@
     opacity: 0.88;
 
     @media (min-width: $bp-768) {
-      top: 573px;
-      left: 396px;
+      top: 59.75%;
+      left: 51.56%;
     }
 
     @media (min-width: $bp-1024) {
-      top: 430px;
-      left: 626px;
+      top: 60.56%;
+      left: 61.13%;
     }
 
     @media (min-width: $bp-1440) {
-      top: 455px;
-      left: 995px;
+      top: 61.16%;
+      left: 69.1%;
     }
 
     @media (min-width: $bp-1920) {
-      top: 556px;
-      left: 1330px;
+      top: 61.78%;
+      left: 69.27%;
       gap: 16px;
     }
   }
@@ -184,14 +189,17 @@
     background-color: rgba($color-white, 0.45);
 
     @media (min-width: $bp-768) {
+      width: 145px;
       flex-basis: 145px;
     }
 
     @media (min-width: $bp-1440) {
+      width: 186px;
       flex-basis: 186px;
     }
 
     @media (min-width: $bp-1920) {
+      width: 244px;
       flex-basis: 244px;
     }
   }
@@ -206,34 +214,34 @@
 
   &__side-label {
     position: absolute;
-    top: 420px;
-    right: 19px;
+    top: 77.49%;
+    right: 5.07%;
     transform: translateY(-50%) rotate(180deg);
     writing-mode: vertical-rl;
     pointer-events: none;
 
     @media (min-width: $bp-768) {
-      top: 750px;
-      right: 29px;
+      top: 78.21%;
+      right: 3.78%;
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
 
     @media (min-width: $bp-1024) {
-      top: 565px;
-      right: 39px;
+      top: 79.58%;
+      right: 3.81%;
     }
 
     @media (min-width: $bp-1440) {
-      top: 536px;
-      right: 52px;
+      top: 72.04%;
+      right: 3.61%;
       gap: 10px;
     }
 
     @media (min-width: $bp-1920) {
-      top: 646px;
-      right: 78px;
+      top: 71.78%;
+      right: 4.06%;
       gap: 12px;
     }
   }
@@ -284,7 +292,7 @@
   &__bottom-nav {
     position: absolute;
     left: $hero-side-offset-mobile;
-    bottom: 22px;
+    bottom: 4.06%;
     justify-content: flex-start;
     gap: 52px;
     pointer-events: auto;
@@ -294,20 +302,20 @@
     }
 
     @media screen and (min-width: $bp-768) {
-      left: 47px;
-      bottom: 30px;
+      left: 6.12%;
+      bottom: 3.13%;
       gap: 32px;
     }
 
     @media screen and (min-width: $bp-1024) {
-      left: 56px;
-      bottom: 30px;
+      left: 5.47%;
+      bottom: 4.23%;
       gap: 40px;
     }
 
     @media screen and (min-width: $bp-1440) {
-      left: 65px;
-      bottom: 38px;
+      left: 4.51%;
+      bottom: 5.11%;
       gap: 72px;
 
       .bottom-nav__city {
@@ -320,8 +328,8 @@
     }
 
     @media screen and (min-width: $bp-1920) {
-      left: 81px;
-      bottom: 48px;
+      left: 4.22%;
+      bottom: 5.33%;
       gap: 88px;
     }
   }
@@ -364,8 +372,8 @@
 
     @media screen and (min-width: $bp-1440) {
       position: absolute;
-      left: 452px;
-      bottom: 43px;
+      left: 31.39%;
+      bottom: 5.78%;
       z-index: 3;
       display: flex;
       align-items: center;
@@ -373,8 +381,8 @@
     }
 
     @media screen and (min-width: $bp-1920) {
-      left: 612px;
-      bottom: 53px;
+      left: 31.88%;
+      bottom: 5.89%;
       gap: 40px;
     }
   }

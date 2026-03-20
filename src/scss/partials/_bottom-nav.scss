@@ -15,6 +15,10 @@
     @media screen and (min-width: $bp-768) {
       display: flex;
       gap: 15px;
+      margin-right: 64px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
       margin-right: 79px;
     }
   }

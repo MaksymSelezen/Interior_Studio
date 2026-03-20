@@ -19,23 +19,6 @@
   &__container {
     display: flex;
     align-items: center;
-    padding-inline: $container-pad-375;
-
-    @media screen and (min-width: $bp-768) {
-      padding-inline: $container-pad-768;
-    }
-
-    @media screen and (min-width: $bp-1024) {
-      padding-inline: $container-pad-1024;
-    }
-
-    @media screen and (min-width: $bp-1440) {
-      padding-inline: $container-pad-1440;
-    }
-
-    @media screen and (min-width: $bp-1920) {
-      padding-inline: $container-pad-1920;
-    }
   }
 
   &__logo-text {

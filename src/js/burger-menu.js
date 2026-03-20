@@ -1,8 +1,7 @@
 import { lock, unlock } from "./scrollLock";
 
 const burgerBtn = document.querySelector(".header__menu-toggle");
-const burgerMenu = document.querySelector("#burger-menu");
-const burgerCloseItems = document.querySelectorAll(".js-burger-close");
+const burgerMenu = document.getElementById("burger-menu");
 const burgerScrollable = burgerMenu?.querySelector(
   ".js-scroll-lock-scrollable",
 );
@@ -10,7 +9,6 @@ const burgerScrollable = burgerMenu?.querySelector(
 const langWrap = burgerMenu?.querySelector(".burger-menu__lang");
 const langToggle = langWrap?.querySelector(".js-lang-toggle");
 const langOptionsWrap = langWrap?.querySelector(".burger-menu__lang-menu");
-const langOptions = langWrap?.querySelectorAll(".js-lang-option");
 
 function openMenu() {
   if (!burgerMenu || !burgerScrollable) return;
@@ -28,45 +26,44 @@ function closeMenu() {
   unlock(burgerScrollable);
 }
 
-function selectLanguage(lang) {
-  const activeOption = langWrap?.querySelector(
-    `.js-lang-option[data-lang="${lang}"]`,
-  );
-  if (!activeOption || !langWrap || !langToggle || !langOptions) return;
+function selectLanguage(option) {
+  if (!langWrap || !langToggle) return;
 
-  langOptions.forEach((option) => option.classList.remove("is-active"));
-  activeOption.classList.add("is-active");
-  langToggle.textContent = activeOption.textContent.trim();
+  langWrap.querySelectorAll(".js-lang-option").forEach((item) => {
+    item.classList.toggle("is-active", item === option);
+  });
+
+  langToggle.textContent = option.textContent.trim();
   langWrap.classList.remove("is-open");
 }
 
-if (burgerBtn && burgerMenu) {
-  burgerBtn.addEventListener("click", () => {
-    const isOpen = burgerMenu.classList.contains("is-open");
-    if (isOpen) closeMenu();
-    else openMenu();
-  });
+burgerBtn?.addEventListener("click", () => {
+  if (!burgerMenu) return;
 
-  burgerCloseItems.forEach((item) => item.addEventListener("click", closeMenu));
+  burgerMenu.classList.contains("is-open") ? closeMenu() : openMenu();
+});
 
-  burgerMenu.addEventListener("click", (event) => {
-    if (event.target.closest(".js-burger-link")) closeMenu();
-  });
-}
+burgerMenu?.addEventListener("click", (event) => {
+  if (event.target.closest(".js-burger-close, .js-burger-link")) {
+    closeMenu();
+    return;
+  }
 
-if (langWrap && langToggle && langOptionsWrap && langOptions?.length) {
-  langToggle.addEventListener("click", () => {
-    langWrap.classList.toggle("is-open");
-  });
+  const option = event.target.closest(".js-lang-option");
 
-  langOptionsWrap.addEventListener("click", (event) => {
-    const option = event.target.closest(".js-lang-option");
-    if (!option) return;
+  if (option) {
+    selectLanguage(option);
+  }
+});
 
-    selectLanguage(option.dataset.lang);
-  });
+langToggle?.addEventListener("click", () => {
+  if (!langOptionsWrap) return;
 
-  document.addEventListener("click", (event) => {
-    if (!langWrap.contains(event.target)) langWrap.classList.remove("is-open");
-  });
-}
+  langWrap?.classList.toggle("is-open");
+});
+
+document.addEventListener("click", (event) => {
+  if (!langWrap?.contains(event.target)) {
+    langWrap?.classList.remove("is-open");
+  }
+});

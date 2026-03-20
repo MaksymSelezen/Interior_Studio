@@ -1,10 +1,10 @@
 <header class="header">
   <div class="container header__container">
-    <a class="header__logo" href="/">
+    <a href="/">
       <span class="header__logo-text">LOGO</span>
     </a>
 
-    <button class="header__menu-toggle js-burger-open" type="button">
+    <button class="header__menu-toggle" type="button">
       <svg class="header__menu-icon" width="28" height="8">
         <use href="/src/assets/icons/sprite.svg#icon-burger"></use>
       </svg>
@@ -29,12 +29,10 @@
     </nav>
 
     <div class="header__controls">
-      <div class="header__lang">
-        <select class="header__lang-select" name="language">
-          <option value="en" selected>En</option>
-          <option value="uk">Ua</option>
-        </select>
-      </div>
+      <select class="header__lang-select" name="language">
+        <option value="en" selected>En</option>
+        <option value="uk">Ua</option>
+      </select>
 
       <button class="header__cta js-open-request" type="button">
         Send Request

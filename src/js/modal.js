@@ -2,21 +2,31 @@ import JustValidate from "just-validate";
 
 import { lock, unlock } from "./scrollLock";
 
-const openBtns = document.querySelectorAll(".js-open-request");
-
 const requestPopup = document.getElementById("popup-request");
 const successPopup = document.getElementById("popup-success");
-
-const overlays = document.querySelectorAll(".js-popup-overlay");
-const closes = document.querySelectorAll(".js-popup-close");
-
 const form = document.querySelector(".js-request-form");
-const sendAgainBtn = document.querySelector(".js-send-again");
 
 let requestFormValidator = null;
 
+const createNameRules = (label) => [
+  {
+    rule: "required",
+    errorMessage: `Enter your ${label}`,
+  },
+  {
+    rule: "minLength",
+    value: 2,
+    errorMessage: "Enter at least 2 characters",
+  },
+  {
+    rule: "maxLength",
+    value: 30,
+    errorMessage: "Enter no more than 30 characters",
+  },
+];
+
 function getScrollableContainer(popup) {
-  return popup?.querySelector(".js-scroll-lock-scrollable") || null;
+  return popup?.querySelector(".js-scroll-lock-scrollable") ?? null;
 }
 
 function resetRequestFormValidation() {
@@ -64,38 +74,8 @@ function initRequestFormValidation() {
   });
 
   requestFormValidator
-    .addField('[name="firstName"]', [
-      {
-        rule: "required",
-        errorMessage: "Enter your name",
-      },
-      {
-        rule: "minLength",
-        value: 2,
-        errorMessage: "Enter at least 2 characters",
-      },
-      {
-        rule: "maxLength",
-        value: 30,
-        errorMessage: "Enter no more than 30 characters",
-      },
-    ])
-    .addField('[name="lastName"]', [
-      {
-        rule: "required",
-        errorMessage: "Enter your last name",
-      },
-      {
-        rule: "minLength",
-        value: 2,
-        errorMessage: "Enter at least 2 characters",
-      },
-      {
-        rule: "maxLength",
-        value: 30,
-        errorMessage: "Enter no more than 30 characters",
-      },
-    ])
+    .addField('[name="firstName"]', createNameRules("name"))
+    .addField('[name="lastName"]', createNameRules("last name"))
     .addField('[name="phone"]', [
       {
         rule: "required",
@@ -169,27 +149,28 @@ function initRequestFormValidation() {
 
 initRequestFormValidation();
 
-openBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
+document.addEventListener("click", (event) => {
+  if (event.target.closest(".js-open-request")) {
     openPopup(requestPopup);
-  });
-});
+    return;
+  }
 
-overlays.forEach((overlay) => {
-  overlay.addEventListener("click", () => {
-    const popup = overlay.closest(".popup");
-    closePopup(popup);
-  });
-});
+  if (event.target.closest(".js-send-again")) {
+    closePopup(successPopup);
+    openPopup(requestPopup);
+    return;
+  }
 
-closes.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const popup = btn.closest(".popup");
-    closePopup(popup);
-  });
-});
+  const overlay = event.target.closest(".js-popup-overlay");
 
-sendAgainBtn?.addEventListener("click", () => {
-  closePopup(successPopup);
-  openPopup(requestPopup);
+  if (overlay) {
+    closePopup(overlay.closest(".popup"));
+    return;
+  }
+
+  const closeButton = event.target.closest(".js-popup-close");
+
+  if (closeButton) {
+    closePopup(closeButton.closest(".popup"));
+  }
 });

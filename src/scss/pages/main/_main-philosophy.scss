@@ -36,6 +36,10 @@
       min-height: 711px;
     }
 
+    @media screen and (min-width: $bp-1024) and (max-width: 1439.98px) {
+      min-height: calc(711px + 149 * ((100vw - 1024px) / 416));
+    }
+
     @media screen and (min-width: $bp-1440) {
       min-height: 860px;
     }
@@ -149,6 +153,11 @@
       margin-bottom: 0;
     }
 
+    @media screen and (min-width: $bp-1024) and (max-width: 1439.98px) {
+      min-height: calc(451px + 199 * ((100vw - 1024px) / 416));
+      margin-top: calc(96px + 8 * ((100vw - 1024px) / 416));
+    }
+
     @media screen and (min-width: $bp-1440) {
       min-height: 650px;
       margin-top: 104px;
@@ -176,6 +185,12 @@
         margin-left: 0;
       }
 
+      @media screen and (min-width: $bp-1024) and (max-width: 1439.98px) {
+        top: calc(35px * ((100vw - 1024px) / 416));
+        left: calc(155px + 83 * ((100vw - 1024px) / 416));
+        width: calc(190px + 89 * ((100vw - 1024px) / 416));
+      }
+
       @media screen and (min-width: $bp-1440) {
         top: 35px;
         left: 238px;
@@ -200,6 +215,11 @@
         width: 190px;
       }
 
+      @media screen and (min-width: $bp-1024) and (max-width: 1439.98px) {
+        top: calc(98px + 62 * ((100vw - 1024px) / 416));
+        width: calc(190px + 126 * ((100vw - 1024px) / 416));
+      }
+
       @media screen and (min-width: $bp-1440) {
         top: 160px;
         width: 316px;
@@ -218,6 +238,11 @@
         width: 349px;
       }
 
+      @media screen and (min-width: $bp-1024) and (max-width: 1439.98px) {
+        top: calc(-502px - 23 * ((100vw - 1024px) / 416));
+        width: calc(349px + 164 * ((100vw - 1024px) / 416));
+      }
+
       @media screen and (min-width: $bp-1440) {
         top: -525px;
         right: 0;
@@ -226,17 +251,27 @@
     }
   }
 
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   &__quote {
     display: flex;
     align-items: flex-start;
     gap: 29px;
 
     @media screen and (min-width: $bp-768) {
-      // width: 100%;
-      // max-width: 319px;
       margin-left: 201px;
       transform: translateY(-117px);
       gap: 16px;
+    }
+
+    @media screen and (min-width: $bp-768) and (max-width: 1023.98px) {
+      margin-left: calc(201px + 165 * ((100vw - 768px) / 256));
+      transform: translateY(calc(-117px + 117 * ((100vw - 768px) / 256)));
+      gap: calc(16px + 6 * ((100vw - 768px) / 256));
     }
 
     @media screen and (min-width: $bp-1024) {
@@ -248,10 +283,15 @@
       gap: 22px;
     }
 
+    @media screen and (min-width: $bp-1024) and (max-width: 1439.98px) {
+      top: calc(600px + 155 * ((100vw - 1024px) / 416));
+      left: calc(366px + 234 * ((100vw - 1024px) / 416));
+      gap: calc(22px + 10 * ((100vw - 1024px) / 416));
+    }
+
     @media screen and (min-width: $bp-1440) {
       top: 755px;
       left: 600px;
-      // max-width: 380px;
       gap: 32px;
     }
   }
@@ -264,6 +304,11 @@
     @media screen and (min-width: $bp-1024) {
       width: 10px;
       height: 24px;
+    }
+
+    @media screen and (min-width: $bp-1024) and (max-width: 1439.98px) {
+      width: calc(10px + 8 * ((100vw - 1024px) / 416));
+      height: calc(24px + 20 * ((100vw - 1024px) / 416));
     }
 
     @media screen and (min-width: $bp-1440) {
@@ -281,6 +326,10 @@
 
     @media screen and (min-width: $bp-1024) {
       max-width: 315px;
+    }
+
+    @media screen and (min-width: $bp-1024) and (max-width: 1439.98px) {
+      max-width: calc(315px + 65 * ((100vw - 1024px) / 416));
     }
 
     @media screen and (min-width: $bp-1440) {

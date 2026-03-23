@@ -5,10 +5,25 @@
   color: $color-white;
   padding-block: 80px 96px;
 
+  @media screen and (min-width: $bp-768) {
+    padding-block: 28px 124px;
+  }
+
+  &__container {
+  }
+
+  &__head {
+  }
+
   &__title {
     font-weight: 700;
     font-size: 26px;
     margin-bottom: 20px;
+
+    @media screen and (min-width: $bp-768) {
+      font-size: 32px;
+      text-align: center;
+    }
   }
 
   &__text {
@@ -17,6 +32,13 @@
     line-height: 1.7066;
     color: $color-gray;
     margin-bottom: 75px;
+
+    @media screen and (min-width: $bp-768) {
+      text-align: center;
+      max-width: 455px;
+      margin: 0 auto;
+      margin-bottom: 95px;
+    }
   }
 
   &__grid {
@@ -72,6 +94,10 @@
       justify-content: space-between;
       padding: 24px;
       pointer-events: none;
+
+      @media screen and (min-width: $bp-768) {
+        padding: 32px;
+      }
     }
 
     &-meta {
@@ -91,6 +117,10 @@
     &-body {
       display: grid;
       gap: 16px;
+
+      @media screen and (min-width: $bp-768) {
+        gap: 24px;
+      }
     }
 
     &-title {
@@ -99,9 +129,16 @@
       font-weight: 700;
       font-size: 20px;
       line-height: 1.26776;
+
+      @media screen and (min-width: $bp-768) {
+        max-width: 232px;
+      }
     }
 
     &--mobile-only {
+      @media screen and (min-width: $bp-768) {
+        display: none;
+      }
     }
   }
 
@@ -119,6 +156,10 @@
     justify-content: center;
     align-items: center;
 
+    @media screen and (min-width: $bp-768) {
+      padding: 145px;
+    }
+
     &-title {
       font-weight: 700;
       font-size: 20px;
@@ -126,6 +167,69 @@
       color: $color-dark;
       white-space: nowrap;
       margin-bottom: 16px;
+
+      @media screen and (min-width: $bp-768) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &-image {
+    }
+  }
+
+  &__bottom {
+  }
+
+  &__bottom-title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.21154;
+    margin-top: 96px;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: $bp-768) {
+      font-size: 32px;
+      text-align: center;
+      line-height: 1.424;
+      max-width: 443px;
+      margin: 0 auto;
+      margin-top: 126px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__bottom-text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.7066;
+
+    @media screen and (min-width: $bp-768) {
+      max-width: 455px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &__bottom-action {
+    @media screen and (min-width: $bp-768) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__bottom-button {
+    padding: 14px 50px;
+    background-color: $color-white;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: $color-dark;
+    margin-top: 40px;
+    margin-left: 1px;
+
+    @media screen and (min-width: $bp-768) {
+      margin-top: 48px;
     }
   }
 }

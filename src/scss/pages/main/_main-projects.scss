@@ -8,7 +8,7 @@
   &__title {
     font-weight: 700;
     font-size: 26px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   &__text {
@@ -16,7 +16,12 @@
     font-size: 14px;
     line-height: 1.7066;
     color: $color-gray;
-    margin-bottom: 80px;
+    margin-bottom: 75px;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 6px;
   }
 
   &__card {
@@ -65,7 +70,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 24px 24px 21px;
+      padding: 24px;
       pointer-events: none;
     }
 
@@ -73,7 +78,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 8px 24px;
+      gap: 16px;
       max-width: calc(100% - 24px);
     }
 
@@ -85,9 +90,7 @@
 
     &-body {
       display: grid;
-      justify-items: start;
       gap: 16px;
-      margin-top: auto;
     }
 
     &-title {
@@ -96,7 +99,6 @@
       font-weight: 700;
       font-size: 20px;
       line-height: 1.26776;
-      text-wrap: balance;
     }
 
     &--mobile-only {
@@ -110,65 +112,20 @@
   }
 
   &__cta {
+    background-color: white;
+    padding: 60px 53px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     &-title {
       font-weight: 700;
       font-size: 20px;
       line-height: 1.26776;
-    }
-  }
-}
-
-@media screen and (min-width: $bp-768) {
-  .projects {
-    &__card {
-      &-content {
-        padding: 24px;
-      }
-
-      &-title {
-        max-width: 62%;
-        font-size: 28px;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: $bp-1024) {
-  .projects {
-    &__card {
-      &-content {
-        padding: 24px;
-      }
-
-      &-body {
-        gap: 18px;
-      }
-
-      &-title {
-        max-width: 58%;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: $bp-1440) {
-  .projects {
-    &__card {
-      &-content {
-        padding: 24px 30px 24px 24px;
-      }
-
-      &-meta {
-        max-width: calc(100% - 30px);
-      }
-
-      &-body {
-        gap: 20px;
-      }
-
-      &-title {
-        max-width: 56%;
-      }
+      color: $color-dark;
+      white-space: nowrap;
+      margin-bottom: 16px;
     }
   }
 }

@@ -5,12 +5,6 @@
   color: $color-white;
   padding-block: 80px 96px;
 
-  &__container {
-  }
-
-  &__head {
-  }
-
   &__title {
     font-weight: 700;
     font-size: 26px;
@@ -25,22 +19,54 @@
     margin-bottom: 80px;
   }
 
-  &__grid {
-  }
-
   &__card {
     position: relative;
     display: block;
     overflow: hidden;
+    color: inherit;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba($color-black, 0.18) 0%,
+        rgba($color-black, 0.08) 32%,
+        rgba($color-black, 0.52) 100%
+      );
+      pointer-events: none;
+    }
+
     &-image {
+      picture,
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      img {
+        object-fit: cover;
+      }
     }
 
     &-content {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px 24px 21px;
     }
 
     &-meta {
       display: flex;
-      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 24px;
+      max-width: calc(100% - 24px);
     }
 
     &-meta-item {
@@ -49,14 +75,28 @@
       line-height: 1.7066;
     }
 
+    &-body {
+      display: grid;
+      justify-items: start;
+      gap: 16px;
+    }
+
     &-title {
+      max-width: calc(100% - 30px);
+      margin: 0;
       font-weight: 700;
       font-size: 20px;
       line-height: 1.26776;
+      text-wrap: balance;
     }
 
     &--mobile-only {
     }
+  }
+
+  &__discover {
+    position: relative;
+    z-index: 2;
   }
 
   &__cta {
@@ -65,8 +105,60 @@
       font-size: 20px;
       line-height: 1.26776;
     }
+  }
+}
 
-    &-image {
+@media screen and (min-width: $bp-768) {
+  .projects {
+    &__card {
+      &-content {
+        padding: 24px;
+      }
+
+      &-title {
+        max-width: 62%;
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $bp-1024) {
+  .projects {
+    &__card {
+      &-content {
+        padding: 24px 24px 24px;
+      }
+
+      &-body {
+        gap: 18px;
+      }
+
+      &-title {
+        max-width: 58%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $bp-1440) {
+  .projects {
+    &__card {
+      &-content {
+        padding: 24px 30px 24px 24px;
+      }
+
+      &-meta {
+        max-width: calc(100% - 30px);
+      }
+
+      &-body {
+        gap: 20px;
+      }
+
+      &-title {
+        max-width: 56%;
+      }
     }
   }
 }

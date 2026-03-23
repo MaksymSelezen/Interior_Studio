@@ -1,0 +1,72 @@
+@use "../../utils/variables" as *;
+
+.projects {
+  background-color: $color-dark;
+  color: $color-white;
+  padding-block: 80px 96px;
+
+  &__container {
+  }
+
+  &__head {
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.7066;
+    color: $color-gray;
+    margin-bottom: 80px;
+  }
+
+  &__grid {
+  }
+
+  &__card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    &-image {
+    }
+
+    &-content {
+    }
+
+    &-meta {
+      display: flex;
+      gap: 16px;
+    }
+
+    &-meta-item {
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 1.7066;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.26776;
+    }
+
+    &--mobile-only {
+    }
+  }
+
+  &__cta {
+    &-title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.26776;
+    }
+
+    &-image {
+    }
+  }
+}

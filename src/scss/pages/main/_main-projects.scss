@@ -2,15 +2,18 @@
 @use "../../utils/variables" as *;
 
 .projects {
+  padding-block: 80px 96px;
   background-color: $color-dark;
   color: $color-white;
-  padding-block: 80px 96px;
+
   @media screen and (min-width: $bp-768) {
     padding-block: 28px 124px;
   }
+
   @media screen and (min-width: $bp-1024) {
     padding-block: 70px 142px;
   }
+
   @media screen and (min-width: $bp-1440) {
     padding-block: 120px 300px;
   }
@@ -19,10 +22,12 @@
     margin-bottom: 20px;
     font-size: 26px;
     font-weight: 700;
+
     @media screen and (min-width: $bp-768) {
       font-size: 32px;
       text-align: center;
     }
+
     @media screen and (min-width: $bp-1440) {
       margin-bottom: 34px;
       font-size: 36px;
@@ -35,14 +40,17 @@
     font-size: 14px;
     font-weight: 300;
     line-height: 1.7066;
+
     @media screen and (min-width: $bp-768) {
       max-width: 455px;
       margin: 0 auto 95px;
       text-align: center;
     }
+
     @media screen and (min-width: $bp-1024) {
       margin-bottom: 120px;
     }
+
     @media screen and (min-width: $bp-1440) {
       margin-bottom: 130px;
     }
@@ -51,6 +59,7 @@
   &__grid {
     display: grid;
     gap: 6px;
+
     @media screen and (min-width: $bp-1024) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       align-items: stretch;
@@ -64,6 +73,7 @@
       position: relative;
       overflow: hidden;
       isolation: isolate;
+
       &::after {
         position: absolute;
         inset: 0;
@@ -76,15 +86,12 @@
         );
         pointer-events: none;
       }
-      picture,
+
       img {
-        display: block;
         width: 100%;
-      }
-      img {
-        height: auto;
         object-fit: cover;
       }
+
       @media screen and (min-width: $bp-1440) {
         &:hover .projects__card-content,
         &:focus-within .projects__card-content {
@@ -108,12 +115,15 @@
       justify-content: space-between;
       padding: 24px;
       pointer-events: none;
+
       @media screen and (min-width: $bp-768) {
         padding: 32px;
       }
+
       @media screen and (min-width: $bp-1024) {
         padding: 28px 32px 38px;
       }
+
       @media screen and (min-width: $bp-1440) {
         opacity: 0;
         transition: opacity 240ms ease;
@@ -126,6 +136,7 @@
       align-items: center;
       gap: 16px;
       max-width: calc(100% - 24px);
+
       @media screen and (min-width: $bp-1024) {
         gap: 24px;
       }
@@ -140,6 +151,7 @@
     &-body {
       display: grid;
       gap: 16px;
+
       @media screen and (min-width: $bp-768) {
         gap: 24px;
       }
@@ -150,48 +162,56 @@
       font-size: 20px;
       font-weight: 700;
       line-height: 1.26776;
+
       @media screen and (min-width: $bp-768) {
         max-width: 232px;
       }
-      &--only-1024 {
+
+      &_only-1024 {
         display: none;
       }
     }
 
-    &--mobile-only {
+    &_mobile-only {
       @media screen and (min-width: $bp-768) {
         display: none;
       }
     }
 
-    &--only-1024 {
+    &_only-1024 {
       display: none;
+
       @media screen and (min-width: $bp-1024) {
         display: block;
       }
     }
 
-    &--wide-1024 {
+    &_wide-1024 {
       @media screen and (min-width: $bp-1024) {
         grid-column: 1 / -1;
-        .projects__card-body,
+
+        .projects__card-body {
+          display: block;
+          max-width: 232px;
+        }
+
         .projects__card-title {
           max-width: 232px;
         }
-        .projects__card-body {
-          display: block;
-        }
       }
+
       @media screen and (min-width: $bp-1024) and (max-width: 1439.98px) {
+        .projects__card-content {
+          padding: 28px 32px 32px;
+        }
+
         .projects__discover {
           position: absolute;
           right: 85px;
           bottom: 36px;
         }
-        .projects__card-content {
-          padding: 28px 32px 32px;
-        }
       }
+
       @media screen and (min-width: $bp-1440) {
         .projects__card-content {
           padding: 28px 32px 32px;
@@ -199,18 +219,19 @@
       }
     }
 
-    &--hide-on-1024 {
+    &_hide-on-1024 {
       @media screen and (min-width: $bp-1024) {
         display: none;
       }
     }
 
-    &--title-swap-1024 {
+    &_title-swap-1024 {
       @media screen and (min-width: $bp-1024) and (max-width: 1439.98px) {
-        .projects__card-title--default {
+        .projects__card-title_default {
           display: none;
         }
-        .projects__card-title--only-1024 {
+
+        .projects__card-title_only-1024 {
           display: block;
         }
       }
@@ -221,6 +242,7 @@
     position: relative;
     z-index: 3;
     pointer-events: auto;
+
     @media screen and (min-width: $bp-1440) {
       display: none;
     }
@@ -233,9 +255,11 @@
     align-items: center;
     padding: 60px 53px;
     background-color: $color-white;
+
     @media screen and (min-width: $bp-768) {
       padding: 145px;
     }
+
     @media screen and (min-width: $bp-1024) {
       justify-content: flex-start;
       padding: 65px 115px;
@@ -252,9 +276,11 @@
       font-weight: 700;
       line-height: 1.26776;
       white-space: nowrap;
+
       @media screen and (min-width: $bp-768) {
         margin-bottom: 24px;
       }
+
       @media screen and (min-width: $bp-1440) {
         font-size: 22px;
       }
@@ -283,6 +309,7 @@
     font-size: 26px;
     font-weight: 700;
     line-height: 1.21154;
+
     @media screen and (min-width: $bp-768) {
       max-width: 443px;
       margin: 126px auto 24px;
@@ -290,15 +317,17 @@
       line-height: 1.424;
       text-align: center;
     }
+
     @media screen and (min-width: $bp-1024) {
       margin-top: 132px;
     }
+
     @media screen and (min-width: $bp-1440) {
       z-index: 10;
       min-width: 424px;
       min-height: 154px;
-      margin: 0;
       max-width: 424px;
+      margin: 0;
       font-size: 36px;
       text-align: left;
       transform: translate(135px, 42px);
@@ -315,11 +344,13 @@
     font-size: 14px;
     font-weight: 300;
     line-height: 1.7066;
+
     @media screen and (min-width: $bp-768) {
       max-width: 455px;
       margin: 0 auto;
       text-align: center;
     }
+
     @media screen and (min-width: $bp-1440) {
       min-width: 340px;
       margin: 0;
@@ -331,7 +362,7 @@
     @media screen and (min-width: $bp-1440) {
       max-width: 320px;
       z-index: 10;
-      transform: translateX(-150px) translateY(235px);
+      transform: translate(-150px, 235px);
     }
   }
 
@@ -340,6 +371,7 @@
       display: flex;
       justify-content: center;
     }
+
     @media screen and (min-width: $bp-1440) {
       justify-content: flex-start;
     }
@@ -355,12 +387,15 @@
     font-weight: 600;
     letter-spacing: 0.06em;
     text-align: center;
+
     @media screen and (min-width: $bp-768) {
       margin-top: 48px;
     }
+
     @media screen and (min-width: $bp-1024) {
       margin-top: 66px;
     }
+
     @media screen and (min-width: $bp-1440) {
       margin-top: 48px;
       margin-left: 0;
@@ -369,6 +404,7 @@
 
   &__bottom-collage {
     display: none;
+
     @media screen and (min-width: $bp-1440) {
       $collage-items: (
         1: (
@@ -422,12 +458,11 @@
         position: absolute;
         top: 80px;
         left: -120px;
-
         object-fit: cover;
         box-shadow: 0 14px 36px rgba($color-black, 0.45);
 
         @each $idx, $item in $collage-items {
-          &--#{$idx} {
+          &_#{$idx} {
             transform: list.nth($item, 1);
             z-index: list.nth($item, 2);
           }

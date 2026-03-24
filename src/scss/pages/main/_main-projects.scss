@@ -13,6 +13,10 @@
     padding-block: 70px 142px;
   }
 
+  @media screen and (min-width: $bp-1440) {
+    padding-block: 120px 142px;
+  }
+
   &__container {
   }
 
@@ -27,6 +31,11 @@
     @media screen and (min-width: $bp-768) {
       font-size: 32px;
       text-align: center;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      font-size: 36px;
+      margin-bottom: 34px;
     }
   }
 
@@ -46,6 +55,10 @@
 
     @media screen and (min-width: $bp-1024) {
       margin-bottom: 120px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      margin-bottom: 130px;
     }
   }
 
@@ -198,6 +211,10 @@
       justify-content: flex-start;
     }
 
+    @media screen and (min-width: $bp-1024) {
+      padding: 120px 165px;
+    }
+
     &-title {
       font-weight: 700;
       font-size: 20px;
@@ -208,6 +225,10 @@
 
       @media screen and (min-width: $bp-768) {
         margin-bottom: 24px;
+      }
+
+      @media screen and (min-width: $bp-1440) {
+        font-size: 22px;
       }
     }
 
@@ -330,6 +351,59 @@
           display: block;
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: $bp-1440) {
+  .projects {
+    &__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: stretch;
+    }
+
+    &__card {
+      &--only-1024 {
+        display: block;
+      }
+
+      &--wide-1024 {
+        grid-column: 1 / -1;
+
+        .projects__card-content {
+          inset: 0;
+          padding: 28px 32px 32px;
+          opacity: 0;
+          transition: opacity 240ms ease;
+        }
+
+        .projects__card-body {
+          display: block;
+          max-width: 232px;
+        }
+
+        .projects__card-title {
+          max-width: 232px;
+        }
+      }
+
+      &--hide-on-1024 {
+        display: none;
+      }
+
+      .projects__card-content {
+        opacity: 0;
+        transition: opacity 240ms ease;
+      }
+
+      .projects__card-image:hover .projects__card-content,
+      .projects__card-image:focus-within .projects__card-content {
+        opacity: 1;
+      }
+    }
+
+    &__discover {
+      display: none;
     }
   }
 }

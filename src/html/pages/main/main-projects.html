@@ -10,7 +10,7 @@
     </div>
 
     <div class="projects__grid">
-      <article class="projects__card">
+      <article class="projects__card projects__card--title-swap-1024">
         <div class="projects__card-image">
           <picture>
             <source
@@ -51,7 +51,13 @@
             </div>
 
             <div class="projects__card-body">
-              <h3 class="projects__card-title">Residence by the lighthouse</h3>
+              <h3 class="projects__card-title projects__card-title--default">
+                Residence by the lighthouse
+              </h3>
+
+              <h3 class="projects__card-title projects__card-title--only-1024">
+                Eyewear store interior
+              </h3>
 
               {{> partials/ui/btn-discover class="projects__discover"
               href="/pages/projects.html" text="Discover more"}}
@@ -140,6 +146,46 @@
         </div>
       </article>
 
+      <article
+        class="projects__card projects__card--only-1024 projects__card--wide-1024"
+      >
+        <div class="projects__card-image">
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="
+                /src/assets/images/main/section_projects/section3-project-photo3-1024.png
+              "
+            />
+            <img
+              src="/src/assets/images/main/section_projects/section3-project-photo3-1024.png"
+              alt="Residence by the lighthouse"
+            />
+          </picture>
+
+          <a
+            href="/pages/one-project.html"
+            class="projects__card-link"
+            aria-label="Open Residence by the lighthouse project"
+          ></a>
+
+          <div class="projects__card-content">
+            <div class="projects__card-meta">
+              <span class="projects__card-meta-item">Lodz</span>
+              <span class="projects__card-meta-item">16.10.2018</span>
+              <span class="projects__card-meta-item">80 sq.m</span>
+            </div>
+
+            <div class="projects__card-body">
+              <h3 class="projects__card-title">Residence by the lighthouse</h3>
+
+              {{> partials/ui/btn-discover class="projects__discover"
+              href="/pages/projects.html" text="Discover more"}}
+            </div>
+          </div>
+        </div>
+      </article>
+
       <article class="projects__card">
         <div class="projects__card-image">
           <picture>
@@ -190,7 +236,7 @@
         </div>
       </article>
 
-      <article class="projects__card">
+      <article class="projects__card projects__card--hide-on-1024">
         <div class="projects__card-image">
           <picture>
             <source

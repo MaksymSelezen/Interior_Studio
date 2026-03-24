@@ -9,6 +9,10 @@
     padding-block: 28px 124px;
   }
 
+  @media screen and (min-width: $bp-1024) {
+    padding-block: 70px 142px;
+  }
+
   &__container {
   }
 
@@ -38,6 +42,10 @@
       max-width: 455px;
       margin: 0 auto;
       margin-bottom: 95px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      margin-bottom: 120px;
     }
   }
 
@@ -98,6 +106,10 @@
       @media screen and (min-width: $bp-768) {
         padding: 32px;
       }
+
+      @media screen and (min-width: $bp-1024) {
+        padding: 28px 32px 38px;
+      }
     }
 
     &-meta {
@@ -106,6 +118,10 @@
       align-items: center;
       gap: 16px;
       max-width: calc(100% - 24px);
+
+      @media screen and (min-width: $bp-1024) {
+        gap: 24px;
+      }
     }
 
     &-meta-item {
@@ -133,12 +149,29 @@
       @media screen and (min-width: $bp-768) {
         max-width: 232px;
       }
+
+      &--only-1024 {
+        display: none;
+      }
     }
 
     &--mobile-only {
       @media screen and (min-width: $bp-768) {
         display: none;
       }
+    }
+
+    &--only-1024 {
+      display: none;
+    }
+
+    &--wide-1024 {
+    }
+
+    &--hide-on-1024 {
+    }
+
+    &--title-swap-1024 {
     }
   }
 
@@ -158,6 +191,11 @@
 
     @media screen and (min-width: $bp-768) {
       padding: 145px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding: 62px 115px;
+      justify-content: flex-start;
     }
 
     &-title {
@@ -196,6 +234,10 @@
       margin-top: 126px;
       margin-bottom: 24px;
     }
+
+    @media screen and (min-width: $bp-1024) {
+      margin-top: 132px;
+    }
   }
 
   &__bottom-text {
@@ -230,6 +272,64 @@
 
     @media screen and (min-width: $bp-768) {
       margin-top: 48px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      margin-top: 66px;
+    }
+  }
+}
+
+@media screen and (min-width: $bp-1024) and (max-width: 1439.98px) {
+  .projects {
+    &__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: stretch;
+    }
+
+    &__card {
+      &--only-1024 {
+        display: block;
+      }
+
+      &--wide-1024 {
+        grid-column: 1 / -1;
+
+        .projects__card-content {
+          position: absolute;
+          inset: 0;
+          padding: 28px 32px 32px;
+        }
+
+        .projects__card-body {
+          display: block;
+          max-width: 232px;
+        }
+
+        .projects__card-title {
+          max-width: 232px;
+        }
+
+        .projects__discover {
+          position: absolute;
+          right: 85px;
+          bottom: 36px;
+        }
+      }
+
+      &--hide-on-1024 {
+        display: none;
+      }
+
+      &--title-swap-1024 {
+        .projects__card-title--default {
+          display: none;
+        }
+
+        .projects__card-title--only-1024 {
+          display: block;
+        }
+      }
     }
   }
 }

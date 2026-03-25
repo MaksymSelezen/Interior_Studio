@@ -29,148 +29,184 @@
     position: absolute;
     display: block;
     line-height: 0;
+    width: 100%;
+    max-width: 0;
   }
 
   &__photo_1 {
-    top: 98px;
-    left: -88px;
+    top: 14.519%;
+    left: -23.467%;
+    max-width: 41.867%;
     z-index: 1;
 
     @media screen and (min-width: $bp-768) {
-      top: 198px;
-      left: -163px;
+      top: 23.827%;
+      left: -21.224%;
+      max-width: 32.422%;
     }
 
     @media screen and (min-width: $bp-1024) {
-      top: 220px;
-      left: -238px;
+      top: 27.848%;
+      left: -23.242%;
+      max-width: 28.809%;
     }
 
     @media screen and (min-width: $bp-1440) {
-      top: 184px;
-      left: -141px;
+      top: 22.604%;
+      left: -9.792%;
+      max-width: 24.167%;
     }
   }
 
   &__photo_2 {
-    top: 37px;
-    left: 53px;
+    top: 5.481%;
+    left: 14.133%;
+    max-width: 32.533%;
 
     @media screen and (min-width: $bp-768) {
-      top: 114px;
-      left: 40px;
+      top: 13.718%;
+      left: 5.208%;
+      max-width: 25.26%;
     }
 
     @media screen and (min-width: $bp-1024) {
-      top: 118px;
-      left: 4px;
+      top: 14.937%;
+      left: 0.391%;
+      max-width: 22.461%;
     }
 
     @media screen and (min-width: $bp-1440) {
-      top: 62px;
-      left: 144px;
+      top: 7.617%;
+      left: 10%;
+      max-width: 18.819%;
     }
   }
 
   &__photo_3 {
-    top: 112px;
-    right: -94px;
+    top: 16.593%;
+    right: -25.067%;
+    max-width: 46.133%;
     z-index: 1;
 
     @media screen and (min-width: $bp-768) {
-      top: -28px;
-      right: 89px;
+      top: -3.369%;
+      right: 11.589%;
+      max-width: 35.807%;
     }
 
     @media screen and (min-width: $bp-1024) {
-      top: -57px;
-      right: 275px;
+      top: -7.215%;
+      right: 26.855%;
+      max-width: 28.809%;
     }
 
     @media screen and (min-width: $bp-1440) {
-      top: -144px;
-      right: 319px;
+      top: -17.69%;
+      right: 22.153%;
+      max-width: 24.167%;
     }
   }
 
   &__photo_4 {
-    top: 135px;
-    right: -75px;
+    top: 20%;
+    right: -20%;
+    max-width: 38.933%;
+
+    @media screen and (min-width: $bp-768) {
+      top: 16.246%;
+      right: -9.766%;
+      max-width: 27.865%;
+    }
 
     @media screen and (min-width: $bp-1024) {
-      top: 118px;
-      right: 100px;
+      top: 14.937%;
+      right: 9.766%;
+      max-width: 22.461%;
     }
 
     @media screen and (min-width: $bp-1440) {
-      top: 62px;
-      right: 111px;
+      top: 7.617%;
+      right: 7.708%;
+      max-width: 18.819%;
     }
   }
 
   &__photo_5 {
-    top: 413px;
-    right: -142px;
+    top: 61.185%;
+    right: -37.867%;
+    max-width: 53.067%;
 
     @media screen and (min-width: $bp-768) {
-      top: 484px;
-      right: -252px;
+      top: 58.243%;
+      right: -32.812%;
+      max-width: 41.276%;
     }
 
     @media screen and (min-width: $bp-1024) {
-      top: 425px;
-      right: -152px;
+      top: 53.797%;
+      right: -14.844%;
+      max-width: 33.301%;
     }
 
     @media screen and (min-width: $bp-1440) {
-      top: 430px;
-      right: -88px;
+      top: 52.826%;
+      right: -6.111%;
+      max-width: 27.917%;
     }
   }
 
   &__photo_6 {
-    bottom: -13px;
-    right: 38px;
+    bottom: -1.926%;
+    right: 10.133%;
+    max-width: 28.267%;
 
     @media screen and (min-width: $bp-768) {
-      bottom: -23px;
-      right: 158px;
+      bottom: -2.768%;
+      right: 20.573%;
+      max-width: 22.005%;
     }
 
     @media screen and (min-width: $bp-1024) {
-      bottom: -4px;
-      right: 305px;
+      bottom: -0.506%;
+      right: 29.785%;
+      max-width: 17.773%;
     }
 
     @media screen and (min-width: $bp-1440) {
-      bottom: -47px;
-      right: 453px;
+      bottom: -5.774%;
+      right: 31.458%;
+      max-width: 14.861%;
     }
   }
 
   &__photo_7 {
-    bottom: 144px;
-    right: 247px;
+    bottom: 21.333%;
+    right: 65.867%;
+    max-width: 28.267%;
 
     @media screen and (min-width: $bp-768) {
-      bottom: 63px;
-      left: 46px;
+      bottom: 7.581%;
+      left: 5.99%;
+      max-width: 29.297%;
     }
 
     @media screen and (min-width: $bp-1024) {
-      bottom: 88px;
-      left: 58px;
+      bottom: 11.139%;
+      left: 5.664%;
+      max-width: 23.73%;
     }
 
     @media screen and (min-width: $bp-1440) {
-      bottom: 61px;
-      left: 280px;
+      bottom: 7.494%;
+      left: 19.444%;
+      max-width: 19.792%;
     }
   }
 
   &__photo_8 {
-    bottom: 69px;
-    left: -58px;
+    bottom: 10.222%;
+    left: -15.467%;
+    max-width: 38.933%;
 
     @media screen and (min-width: $bp-768) {
       display: none;
@@ -178,9 +214,16 @@
 
     @media screen and (min-width: $bp-1440) {
       display: block;
-      bottom: -90px;
-      left: -127px;
+      bottom: -11.057%;
+      left: -8.819%;
+      max-width: 18.819%;
     }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   &__content {
@@ -188,7 +231,8 @@
     top: 52%;
     left: 50%;
     z-index: 2;
-    width: 286px;
+    width: 76.267%;
+    max-width: 286px;
     text-align: center;
     transform: translate(-50%, -50%);
 
@@ -197,6 +241,7 @@
       flex-direction: column;
       align-items: center;
       top: 51%;
+      max-width: 390px;
     }
   }
 
@@ -245,9 +290,6 @@
     line-height: 1.7;
     color: $color-dark;
     opacity: 0.6;
-
-    @media screen and (min-width: $bp-768) {
-      min-width: 390px;
-    }
+    width: 100%;
   }
 }

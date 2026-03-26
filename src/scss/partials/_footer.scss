@@ -2,8 +2,17 @@
 
 .footer {
   &-container {
-    background-color: $color-dark;
     color: $color-bg;
+    background:
+      radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(15, 15, 15, 0.72) 0%,
+        rgba(8, 8, 8, 0.9) 100%
+      ),
+      url("../../assets/images/footer/footer_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   &__content {
@@ -14,10 +23,10 @@
     }
 
     @media screen and (min-width: $bp-1024) {
-      padding: 106px 104px 0;
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
+      padding: 106px 104px 0;
     }
 
     @media screen and (min-width: $bp-1440) {
@@ -31,8 +40,8 @@
     }
   }
 
-  @media screen and (min-width: $bp-1440) {
-    &__title_mobile {
+  &__title_mobile {
+    @media screen and (min-width: $bp-1440) {
       display: none;
     }
   }
@@ -46,27 +55,27 @@
   }
 
   &__title {
+    margin-bottom: 24px;
     font-weight: 700;
     font-size: 26px;
-    margin-bottom: 24px;
 
     @media screen and (min-width: $bp-768) {
       font-size: 32px;
     }
 
     @media screen and (min-width: $bp-1440) {
-      font-size: 36px;
       margin-bottom: 18px;
+      font-size: 36px;
     }
   }
 
   &__text {
+    max-width: 286px;
+    margin-bottom: 32px;
     font-weight: 300;
     font-size: 14px;
     line-height: 1.7066;
     opacity: 0.6;
-    max-width: 286px;
-    margin-bottom: 32px;
 
     @media screen and (min-width: $bp-768) {
       max-width: 390px;
@@ -99,10 +108,10 @@
     }
 
     @media screen and (min-width: $bp-1024) {
-      column-gap: 50px;
-      margin-bottom: 64px;
-      margin-right: 50px;
       flex: 1;
+      column-gap: 50px;
+      margin-right: 50px;
+      margin-bottom: 64px;
 
       .footer__location:nth-child(3) {
         margin-left: 28px;
@@ -120,10 +129,10 @@
   }
 
   &__city {
+    margin-bottom: 14px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.36528;
-    margin-bottom: 14px;
 
     @media screen and (min-width: $bp-768) {
       margin-bottom: 20px;
@@ -133,8 +142,8 @@
   &__address {
     font-weight: 300;
     font-size: 11px;
-    letter-spacing: 0.06em;
     line-height: 1.7;
+    letter-spacing: 0.06em;
   }
 
   &__contacts-wrap {
@@ -160,11 +169,11 @@
   }
 
   &__mail {
+    display: inline-block;
+    margin-bottom: 12px;
     font-weight: 600;
     font-size: 11px;
     letter-spacing: 0.06em;
-    display: inline-block;
-    margin-bottom: 12px;
 
     @media screen and (min-width: $bp-1024) {
       margin-bottom: 16px;
@@ -190,14 +199,14 @@
   }
 
   &__button {
+    padding: 14px 50px;
+    margin-bottom: 56px;
     font-weight: 600;
     font-size: 11px;
     letter-spacing: 0.06em;
     text-align: center;
     color: $color-dark;
     background-color: $color-bg;
-    padding: 14px 50px;
-    margin-bottom: 56px;
 
     @media screen and (min-width: $bp-768) {
       margin-bottom: 99px;
@@ -209,7 +218,7 @@
 
     @media screen and (min-width: $bp-1440) {
       padding: 14px 50px 17px;
-      margin-bottom: 121px;
+      margin-bottom: 125px;
     }
   }
 
@@ -223,11 +232,11 @@
   }
 
   &__copy {
+    margin-bottom: 14px;
+    color: #828282;
     font-weight: 300;
     font-size: 12px;
     line-height: 1.52375;
-    color: #828282;
-    margin-bottom: 14px;
   }
 
   &__made {
@@ -237,19 +246,23 @@
   }
 
   &__made-text {
+    color: #828282;
     font-weight: 300;
     font-size: 12px;
     line-height: 1.52375;
-    color: #828282;
   }
 
   &__brand {
     display: block;
     width: 94px;
     height: 23px;
+    flex-shrink: 0;
     color: #fff;
     fill: currentColor;
-    flex-shrink: 0;
     transform: translateY(-5px);
+
+    @media screen and (min-width: $bp-1440) {
+      transform: translateX(5px) translateY(-5px);
+    }
   }
 }

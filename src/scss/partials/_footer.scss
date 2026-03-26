@@ -13,8 +13,6 @@
   }
 
   &__content {
-    padding: 56px 0 0;
-
     @media screen and (min-width: $bp-768) {
       padding: 90px 76px 0;
     }
@@ -22,24 +20,9 @@
     @media screen and (min-width: $bp-1024) {
       padding: 106px 104px 0;
     }
-
-    @media screen and (min-width: $bp-1440) {
-      padding: 120px 130px 0;
-    }
   }
 
-  &__title_desctop {
-    display: none;
-
-    @media screen and (min-width: $bp-1440) {
-      display: block;
-    }
-  }
-
-  @media screen and (min-width: $bp-1440) {
-    &__title_tablet {
-      display: none;
-    }
+  &__top {
   }
 
   &__title {
@@ -49,10 +32,6 @@
 
     @media screen and (min-width: $bp-768) {
       font-size: 32px;
-    }
-
-    @media screen and (min-width: $bp-1440) {
-      font-size: 36px;
     }
   }
 
@@ -71,10 +50,6 @@
 
     @media screen and (min-width: $bp-1024) {
       margin-bottom: 48px;
-    }
-
-    @media screen and (min-width: $bp-1440) {
-      margin-bottom: 52px;
     }
   }
 
@@ -97,20 +72,9 @@
     @media screen and (min-width: $bp-1024) {
       column-gap: 50px;
       margin-bottom: 64px;
-      flex-wrap: nowrap;
-      flex-shrink: 0;
 
       .footer__location:nth-child(3) {
         margin-left: 28px;
-      }
-    }
-
-    @media screen and (min-width: $bp-1440) {
-      column-gap: 115px;
-      margin-bottom: 72px;
-
-      .footer__location:nth-child(3) {
-        margin-left: 25px;
       }
     }
   }
@@ -164,10 +128,6 @@
     letter-spacing: 0.06em;
     display: inline-block;
     margin-bottom: 12px;
-
-    @media screen and (min-width: $bp-1024) {
-      margin-bottom: 21px;
-    }
   }
 
   &__socials {
@@ -205,26 +165,12 @@
     @media screen and (min-width: $bp-1024) {
       margin-bottom: 118px;
     }
-
-    @media screen and (min-width: $bp-1440) {
-      margin-bottom: 126px;
-    }
   }
 
   &__bottom {
-    padding-bottom: 24px;
-
     @media screen and (min-width: $bp-768) {
       display: flex;
       justify-content: space-between;
-    }
-
-    @media screen and (min-width: $bp-1024) {
-      padding-bottom: 32px;
-    }
-
-    @media screen and (min-width: $bp-1440) {
-      padding-bottom: 26px;
     }
   }
 
@@ -240,10 +186,6 @@
     display: flex;
     gap: 20px;
     margin-left: 5px;
-
-    @media screen and (min-width: $bp-1440) {
-      gap: 10px;
-    }
   }
 
   &__made-text {
@@ -261,22 +203,5 @@
     fill: currentColor;
     flex-shrink: 0;
     transform: translateY(-5px);
-
-    @media screen and (min-width: $bp-1440) {
-      transform: translateX(6px) translateY(0px);
-    }
-  }
-}
-
-@media screen and (min-width: $bp-1024) {
-  .footer__info {
-    display: flex;
-    gap: 107px;
-  }
-}
-
-@media screen and (min-width: $bp-1440) {
-  .footer__info {
-    gap: 326px;
   }
 }

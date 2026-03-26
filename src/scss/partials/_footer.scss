@@ -1,28 +1,48 @@
 @use "../utils/variables" as *;
 
 .footer {
-  .container {
-  }
-
   &-container {
     background-color: $color-dark;
     color: $color-bg;
   }
 
-  &__inner {
-  }
-
   &__content {
+    padding: 56px 0 0;
+
     @media screen and (min-width: $bp-768) {
       padding: 90px 76px 0;
     }
 
     @media screen and (min-width: $bp-1024) {
       padding: 106px 104px 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      padding: 120px 130px 0;
     }
   }
 
   &__top {
+    @media screen and (min-width: $bp-1024) {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: $bp-1440) {
+    &__title_mobile {
+      display: none;
+    }
+  }
+
+  &__title_desctop {
+    display: none;
+
+    @media screen and (min-width: $bp-1440) {
+      display: block;
+    }
   }
 
   &__title {
@@ -32,6 +52,11 @@
 
     @media screen and (min-width: $bp-768) {
       font-size: 32px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      font-size: 36px;
+      margin-bottom: 18px;
     }
   }
 
@@ -50,6 +75,10 @@
 
     @media screen and (min-width: $bp-1024) {
       margin-bottom: 48px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      margin-bottom: 58px;
     }
   }
 
@@ -72,15 +101,21 @@
     @media screen and (min-width: $bp-1024) {
       column-gap: 50px;
       margin-bottom: 64px;
+      margin-right: 50px;
+      flex: 1;
 
       .footer__location:nth-child(3) {
         margin-left: 28px;
       }
     }
-  }
 
-  &__location {
-    &_full {
+    @media screen and (min-width: $bp-1440) {
+      column-gap: 115px;
+      margin-bottom: 72px;
+
+      .footer__location:nth-child(3) {
+        margin-left: 24px;
+      }
     }
   }
 
@@ -91,15 +126,8 @@
     margin-bottom: 14px;
 
     @media screen and (min-width: $bp-768) {
-      margin-bottom: 24px;
-    }
-
-    @media screen and (min-width: $bp-1024) {
       margin-bottom: 20px;
     }
-  }
-
-  &__link {
   }
 
   &__address {
@@ -114,11 +142,20 @@
       display: flex;
       gap: 183px;
     }
+
+    @media screen and (min-width: $bp-1024) {
+      display: contents;
+    }
   }
 
   &__contacts {
     @media screen and (min-width: $bp-768) {
       order: 2;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      order: 0;
+      transform: translateY(5px);
     }
   }
 
@@ -128,15 +165,16 @@
     letter-spacing: 0.06em;
     display: inline-block;
     margin-bottom: 12px;
+
+    @media screen and (min-width: $bp-1024) {
+      margin-bottom: 16px;
+    }
   }
 
   &__socials {
     display: flex;
     gap: 17px;
     margin-bottom: 46px;
-  }
-
-  &__social-item {
   }
 
   &__social-link {
@@ -146,6 +184,9 @@
   }
 
   &__action {
+    @media screen and (min-width: $bp-1024) {
+      flex-basis: 100%;
+    }
   }
 
   &__button {
@@ -165,9 +206,16 @@
     @media screen and (min-width: $bp-1024) {
       margin-bottom: 118px;
     }
+
+    @media screen and (min-width: $bp-1440) {
+      padding: 14px 50px 17px;
+      margin-bottom: 121px;
+    }
   }
 
   &__bottom {
+    padding-bottom: 24px;
+
     @media screen and (min-width: $bp-768) {
       display: flex;
       justify-content: space-between;

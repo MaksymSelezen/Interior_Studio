@@ -1,0 +1,191 @@
+@use "../../utils/variables" as *;
+
+.blog-page {
+  background-color: $color-bg;
+  color: $color-dark;
+
+  .header {
+    @media screen and (min-width: $bp-768) {
+      padding-left: 5px;
+
+      &__menu-toggle {
+        margin-left: 74px;
+      }
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding-left: 0;
+      padding-top: 32px;
+
+      &__menu-toggle {
+        margin-left: 97px;
+      }
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      padding-top: 24px;
+
+      &__menu-toggle {
+        margin-left: 97px;
+      }
+    }
+
+    &__logo-text,
+    &__menu-text,
+    &__link,
+    &__lang-select,
+    &__cta {
+      color: $color-dark;
+    }
+
+    &__menu-icon {
+      fill: $color-dark;
+    }
+
+    &__cta {
+      border-color: $color-dark;
+    }
+  }
+}
+
+.blog-hero {
+  background-color: $color-bg;
+  color: inherit;
+  padding-block: 117px 64px;
+
+  @media screen and (min-width: $bp-768) {
+    padding-block: 140px 64px;
+    padding-left: 76px;
+  }
+
+  @media screen and (min-width: $bp-1024) {
+    padding-block: 162px 104px;
+    padding-left: 104px;
+  }
+
+  @media screen and (min-width: $bp-1440) {
+    padding-block: 208px 124px;
+    padding-left: 133px;
+  }
+
+  @media screen and (min-width: $bp-1440) {
+    &__inner {
+      display: flex;
+      gap: 412px;
+    }
+  }
+
+  &__titile_tablet {
+    display: none;
+
+    @media screen and (min-width: $bp-768) {
+      display: inline-block;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+
+    @media screen and (min-width: $bp-768) {
+      margin-bottom: 12px;
+      font-size: 32px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      font-size: 36px;
+    }
+  }
+
+  &__select-wrap {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__select {
+    appearance: none;
+    padding: 7px 39px 8px 13px;
+    border: 1px solid #c4c4c4;
+    border-radius: 88px;
+    background-color: transparent;
+    color: $color-dark;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    outline: none;
+
+    @media screen and (min-width: $bp-768) {
+      display: none;
+    }
+  }
+
+  &__select-icon {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+
+  &__tabs {
+    display: none;
+
+    @media screen and (min-width: $bp-768) {
+      display: flex;
+      gap: 28px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      gap: 26px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      gap: 32px;
+    }
+  }
+
+  &__tab {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    color: $color-gray;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    transition: color 200ms ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $color-dark;
+      opacity: 0;
+      transition: opacity 200ms ease;
+    }
+
+    @media screen and (min-width: $bp-768) {
+      &:hover {
+        color: $color-dark;
+      }
+
+      &:hover::after {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__tab_active {
+    color: $color-gray;
+
+    &::after {
+      opacity: 0;
+    }
+  }
+}

@@ -1,20 +1,36 @@
 @use "../../utils/variables" as *;
 
 .blog-grid {
-  &__item {
-    margin-bottom: 6px;
-  }
-
-  @media screen and (min-width: $bp-768) {
-    &__list {
+  &__list {
+    @media screen and (min-width: $bp-768) {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 6px;
     }
+  }
 
-    &__item {
+  &__item {
+    margin-bottom: 6px;
+
+    @media screen and (min-width: $bp-768) {
       margin-bottom: 0;
       aspect-ratio: 1 / 1;
+    }
+
+    &_hidden {
+      display: none;
+
+      @media screen and (min-width: $bp-768) {
+        display: block;
+      }
+    }
+
+    &:last-child {
+      .blog-card__title {
+        @media screen and (min-width: $bp-768) {
+          transform: translateX(-5px) translateY(5px);
+        }
+      }
     }
   }
 }
@@ -22,28 +38,8 @@
 .blog-card {
   position: relative;
 
-  &_overlay {
-    .blog-card__link {
-      display: block;
-      position: relative;
-    }
-
-    .blog-card__content {
-      position: absolute;
-      left: 8px;
-      bottom: 0;
-      z-index: 1;
-      background-color: transparent;
-      padding: 0 16px 18px;
-    }
-
-    .blog-card__title {
-      margin-bottom: 0;
-    }
-
-    .blog-card__title-link {
-      color: $color-white;
-    }
+  @media screen and (min-width: $bp-768) {
+    height: 100%;
   }
 
   &__link {
@@ -52,8 +48,8 @@
 
   &__image {
     display: block;
-    object-fit: cover;
     width: 100%;
+    object-fit: cover;
   }
 
   &__content {
@@ -65,16 +61,28 @@
     margin-bottom: 24px;
 
     @media screen and (min-width: $bp-768) {
-      &_hidden {
+      max-width: 208px;
+    }
+
+    &_hidden {
+      @media screen and (min-width: $bp-768) {
         display: none;
       }
     }
   }
 
   &__title-link {
-    font-weight: 700;
     font-size: 16px;
+    font-weight: 700;
     color: $color-dark;
+  }
+
+  &__break {
+    display: none;
+
+    @media screen and (min-width: $bp-768) {
+      display: inline;
+    }
   }
 
   &__discover {
@@ -85,60 +93,66 @@
     }
   }
 
-  @media screen and (min-width: $bp-768) {
-    height: 100%;
+  &_overlay {
+    .blog-card__link {
+      position: relative;
 
-    &_discover {
-      .blog-card__link {
-        display: none;
-      }
-
-      .blog-card__content {
+      @media screen and (min-width: $bp-768) {
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 34px 22px;
-      }
-
-      .blog-card__title {
-        margin-bottom: 24px;
       }
     }
 
-    &_overlay {
-      .blog-card__link,
-      .blog-card__image {
+    .blog-card__image {
+      @media screen and (min-width: $bp-768) {
         height: 100%;
       }
+    }
 
-      .blog-card__link {
-        &::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(
-            180deg,
-            rgba($color-black, 0) 48%,
-            rgba($color-black, 0.52) 100%
-          );
-        }
-      }
+    .blog-card__content {
+      position: absolute;
+      left: 8px;
+      bottom: 0;
+      z-index: 1;
+      padding: 0 16px 18px;
+      background-color: transparent;
 
-      .blog-card__content {
+      @media screen and (min-width: $bp-768) {
         left: 0;
         right: 0;
-        padding: 0 16px 16px;
+        padding: 0 32px 32px;
       }
     }
+
+    .blog-card__title {
+      margin-bottom: 0;
+    }
+
+    .blog-card__title-link {
+      color: $color-white;
+    }
   }
-}
 
-.blog-grid__item_hidden {
-  display: none;
+  &_discover {
+    .blog-card__link {
+      @media screen and (min-width: $bp-768) {
+        display: none;
+      }
+    }
 
-  @media screen and (min-width: $bp-768) {
-    display: block;
+    .blog-card__content {
+      @media screen and (min-width: $bp-768) {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 34px 32px;
+      }
+    }
+
+    .blog-card__title {
+      @media screen and (min-width: $bp-768) {
+        margin-bottom: 40px;
+      }
+    }
   }
 }

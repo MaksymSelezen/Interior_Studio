@@ -25,10 +25,35 @@
       }
     }
 
+    &:first-child,
+    &:last-child {
+      .blog-card__text {
+        display: none;
+      }
+    }
+
+    &:first-child {
+      .blog-card__text {
+        @media screen and (min-width: $bp-1024) {
+          display: block;
+        }
+      }
+    }
+
     &:last-child {
       .blog-card__title {
         @media screen and (min-width: $bp-768) {
           transform: translateX(-5px) translateY(5px);
+        }
+
+        @media screen and (min-width: $bp-1024) {
+          transform: translateX(-5px) translateY(-20px);
+        }
+      }
+
+      .blog-card__text {
+        @media screen and (min-width: $bp-1440) {
+          display: block;
         }
       }
     }
@@ -64,6 +89,10 @@
       max-width: 208px;
     }
 
+    @media screen and (min-width: $bp-1024) {
+      max-width: 273px;
+    }
+
     &_hidden {
       @media screen and (min-width: $bp-768) {
         display: none;
@@ -75,6 +104,22 @@
     font-size: 16px;
     font-weight: 700;
     color: $color-dark;
+
+    @media screen and (min-width: $bp-1024) {
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    display: none;
+    margin-bottom: 40px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.7066;
+    color: $color-dark;
+    opacity: 0.7;
+
+    max-width: 348px;
   }
 
   &__break {
@@ -121,6 +166,11 @@
         right: 0;
         padding: 0 32px 32px;
       }
+
+      @media screen and (min-width: $bp-1024) {
+        bottom: 6px;
+        padding: 0 46px 46px;
+      }
     }
 
     .blog-card__title {
@@ -129,6 +179,11 @@
 
     .blog-card__title-link {
       color: $color-white;
+
+      @media screen and (min-width: $bp-1024) {
+        font-weight: 700;
+        font-size: 20px;
+      }
     }
   }
 
@@ -147,11 +202,19 @@
         justify-content: flex-end;
         padding: 34px 32px;
       }
+
+      @media screen and (min-width: $bp-1024) {
+        padding: 55px 46px;
+      }
     }
 
     .blog-card__title {
       @media screen and (min-width: $bp-768) {
         margin-bottom: 40px;
+      }
+
+      @media screen and (min-width: $bp-1024) {
+        margin-bottom: 24px;
       }
     }
   }

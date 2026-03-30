@@ -1,19 +1,26 @@
 @use "../../utils/variables" as *;
 
 .blog-grid {
-  &__list {
-  }
-
   &__item {
     margin-bottom: 6px;
+  }
+
+  @media screen and (min-width: $bp-768) {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px;
+    }
+
+    &__item {
+      margin-bottom: 0;
+      aspect-ratio: 1 / 1;
+    }
   }
 }
 
 .blog-card {
   position: relative;
-
-  &_discover {
-  }
 
   &_overlay {
     .blog-card__link {
@@ -24,7 +31,7 @@
     .blog-card__content {
       position: absolute;
       left: 8px;
-      bottom: 0px;
+      bottom: 0;
       z-index: 1;
       background-color: transparent;
       padding: 0 16px 18px;
@@ -50,12 +57,18 @@
   }
 
   &__content {
-    background-color: #f2f2f2;
+    background-color: $color-surface;
     padding: 20px 24px 24px;
   }
 
   &__title {
     margin-bottom: 24px;
+
+    @media screen and (min-width: $bp-768) {
+      &_hidden {
+        display: none;
+      }
+    }
   }
 
   &__title-link {
@@ -70,5 +83,62 @@
     .btn-discover__line {
       background-color: rgba($color-dark, 0.4);
     }
+  }
+
+  @media screen and (min-width: $bp-768) {
+    height: 100%;
+
+    &_discover {
+      .blog-card__link {
+        display: none;
+      }
+
+      .blog-card__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 34px 22px;
+      }
+
+      .blog-card__title {
+        margin-bottom: 24px;
+      }
+    }
+
+    &_overlay {
+      .blog-card__link,
+      .blog-card__image {
+        height: 100%;
+      }
+
+      .blog-card__link {
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            180deg,
+            rgba($color-black, 0) 48%,
+            rgba($color-black, 0.52) 100%
+          );
+        }
+      }
+
+      .blog-card__content {
+        left: 0;
+        right: 0;
+        padding: 0 16px 16px;
+      }
+    }
+  }
+}
+
+.blog-grid__item_hidden {
+  display: none;
+
+  @media screen and (min-width: $bp-768) {
+    display: block;
   }
 }

@@ -49,6 +49,10 @@
         @media screen and (min-width: $bp-1024) {
           transform: translateX(-5px) translateY(-20px);
         }
+
+        @media screen and (min-width: $bp-1440) {
+          transform: translateX(-5px) translateY(0px);
+        }
       }
 
       .blog-card__text {
@@ -93,6 +97,10 @@
       max-width: 273px;
     }
 
+    @media screen and (min-width: $bp-1440) {
+      max-width: 365px;
+    }
+
     &_hidden {
       @media screen and (min-width: $bp-768) {
         display: none;
@@ -108,6 +116,10 @@
     @media screen and (min-width: $bp-1024) {
       font-size: 20px;
     }
+
+    @media screen and (min-width: $bp-1440) {
+      font-size: 28px;
+    }
   }
 
   &__text {
@@ -118,8 +130,12 @@
     line-height: 1.7066;
     color: $color-dark;
     opacity: 0.7;
-
     max-width: 348px;
+
+    @media screen and (min-width: $bp-1440) {
+      max-width: 433px;
+      margin-bottom: 56px;
+    }
   }
 
   &__break {
@@ -171,6 +187,10 @@
         bottom: 6px;
         padding: 0 46px 46px;
       }
+
+      @media screen and (min-width: $bp-1024) {
+        padding: 0 56px 56px;
+      }
     }
 
     .blog-card__title {
@@ -183,6 +203,9 @@
       @media screen and (min-width: $bp-1024) {
         font-weight: 700;
         font-size: 20px;
+      }
+      @media screen and (min-width: $bp-1440) {
+        font-size: 28px;
       }
     }
   }
@@ -205,6 +228,10 @@
 
       @media screen and (min-width: $bp-1024) {
         padding: 55px 46px;
+      }
+
+      @media screen and (min-width: $bp-1024) {
+        padding: 65px 56px;
       }
     }
 

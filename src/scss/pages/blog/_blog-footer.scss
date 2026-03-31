@@ -16,12 +16,35 @@
 
   &__container {
     padding-block: 80px 24px;
+
+    @media screen and (min-width: $bp-768) {
+      padding-block: 104px 24px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding-block: 124px 24px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      padding-block: 140px 24px;
+    }
   }
 
   &__inner {
   }
 
   &__content {
+    @media screen and (min-width: $bp-768) {
+      padding-inline: 76px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding-inline: 104px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      padding-inline: 135px 148px;
+    }
   }
 
   &__title {
@@ -30,6 +53,23 @@
     font-size: 26px;
     font-weight: 700;
     line-height: 1.21923;
+
+    @media screen and (min-width: $bp-768) {
+      font-size: 32px;
+      max-width: 387px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      line-height: 1.424;
+      font-size: 36px;
+      max-width: 424px;
+    }
+  }
+
+  &__title-break {
+    @media screen and (min-width: $bp-1440) {
+      display: none;
+    }
   }
 
   &__text {
@@ -37,10 +77,42 @@
     font-size: 14px;
     font-weight: 300;
     line-height: 1.7066;
+
+    @media screen and (min-width: $bp-1024) {
+      max-width: 342px;
+      margin-left: auto;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      max-width: 366px;
+      margin-bottom: 34px;
+    }
+  }
+
+  &__text-hidden {
+    @media screen and (min-width: $bp-1440) {
+      display: none;
+    }
   }
 
   &__form {
     margin-bottom: 80px;
+
+    @media screen and (min-width: $bp-768) {
+      margin-bottom: 106px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      max-width: 345px;
+      margin-left: auto;
+      margin-bottom: 126px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      max-width: 368px;
+      margin-bottom: 140px;
+    }
   }
 
   &__field {
@@ -58,6 +130,10 @@
     font-weight: 300;
     line-height: 1.7;
     outline: none;
+
+    @media screen and (min-width: $bp-1440) {
+      font-size: 20px;
+    }
 
     &::placeholder {
       color: rgba(255, 255, 255, 0.7);
@@ -77,6 +153,10 @@
   }
 
   &__bottom {
+    @media screen and (min-width: $bp-768) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__copyright {
@@ -97,6 +177,14 @@
     align-items: center;
 
     transform: translateX(4px);
+
+    @media screen and (min-width: $bp-768) {
+      transform: translateX(-10px) translateY(-5px);
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      transform: translateX(-2px) translateY(-2px);
+    }
   }
 
   &__brand-text {

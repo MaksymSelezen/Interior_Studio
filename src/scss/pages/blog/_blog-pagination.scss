@@ -1,0 +1,63 @@
+@use "../../utils/variables" as *;
+
+.blog-pagination {
+  padding-block: 48px 80px;
+
+  @media screen and (min-width: $bp-768) {
+    padding-block: 56px 104px;
+  }
+
+  @media screen and (min-width: $bp-1024) {
+    padding-block: 62px 124px;
+  }
+
+  @media screen and (min-width: $bp-1440) {
+    padding-block: 96px 140px;
+  }
+
+  &__nav,
+  &__list,
+  &__item,
+  &__arrow,
+  &__link,
+  &__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__nav {
+    column-gap: 24px;
+
+    @media screen and (min-width: $bp-1024) {
+      column-gap: 32px;
+    }
+  }
+
+  &__arrow {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    color: $color-dark;
+  }
+
+  &__list {
+    column-gap: 18px;
+
+    @media screen and (min-width: $bp-1024) {
+      column-gap: 20px;
+    }
+  }
+
+  &__link,
+  &__dots {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: $color-dark;
+  }
+
+  &__dots {
+    color: rgba(8, 8, 8, 0.4);
+  }
+}

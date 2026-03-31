@@ -12,13 +12,16 @@
 @use "./partials/popup-request";
 @use "./partials/popup-success";
 @use "./partials/burger-menu";
+@use "./partials/share-social.scss";
 
 @use "./pages/main/main-page";
 @use "./pages/blog/blog-hero";
 @use "./pages/blog/blog-grid";
 @use "./pages/blog/blog-pagination";
 @use "./pages/blog/blog-footer";
-@use "./pages/blog-post/blog-post";
+
+@use "./pages/blog-post/blog-post-hero";
+
 @use "./pages/projects/projects";
 @use "./pages/one-project/one-project";
 @use "./pages/about/about";

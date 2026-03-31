@@ -1,0 +1,14 @@
+.share-social {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  &__title {
+    font-weight: 500;
+  }
+
+  &__list {
+    display: flex;
+    gap: 8px;
+  }
+}

@@ -30,9 +30,6 @@
     }
   }
 
-  &__inner {
-  }
-
   &__content {
     @media screen and (min-width: $bp-768) {
       padding-inline: 76px;
@@ -185,9 +182,6 @@
     @media screen and (min-width: $bp-1440) {
       transform: translateX(-2px) translateY(-2px);
     }
-  }
-
-  &__brand-text {
   }
 
   &__brand-logo {

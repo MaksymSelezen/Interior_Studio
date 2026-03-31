@@ -1,0 +1,60 @@
+<section class="blog-post-hero">
+  <div class="container blog-post-hero__container">
+    <div class="blog-post-hero__inner">
+      <div class="blog-post-hero__top">
+        <div class="blog-post-hero__content">
+          <h1 class="blog-post-hero__title">
+            Antrax IT - Italian factory for the production
+          </h1>
+
+          <p class="blog-post-hero__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
+            gravida urna. Donec blandit sapien eu diam ullamcorper euismod. Nam
+            tempus pellentesque ligula ut aliquam. Donec et ipsum nec quam
+            posuere maximus eu in erat. Duis laoreet finibus consectetur. Nullam
+            pulvinar ex sit amet leo gravida, sed mattis enim vehicula. Duis
+            purus nisl, consectetur ut est non, placerat eleifend turpis.
+            <br class="blog-post-hero__break" />
+            Duis auctor suscipit arcu. Aenean leo est, rutrum a eleifend eget,
+            tempor nec urna. Proin finibus lobortis arcu dictum convallis. Ut
+            fermentum eu magna vel laoreet. In lacus augue, malesuada id elit
+            sit amet, varius imperdiet ex. Nullam blandit lobortis posuere.
+          </p>
+        </div>
+
+        <div class="blog-post-hero__share">{{> partials/ui/share-social}}</div>
+      </div>
+
+      <div class="blog-post-hero__image-wrap">
+        <picture class="blog-post-hero__picture">
+          <source
+            media="(min-width: 1440px)"
+            srcset="
+              /src/assets/images/blog-post/hero/one-news-hero-photo1-1440.png
+            "
+          />
+          <source
+            media="(min-width: 1024px)"
+            srcset="
+              /src/assets/images/blog-post/hero/one-news-hero-photo1-1024.png
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              /src/assets/images/blog-post/hero/one-news-hero-photo1-768.png
+            "
+          />
+          <img
+            class="blog-post-hero__image"
+            src="/src/assets/images/blog-post/hero/one-news-hero-photo1-375.png"
+            alt="Modern interior design project"
+            loading="eager"
+            width="325"
+            height="170"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>

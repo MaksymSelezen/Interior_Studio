@@ -1,0 +1,119 @@
+@use "../../utils/variables" as *;
+
+.blog-post-article {
+  &__container {
+    padding-bottom: 64px;
+  }
+
+  &__inner {
+    @media screen and (min-width: $bp-768) {
+      padding-inline: 76px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding-inline: 104px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      padding-inline: 133px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.365;
+
+    @media screen and (min-width: $bp-768) {
+      max-width: 419px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__content {
+    max-width: 715px;
+  }
+
+  &__paragraph {
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.7066;
+    opacity: 0.7;
+
+    @media screen and (min-width: $bp-768) {
+      margin-bottom: 36px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      margin-bottom: 24px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      margin-bottom: 40px;
+    }
+
+    &_mobile {
+      @media screen and (min-width: $bp-1440) {
+        display: none;
+      }
+    }
+
+    &_desktop {
+      display: none;
+
+      @media screen and (min-width: $bp-1440) {
+        display: block;
+      }
+    }
+  }
+
+  &__break {
+    display: none;
+
+    @media screen and (min-width: $bp-1024) {
+      display: block;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      display: none;
+    }
+  }
+
+  &__list {
+    margin-bottom: 32px;
+
+    @media screen and (min-width: $bp-1024) {
+      margin-bottom: 36px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.7066;
+    opacity: 0.7;
+
+    @media screen and (min-width: $bp-1440) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__item-number {
+    margin-right: 1px;
+    font-weight: 500;
+
+    @media screen and (min-width: $bp-768) {
+      margin-right: 4px;
+    }
+  }
+}

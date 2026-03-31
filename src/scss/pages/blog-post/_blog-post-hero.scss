@@ -53,19 +53,16 @@
     padding-block: 116px 64px;
 
     @media screen and (min-width: $bp-768) {
-      padding-block: 138px 72px;
+      padding-block: 138px 74px;
     }
 
     @media screen and (min-width: $bp-1024) {
-      padding-block: 162px 88px;
+      padding-block: 162px 84px;
     }
 
     @media screen and (min-width: $bp-1440) {
-      padding-block: 208px 88px;
+      padding-block: 208px 99px;
     }
-  }
-
-  &__inner {
   }
 
   &__top {
@@ -145,12 +142,6 @@
       flex-shrink: 0;
       transform: translateX(-5px) translateY(-8px);
     }
-  }
-
-  &__image-wrap {
-  }
-
-  &__picture {
   }
 
   &__image {

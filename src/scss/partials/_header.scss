@@ -1,13 +1,16 @@
 @use "../utils/variables" as *;
 
 .header {
-  position: absolute;
-  // position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: $z-header;
   padding-top: 21px;
+  transition:
+    background-color 250ms ease,
+    backdrop-filter 250ms ease,
+    -webkit-backdrop-filter 250ms ease;
 
   @media screen and (min-width: $bp-1440) {
     padding-top: 25px;
@@ -15,6 +18,37 @@
 
   @media screen and (min-width: $bp-1920) {
     padding-top: 36px;
+  }
+
+  &.header_scrolled {
+    background-color: rgba($color-dark, 0.78);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding-bottom: 12px;
+
+    @media screen and (min-width: $bp-1440) {
+      padding-bottom: 14px;
+    }
+
+    @media screen and (min-width: $bp-1920) {
+      padding-bottom: 16px;
+    }
+
+    .header__logo-text,
+    .header__menu-text,
+    .header__link,
+    .header__lang-select,
+    .header__cta {
+      color: $color-white;
+    }
+
+    .header__menu-icon {
+      fill: $color-white;
+    }
+
+    .header__cta {
+      border-color: $color-white;
+    }
   }
 
   &__container {

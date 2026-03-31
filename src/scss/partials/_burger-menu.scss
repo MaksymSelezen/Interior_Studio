@@ -3,7 +3,7 @@
 .burger-menu {
   position: fixed;
   inset: 0;
-  z-index: $z-header;
+  z-index: $z-header + 1;
   display: flex;
   justify-content: center;
   opacity: 0;

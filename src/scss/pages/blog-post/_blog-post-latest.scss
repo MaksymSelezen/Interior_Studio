@@ -2,6 +2,7 @@
 
 .blog-post-latest {
   &__container {
+    padding-right: 0;
     padding-block: 82px 24px;
   }
 
@@ -23,7 +24,7 @@
   }
 
   &__slide {
-    width: auto;
+    min-width: 290px;
   }
 
   &__card {

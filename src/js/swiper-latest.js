@@ -10,10 +10,10 @@ const initLatestSwiper = () => {
 
   const latestSwiper = new Swiper(latestSlider, {
     loop: true,
-    loopAdditionalSlides: 1,
     speed: 500,
     grabCursor: true,
     watchOverflow: true,
+    centeredSlides: false,
     slidesPerView: 1.2,
     spaceBetween: 26,
     breakpoints: {
@@ -22,6 +22,10 @@ const initLatestSwiper = () => {
         spaceBetween: 20,
       },
     },
+  });
+
+  window.addEventListener("load", () => {
+    latestSwiper.update();
   });
 
   return latestSwiper;

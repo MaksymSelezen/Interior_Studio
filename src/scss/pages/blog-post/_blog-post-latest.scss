@@ -1,8 +1,6 @@
 @use "../../utils/variables" as *;
 
 .blog-post-latest {
-  overflow: hidden;
-
   &__container {
     padding-block: 82px 24px;
   }
@@ -25,7 +23,7 @@
   }
 
   &__slide {
-    width: 290px;
+    width: auto;
   }
 
   &__card {
@@ -35,6 +33,9 @@
   }
 
   &__image {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   &__content {

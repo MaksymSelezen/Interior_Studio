@@ -13,8 +13,10 @@ const initLatestSwiper = () => {
 
   if (mobileMedia.matches && !latestSwiper) {
     latestSwiper = new Swiper(latestSlider, {
+      loop: true,
       slidesPerView: 1.2,
       spaceBetween: 26,
+      loopAdditionalSlides: 1,
       speed: 500,
       grabCursor: true,
       watchOverflow: true,

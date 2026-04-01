@@ -14,7 +14,9 @@
   }
 
   &__main {
-    padding-left: 76px;
+    @media screen and (min-width: $bp-768) {
+      padding-left: 76px;
+    }
   }
 
   &__title {
@@ -51,6 +53,10 @@
 
   &__slide {
     min-width: 290px;
+
+    @media screen and (min-width: $bp-768) {
+      min-width: 366px;
+    }
   }
 
   &__card {

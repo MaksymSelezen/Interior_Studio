@@ -1,6 +1,8 @@
 @use "../../utils/variables" as *;
 
 .blog-post-latest {
+  overflow: hidden;
+
   &__container {
     padding-right: 0;
     padding-block: 82px 24px;
@@ -20,14 +22,14 @@
   }
 
   &__title {
+    margin-bottom: 40px;
     font-weight: 700;
     font-size: 26px;
     color: $color-black;
-    margin-bottom: 40px;
 
     @media screen and (min-width: $bp-768) {
-      font-size: 32px;
       margin-bottom: 54px;
+      font-size: 32px;
     }
 
     &_mobile {
@@ -38,6 +40,7 @@
 
     &_tablet {
       display: none;
+
       @media screen and (min-width: $bp-768) {
         display: inline-block;
       }
@@ -45,11 +48,10 @@
   }
 
   &__slider {
-    overflow: hidden;
+    overflow: visible;
   }
 
   &__wrapper {
-    display: flex;
   }
 
   &__slide {
@@ -62,9 +64,11 @@
   }
 
   &__card {
+    display: block;
   }
 
   &__picture {
+    display: block;
   }
 
   &__image {
@@ -77,13 +81,17 @@
   }
 
   &__card-title {
+    max-width: 290px;
+    margin-top: 24px;
+    margin-bottom: 16px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.3716;
     color: $color-btn;
-    margin-top: 24px;
-    max-width: 290px;
-    margin-bottom: 16px;
+
+    @media screen and (min-width: $bp-768) {
+      max-width: 290px;
+    }
   }
 
   &__card-text {
@@ -101,11 +109,11 @@
   }
 
   &__copyright {
+    margin-bottom: 10px;
     font-weight: 300;
     font-size: 12px;
     line-height: 1.52375;
     color: $color-gray;
-    margin-bottom: 10px;
   }
 
   &__brand {

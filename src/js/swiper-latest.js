@@ -14,11 +14,11 @@ const initLatestSwiper = () => {
     grabCursor: true,
     watchOverflow: true,
     centeredSlides: false,
-    slidesPerView: 1.2,
+    slidesPerView: "auto",
     spaceBetween: 26,
     breakpoints: {
       768: {
-        slidesPerView: 1.8,
+        slidesPerView: "auto",
         spaceBetween: 20,
       },
     },

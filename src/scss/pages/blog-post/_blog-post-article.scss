@@ -2,7 +2,15 @@
 
 .blog-post-article {
   &__container {
-    padding-bottom: 64px;
+    padding-bottom: 48px;
+
+    @media screen and (min-width: $bp-768) {
+      padding-bottom: 38px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding-bottom: 56px;
+    }
   }
 
   &__inner {
@@ -109,7 +117,7 @@
   }
 
   &__item-number {
-    margin-right: 1px;
+    margin-right: 3px;
     font-weight: 500;
 
     @media screen and (min-width: $bp-768) {

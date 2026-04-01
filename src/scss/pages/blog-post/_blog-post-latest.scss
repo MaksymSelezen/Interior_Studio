@@ -1,0 +1,95 @@
+@use "../../utils/variables" as *;
+
+.blog-post-latest {
+  overflow: hidden;
+
+  &__container {
+    padding-block: 82px 24px;
+  }
+
+  &__inner {
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    color: $color-black;
+    margin-bottom: 40px;
+  }
+
+  &__slider {
+    overflow: visible;
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+    width: 290px;
+  }
+
+  &__card {
+  }
+
+  &__picture {
+  }
+
+  &__image {
+  }
+
+  &__content {
+  }
+
+  &__card-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.3716;
+    color: $color-btn;
+    margin-top: 24px;
+    max-width: 290px;
+    margin-bottom: 16px;
+  }
+
+  &__card-text {
+  }
+
+  &__footer {
+    margin-top: 75px;
+  }
+
+  &__copyright {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.52375;
+    color: $color-gray;
+    margin-bottom: 10px;
+  }
+
+  &__brand {
+    display: flex;
+    gap: 28px;
+    transform: translateX(5px);
+  }
+
+  &__brand-text {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.52375;
+    color: $color-gray;
+  }
+
+  &__brand-icon {
+  }
+}
+
+.swiper {
+}
+
+.js-blog-post-latest-swiper {
+}
+
+.swiper-wrapper {
+}
+
+.swiper-slide {
+}

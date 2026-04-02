@@ -16,12 +16,19 @@
           >.
         </p>
 
-        <form class="blog-footer__form">
+        <form
+          class="blog-footer__form js-blog-footer-form"
+          action="#"
+          method="post"
+          novalidate
+        >
           <label class="blog-footer__field">
             <input
               class="blog-footer__input"
               type="email"
               name="email"
+              autocomplete="email"
+              required
               placeholder="Email"
             />
 

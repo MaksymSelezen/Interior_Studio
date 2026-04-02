@@ -1,13 +1,11 @@
 @use "../../utils/variables" as *;
 
-.projects {
+.page-projects .projects {
   background-color: $color-bg;
+  color: $color-dark;
 }
 
 .page-projects {
-  background-color: $color-bg;
-  color: $color-dark;
-
   .header {
     @media screen and (min-width: $bp-768) {
       padding-left: 5px;
@@ -53,8 +51,6 @@
 }
 
 .projects-hero {
-  color: $color-dark;
-
   &__container {
     padding-block: 36px 64px;
 
@@ -62,12 +58,33 @@
       padding-block: 110px 96px;
       padding-inline: 124px;
     }
+
+    @media screen and (min-width: $bp-1024) {
+      padding-block: 92px 104px;
+      padding-inline: 159px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      padding-block: 92px 124px;
+      padding-inline: 197px;
+    }
   }
 
   &__inner {
+    @media screen and (min-width: $bp-1440) {
+      display: grid;
+      grid-template-columns: max-content max-content;
+      grid-template-areas:
+        "title text"
+        ". categories";
+      justify-content: space-between;
+    }
   }
 
   &__content {
+    @media screen and (min-width: $bp-1440) {
+      display: contents;
+    }
   }
 
   &__title {
@@ -78,6 +95,12 @@
     @media screen and (min-width: $bp-768) {
       font-size: 32px;
       margin-bottom: 18px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      grid-area: title;
+      font-size: 36px;
+      margin-bottom: 0;
     }
   }
 
@@ -90,9 +113,32 @@
     @media screen and (min-width: $bp-768) {
       margin-bottom: 30px;
     }
+
+    @media screen and (min-width: $bp-1024) {
+      max-width: 448px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      transform: translateX(-3px) translateY(-5px);
+    }
+  }
+
+  &__text-break {
+    display: none;
+
+    @media screen and (min-width: $bp-1024) {
+      display: block;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      display: none;
+    }
   }
 
   &__categories {
+    @media screen and (min-width: $bp-1440) {
+      grid-area: categories;
+    }
   }
 
   &__select {
@@ -104,6 +150,12 @@
     @media screen and (min-width: $bp-768) {
       display: flex;
       gap: 34px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      letter-spacing: 0.06em;
+      gap: 32px;
+      transform: translateX(-2px) translateY(-5px);
     }
   }
 

@@ -8,29 +8,7 @@
       </h1>
 
       <div class="blog-hero__categories">
-        <div class="blog-hero__select-wrap">
-          <select class="blog-hero__select" name="blog-category">
-            <option value="apartments" selected>Apartments</option>
-            <option value="house">House</option>
-            <option value="office">Office</option>
-          </select>
-
-          <span class="blog-hero__select-icon" aria-hidden="true">
-            <svg
-              width="8"
-              height="5"
-              viewBox="0 0 8 5"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.495 0.494873L3.995 3.99487L0.494995 0.494873"
-                stroke="#080808"
-                stroke-width="1.4"
-              />
-            </svg>
-          </span>
-        </div>
+        {{> partials/ui/blog-category-select}}
 
         <ul class="blog-hero__tabs">
           <li class="blog-hero__tabs-item">

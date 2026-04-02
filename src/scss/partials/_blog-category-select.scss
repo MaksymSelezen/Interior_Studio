@@ -1,0 +1,33 @@
+@use "../utils/variables" as *;
+
+.blog-category-select {
+  position: relative;
+  display: inline-block;
+
+  @media screen and (min-width: $bp-768) {
+    display: none;
+  }
+
+  &__field {
+    appearance: none;
+    padding: 7px 33px 8px 13px;
+    border: 1px solid #c4c4c4;
+    border-radius: 88px;
+    background-color: transparent;
+    color: $color-dark;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+}

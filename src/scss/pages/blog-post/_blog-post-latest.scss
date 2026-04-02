@@ -20,9 +20,6 @@
     }
   }
 
-  &__inner {
-  }
-
   &__main {
     @media screen and (min-width: $bp-768) {
       padding-left: 76px;
@@ -72,9 +69,6 @@
     overflow: visible;
   }
 
-  &__wrapper {
-  }
-
   &__slide {
     flex-shrink: 0;
     max-width: 290px;
@@ -110,9 +104,6 @@
     height: auto;
   }
 
-  &__content {
-  }
-
   &__card-title {
     max-width: 290px;
     margin-top: 24px;
@@ -125,9 +116,6 @@
     @media screen and (min-width: $bp-768) {
       max-width: 290px;
     }
-  }
-
-  &__card-text {
   }
 
   &__footer {
@@ -184,16 +172,4 @@
       height: 26px;
     }
   }
-}
-
-.swiper {
-}
-
-.js-blog-post-latest-swiper {
-}
-
-.swiper-wrapper {
-}
-
-.swiper-slide {
 }

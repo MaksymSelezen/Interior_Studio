@@ -1,11 +1,67 @@
 @use "../../utils/variables" as *;
 
-.projects-hero {
+.projects {
   background-color: $color-bg;
+}
+
+.page-projects {
+  background-color: $color-bg;
+  color: $color-dark;
+
+  .header {
+    @media screen and (min-width: $bp-768) {
+      padding-left: 5px;
+
+      &__menu-toggle {
+        margin-left: 74px;
+      }
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding-left: 0;
+      padding-top: 32px;
+
+      &__menu-toggle {
+        margin-left: 97px;
+      }
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      padding-top: 24px;
+
+      &__menu-toggle {
+        margin-left: 97px;
+      }
+    }
+
+    &__logo-text,
+    &__menu-text,
+    &__link,
+    &__lang-select,
+    &__cta {
+      color: $color-dark;
+    }
+
+    &__menu-icon {
+      fill: $color-dark;
+    }
+
+    &__cta {
+      border-color: $color-dark;
+    }
+  }
+}
+
+.projects-hero {
   color: $color-dark;
 
   &__container {
     padding-block: 36px 64px;
+
+    @media screen and (min-width: $bp-768) {
+      padding-block: 110px 96px;
+      padding-inline: 124px;
+    }
   }
 
   &__inner {
@@ -18,13 +74,22 @@
     font-weight: 700;
     font-size: 26px;
     margin-bottom: 20px;
+
+    @media screen and (min-width: $bp-768) {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
   }
 
   &__text {
     font-weight: 300;
     font-size: 14px;
-    line-height: 1.7066;
+    line-height: 1.7;
     margin-bottom: 24px;
+
+    @media screen and (min-width: $bp-768) {
+      margin-bottom: 30px;
+    }
   }
 
   &__categories {
@@ -35,12 +100,20 @@
 
   &__list {
     display: none;
+
+    @media screen and (min-width: $bp-768) {
+      display: flex;
+      gap: 34px;
+    }
   }
 
   &__item {
   }
 
   &__link {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1.7066;
   }
 
   &__link_active {

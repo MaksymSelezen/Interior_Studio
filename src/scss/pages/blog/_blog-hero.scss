@@ -1,205 +1,159 @@
 @use "../../utils/variables" as *;
 
-.blog-footer {
-  background-image: url("/src/assets/images/blog/blog-footer/news-footer-photo-375.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: $color-white;
+.blog-page {
+  background-color: $color-bg;
+  color: $color-dark;
+
+  .header {
+    @media screen and (min-width: $bp-768) {
+      padding-left: 5px;
+
+      &__menu-toggle {
+        margin-left: 74px;
+      }
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding-left: 0;
+      padding-top: 32px;
+
+      &__menu-toggle {
+        margin-left: 97px;
+      }
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      padding-top: 24px;
+
+      &__menu-toggle {
+        margin-left: 97px;
+      }
+    }
+
+    &__logo-text,
+    &__menu-text,
+    &__link,
+    &__lang-select,
+    &__cta {
+      color: $color-dark;
+    }
+
+    &__menu-icon {
+      fill: $color-dark;
+    }
+
+    &__cta {
+      border-color: $color-dark;
+    }
+  }
+}
+
+.blog-hero {
+  background-color: $color-bg;
+  color: inherit;
+  padding-block: 117px 64px;
 
   @media screen and (min-width: $bp-768) {
-    background-image: url("/src/assets/images/blog/blog-footer/news-footer-photo-768.png");
+    padding-block: 140px 90px;
+    padding-left: 76px;
+  }
+
+  @media screen and (min-width: $bp-1024) {
+    padding-block: 162px 100px;
+    padding-left: 104px;
   }
 
   @media screen and (min-width: $bp-1440) {
-    background-image: url("/src/assets/images/blog/blog-footer/news-footer-photo-1440.png");
+    padding-block: 208px 104px;
+    padding-left: 133px;
   }
 
-  &__container {
-    padding-block: 80px 24px;
-
-    @media screen and (min-width: $bp-768) {
-      padding-block: 104px 24px;
-    }
-
-    @media screen and (min-width: $bp-1024) {
-      padding-block: 124px 24px;
-    }
-
-    @media screen and (min-width: $bp-1440) {
-      padding-block: 140px 24px;
+  @media screen and (min-width: $bp-1440) {
+    &__inner {
+      display: flex;
+      align-items: center;
+      gap: 412px;
     }
   }
 
-  &__content {
+  &__titile_tablet {
+    display: none;
+
     @media screen and (min-width: $bp-768) {
-      padding-inline: 76px;
-    }
-
-    @media screen and (min-width: $bp-1024) {
-      padding-inline: 104px;
-    }
-
-    @media screen and (min-width: $bp-1440) {
-      padding-inline: 135px 148px;
+      display: inline-block;
     }
   }
 
   &__title {
-    max-width: 292px;
     margin-bottom: 24px;
     font-size: 26px;
     font-weight: 700;
-    line-height: 1.21923;
+    line-height: 1;
 
     @media screen and (min-width: $bp-768) {
       font-size: 32px;
-      max-width: 387px;
     }
 
     @media screen and (min-width: $bp-1440) {
-      line-height: 1.424;
       font-size: 36px;
-      max-width: 424px;
     }
   }
 
-  &__title-break {
-    @media screen and (min-width: $bp-1440) {
-      display: none;
-    }
-  }
+  &__tabs {
+    display: none;
 
-  &__text {
-    margin-bottom: 32px;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.7066;
-
-    @media screen and (min-width: $bp-1024) {
-      max-width: 342px;
-      margin-left: auto;
-      margin-bottom: 20px;
-    }
-
-    @media screen and (min-width: $bp-1440) {
-      max-width: 366px;
-      margin-bottom: 34px;
-    }
-  }
-
-  &__text-hidden {
-    @media screen and (min-width: $bp-1440) {
-      display: none;
-    }
-  }
-
-  &__form {
-    margin-bottom: 80px;
-
-    @media screen and (min-width: $bp-768) {
-      margin-bottom: 106px;
-    }
-
-    @media screen and (min-width: $bp-1024) {
-      max-width: 345px;
-      margin-left: auto;
-      margin-bottom: 126px;
-    }
-
-    @media screen and (min-width: $bp-1440) {
-      max-width: 368px;
-      margin-bottom: 140px;
-    }
-  }
-
-  &__field {
-    position: relative;
-    display: flex;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  }
-
-  &__input {
-    width: 100%;
-    padding: 0 0 9px 0;
-    border: none;
-    background-color: transparent;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.7;
-    outline: none;
-    border-bottom: 1px solid transparent;
-
-    @media screen and (min-width: $bp-1440) {
-      font-size: 20px;
-    }
-
-    &::placeholder {
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    &.is-invalid {
-      border-bottom-color: #c45d48;
-    }
-  }
-
-  &__error-label {
-    position: absolute;
-    left: 0;
-    top: calc(100% + 8px);
-    font-size: 10px;
-    line-height: 1.4;
-    letter-spacing: 0.04em;
-    color: #ffd7d1;
-  }
-
-  &__submit {
-    position: absolute;
-    right: 0;
-    bottom: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-
-  &__bottom {
     @media screen and (min-width: $bp-768) {
       display: flex;
-      justify-content: space-between;
+      gap: 28px;
     }
-  }
 
-  &__copyright {
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 1.52375;
-    color: $color-gray;
-    margin-bottom: 8px;
-  }
-
-  &__brand {
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 1.52375;
-    color: $color-gray;
-    display: flex;
-    gap: 30px;
-    align-items: center;
-
-    transform: translateX(4px);
-
-    @media screen and (min-width: $bp-768) {
-      transform: translateX(-10px) translateY(-5px);
+    @media screen and (min-width: $bp-1024) {
+      gap: 26px;
     }
 
     @media screen and (min-width: $bp-1440) {
-      transform: translateX(-2px) translateY(-2px);
+      gap: 32px;
     }
   }
 
-  &__brand-logo {
-    fill: $color-white;
+  &__tab {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    color: $color-gray;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    transition: color 200ms ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $color-dark;
+      opacity: 0;
+      transition: opacity 200ms ease;
+    }
+
+    @media screen and (min-width: $bp-768) {
+      &:hover {
+        color: $color-dark;
+      }
+
+      &:hover::after {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__tab_active {
+    color: $color-gray;
+
+    &::after {
+      opacity: 0;
+    }
   }
 }

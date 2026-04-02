@@ -1,0 +1,48 @@
+@use "../../utils/variables" as *;
+
+.projects-hero {
+  background-color: $color-bg;
+  color: $color-dark;
+
+  &__container {
+    padding-block: 36px 64px;
+  }
+
+  &__inner {
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.7066;
+    margin-bottom: 24px;
+  }
+
+  &__categories {
+  }
+
+  &__select {
+  }
+
+  &__list {
+    display: none;
+  }
+
+  &__item {
+  }
+
+  &__link {
+  }
+
+  &__link_active {
+  }
+}

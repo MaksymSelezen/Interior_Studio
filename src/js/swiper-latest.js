@@ -18,8 +18,13 @@ const initLatestSwiper = () => {
     spaceBetween: 26,
     breakpoints: {
       768: {
-        slidesPerView: "auto",
         spaceBetween: 20,
+      },
+      1024: {
+        spaceBetween: 40,
+      },
+      1440: {
+        spaceBetween: 48,
       },
     },
   });

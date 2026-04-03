@@ -64,18 +64,7 @@
       position: relative;
       overflow: hidden;
       isolation: isolate;
-      &::after {
-        position: absolute;
-        inset: 0;
-        content: "";
-        background: linear-gradient(
-          180deg,
-          rgba($color-black, 0.18) 0%,
-          rgba($color-black, 0.08) 32%,
-          rgba($color-black, 0.52) 100%
-        );
-        pointer-events: none;
-      }
+
       picture,
       img {
         display: block;

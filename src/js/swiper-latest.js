@@ -1,5 +1,4 @@
 import Swiper from "swiper";
-import "swiper/css";
 
 const latestSliderSelector = ".js-blog-post-latest-swiper";
 

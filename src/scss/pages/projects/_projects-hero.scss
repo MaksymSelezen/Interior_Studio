@@ -141,9 +141,6 @@
     }
   }
 
-  &__select {
-  }
-
   &__list {
     display: none;
 
@@ -159,15 +156,9 @@
     }
   }
 
-  &__item {
-  }
-
   &__link {
     font-weight: 500;
     font-size: 11px;
     line-height: 1.7066;
-  }
-
-  &__link_active {
   }
 }

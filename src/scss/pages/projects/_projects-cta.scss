@@ -1,0 +1,121 @@
+@use "../../utils/variables" as *;
+
+.page-projects .projects {
+  padding-bottom: 0;
+}
+
+.projects-cta {
+  &__container {
+    padding-block: 96px 24px;
+
+    @media screen and (min-width: $bp-768) {
+      padding-block: 104px 24px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding-block: 120px 24px;
+    }
+  }
+
+  &__inner {
+  }
+
+  &__content {
+    @media screen and (min-width: $bp-768) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 121%;
+    margin-bottom: 16px;
+    max-width: 291px;
+
+    @media screen and (min-width: $bp-768) {
+      font-size: 32px;
+      line-height: 142%;
+      margin-bottom: 24px;
+      max-width: 443px;
+      text-align: center;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      max-width: 360px;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 171%;
+    margin-bottom: 38px;
+
+    @media screen and (min-width: $bp-768) {
+      max-width: 448px;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__button {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    border: 1px solid #080808;
+    padding: 14px 48px;
+    margin-bottom: 96px;
+
+    @media screen and (min-width: $bp-768) {
+      margin-bottom: 110px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      margin-bottom: 128px;
+    }
+  }
+
+  &__bottom {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 152%;
+    color: #828282;
+
+    @media screen and (min-width: $bp-768) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__copyright {
+    margin-bottom: 12px;
+  }
+
+  &__made-with {
+    display: flex;
+    gap: 30px;
+    transform: translateX(5px);
+
+    @media screen and (min-width: $bp-768) {
+      transform: translateX(-9px) translateY(-2px);
+    }
+  }
+
+  &__made-with-text {
+  }
+
+  &__logo {
+    @media screen and (min-width: $bp-768) {
+      transform: translateY(-5px);
+    }
+  }
+}

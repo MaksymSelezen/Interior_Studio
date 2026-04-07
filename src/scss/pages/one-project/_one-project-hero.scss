@@ -19,15 +19,30 @@ $one-project-hero-backgrounds: (
   &__container {
     color: $color-white;
     padding-block: 110px 25px;
+
+    @media screen and (min-width: $bp-768) {
+      padding-block: 368px 34px;
+    }
   }
 
   &__content {
+  }
+
+  &__info {
+    @media screen and (min-width: $bp-768) {
+      padding-inline: 76px;
+    }
   }
 
   &__title {
     margin-bottom: 16px;
     font-size: 26px;
     font-weight: 700;
+
+    @media screen and (min-width: $bp-768) {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
   }
 
   &__title-break {
@@ -39,15 +54,28 @@ $one-project-hero-backgrounds: (
     font-size: 14px;
     font-weight: 400;
     line-height: 171%;
+
+    @media screen and (min-width: $bp-768) {
+      max-width: 464px;
+      margin-bottom: 38px;
+    }
   }
 
   &__text-break {
+    @media screen and (min-width: $bp-768) {
+      display: none;
+    }
   }
 
   &__meta {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @media screen and (min-width: $bp-768) {
+      flex-direction: row;
+      gap: 32px;
+    }
   }
 
   &__meta-item {
@@ -78,11 +106,18 @@ $one-project-hero-backgrounds: (
   }
 
   &__share {
-    margin-top: 58px;
+    margin-top: 64px;
+
+    @media screen and (min-width: $bp-768) {
+      margin-top: 312px;
+    }
 
     .share-social {
       flex-direction: row;
       gap: 16px;
+      @media screen and (min-width: $bp-768) {
+        gap: 32px;
+      }
     }
 
     .share-social__title {
@@ -95,6 +130,26 @@ $one-project-hero-backgrounds: (
     }
 
     .share-social__link {
+      background-color: transparent;
+    }
+
+    .share-social__link_facebook .share-social__icon {
+      --color1: transparent;
+      --color2: #fff;
+    }
+
+    .share-social__link_twitter .share-social__icon {
+      --color4: transparent;
+      --color2: #fff;
+    }
+
+    .share-social__link_linkedin .share-social__icon {
+      --color3: transparent;
+      --color2: #fff;
+    }
+
+    .share-social__link_share .share-social__icon {
+      --color1: #fff;
     }
 
     .share-social__icon {

@@ -15,74 +15,82 @@
     @media screen and (min-width: $bp-1024) {
       padding-block: 120px 24px;
     }
+
+    @media screen and (min-width: $bp-1440) {
+      padding-block: 109px 24px;
+    }
   }
 
   &__inner {
   }
 
+  //* ========== HANDLEBARS ==========
+
   &__content {
-    @media screen and (min-width: $bp-768) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .projects__bottom {
+    }
+
+    .projects__bottom-layout {
+      transform: translateY(-100px);
+    }
+
+    .projects__bottom-title {
+      margin: 0 0 16px;
+
+      @media screen and (min-width: $bp-768) {
+        margin: 0 auto 24px;
+      }
+
+      @media screen and (min-width: $bp-1024) {
+        max-width: 361px;
+      }
+    }
+
+    .projects__bottom-break {
+      @media screen and (min-width: $bp-768) {
+        display: none;
+      }
+    }
+
+    .projects__bottom-collage {
+      @media screen and (min-width: $bp-1440) {
+        transform: translateX(-2px) translateY(-14px);
+      }
+    }
+
+    .projects__bottom-collage-image {
+    }
+
+    .projects__bottom-content {
+      transform: translateX(-151px) translateY(224px);
+    }
+
+    .projects__bottom-text {
+    }
+
+    .projects__bottom-action {
+    }
+
+    .projects__bottom-button {
+      border: 1px solid #080808;
+      margin-block: 40px 94px;
+      padding: 14px 48px;
+
+      @media screen and (min-width: $bp-768) {
+        margin-block: 48px 110px;
+      }
+
+      @media screen and (min-width: $bp-1024) {
+        margin-block: 64px 128px;
+      }
+
+      @media screen and (min-width: $bp-1440) {
+        margin-block: 46px 0;
+      }
     }
   }
 
-  &__title {
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 121%;
-    margin-bottom: 16px;
-    max-width: 291px;
-
-    @media screen and (min-width: $bp-768) {
-      font-size: 32px;
-      line-height: 142%;
-      margin-bottom: 24px;
-      max-width: 443px;
-      text-align: center;
-    }
-
-    @media screen and (min-width: $bp-1024) {
-      max-width: 360px;
-    }
-  }
-
-  &__text {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 171%;
-    margin-bottom: 38px;
-
-    @media screen and (min-width: $bp-768) {
-      max-width: 448px;
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    @media screen and (min-width: $bp-1024) {
-      margin-bottom: 64px;
-    }
-  }
-
-  &__button {
-    font-weight: 600;
-    font-size: 11px;
-    letter-spacing: 0.06em;
-    text-align: center;
-    border: 1px solid #080808;
-    padding: 14px 48px;
-    margin-bottom: 96px;
-
-    @media screen and (min-width: $bp-768) {
-      margin-bottom: 110px;
-    }
-
-    @media screen and (min-width: $bp-1024) {
-      margin-bottom: 128px;
-    }
-  }
+  //* ====================
 
   &__bottom {
     font-weight: 300;
@@ -93,6 +101,10 @@
     @media screen and (min-width: $bp-768) {
       display: flex;
       justify-content: space-between;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      padding-top: 194px;
     }
   }
 
@@ -107,6 +119,10 @@
 
     @media screen and (min-width: $bp-768) {
       transform: translateX(-9px) translateY(-2px);
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      transform: translateX(-1px) translateY(-2px);
     }
   }
 

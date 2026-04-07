@@ -1,0 +1,103 @@
+@use "../../utils/variables" as *;
+
+$one-project-hero-backgrounds: (
+  $bp-768: "/src/assets/images/one-project/one-project-hero-photo1-768.png",
+  $bp-1024: "/src/assets/images/one-project/one-project-hero-photo1-1024.png",
+  $bp-1440: "/src/assets/images/one-project/one-project-hero-photo1-1440.png",
+);
+
+.one-project-hero {
+  background: center / cover no-repeat
+    url("/src/assets/images/one-project/one-project-hero-photo1-375.png");
+
+  @each $breakpoint, $image in $one-project-hero-backgrounds {
+    @media screen and (min-width: $breakpoint) {
+      background-image: url(#{$image});
+    }
+  }
+
+  &__container {
+    color: $color-white;
+    padding-block: 110px 25px;
+  }
+
+  &__content {
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  &__title-break {
+  }
+
+  &__text {
+    max-width: 327px;
+    margin-bottom: 32px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 171%;
+  }
+
+  &__text-break {
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__meta-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__meta-item_location {
+  }
+
+  &__meta-item_date {
+  }
+
+  &__meta-item_area {
+  }
+
+  &__meta-icon {
+    fill: #fff;
+    opacity: 0.7;
+  }
+
+  &__meta-text {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    opacity: 0.7;
+  }
+
+  &__share {
+    margin-top: 58px;
+
+    .share-social {
+      flex-direction: row;
+      gap: 16px;
+    }
+
+    .share-social__title {
+    }
+
+    .share-social__list {
+    }
+
+    .share-social__item {
+    }
+
+    .share-social__link {
+    }
+
+    .share-social__icon {
+    }
+  }
+}

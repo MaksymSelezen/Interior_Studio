@@ -23,14 +23,28 @@ $one-project-hero-backgrounds: (
     @media screen and (min-width: $bp-768) {
       padding-block: 368px 34px;
     }
-  }
 
-  &__content {
+    @media screen and (min-width: $bp-1024) {
+      padding-block: 232px 34px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      padding-block: 262px 40px;
+      padding-inline: 42px;
+    }
   }
 
   &__info {
     @media screen and (min-width: $bp-768) {
       padding-inline: 76px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding-inline: 104px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      padding-inline: 155px;
     }
   }
 
@@ -43,9 +57,16 @@ $one-project-hero-backgrounds: (
       font-size: 32px;
       margin-bottom: 24px;
     }
+
+    @media screen and (min-width: $bp-1440) {
+      font-size: 36px;
+    }
   }
 
   &__title-break {
+    @media screen and (min-width: $bp-1440) {
+      display: none;
+    }
   }
 
   &__text {
@@ -58,6 +79,14 @@ $one-project-hero-backgrounds: (
     @media screen and (min-width: $bp-768) {
       max-width: 464px;
       margin-bottom: 38px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      margin-bottom: 54px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      margin-bottom: 65px;
     }
   }
 
@@ -84,15 +113,6 @@ $one-project-hero-backgrounds: (
     gap: 12px;
   }
 
-  &__meta-item_location {
-  }
-
-  &__meta-item_date {
-  }
-
-  &__meta-item_area {
-  }
-
   &__meta-icon {
     fill: #fff;
     opacity: 0.7;
@@ -112,21 +132,29 @@ $one-project-hero-backgrounds: (
       margin-top: 312px;
     }
 
+    @media screen and (min-width: $bp-768) {
+      margin-top: 178px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      margin-top: 199px;
+    }
+
     .share-social {
       flex-direction: row;
       gap: 16px;
+
       @media screen and (min-width: $bp-768) {
         gap: 32px;
       }
-    }
 
-    .share-social__title {
-    }
+      @media screen and (min-width: $bp-1024) {
+        gap: 60px;
+      }
 
-    .share-social__list {
-    }
-
-    .share-social__item {
+      @media screen and (min-width: $bp-1440) {
+        gap: 111px;
+      }
     }
 
     .share-social__link {
@@ -150,9 +178,6 @@ $one-project-hero-backgrounds: (
 
     .share-social__link_share .share-social__icon {
       --color1: #fff;
-    }
-
-    .share-social__icon {
     }
   }
 }

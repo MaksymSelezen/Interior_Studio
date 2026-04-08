@@ -2,35 +2,85 @@
 
 .page--contacts {
   min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 
   .footer {
+    display: flex;
+    flex: 1 0 auto;
+    margin-top: auto;
+
     &-container {
+      display: flex;
+      flex: 1 0 auto;
+      flex-direction: column;
       padding-top: 95px;
       padding-bottom: 24px;
+
+      @media screen and (min-width: $bp-768) {
+        padding-top: 48px;
+      }
+
+      @media screen and (min-width: $bp-1024) {
+        padding-top: 62px;
+      }
+
+      @media screen and (min-width: $bp-1440) {
+        padding-top: 52px;
+      }
+    }
+
+    &__inner {
+      display: flex;
+      flex: 1 0 auto;
+      flex-direction: column;
+      min-height: 100%;
     }
 
     &__content {
       padding-top: 0;
 
       @media screen and (min-width: $bp-768) {
-        padding: 247px 76px;
+        margin-top: auto;
+      }
+    }
+
+    &__contacts-wrap {
+      @media screen and (min-width: $bp-768) {
+        align-items: flex-end;
       }
 
       @media screen and (min-width: $bp-1024) {
-        padding: 112px 102px 124px 102px;
+        align-items: initial;
       }
+    }
 
-      @media screen and (min-width: $bp-1440) {
-        padding: 87px 130px;
+    &__socials {
+      @media screen and (min-width: $bp-768) {
+        margin-bottom: 0;
       }
     }
 
     &__button {
       margin-bottom: 35px;
+
+      @media screen and (min-width: $bp-768) {
+        margin-bottom: 0;
+      }
     }
 
     &__bottom {
+      margin-top: auto;
       padding-bottom: 0;
+
+      @media screen and (min-width: $bp-1024) {
+        transform: translateY(10px);
+      }
+
+      @media screen and (min-width: $bp-1440) {
+        transform: translateY(-2px);
+      }
     }
 
     &__brand {

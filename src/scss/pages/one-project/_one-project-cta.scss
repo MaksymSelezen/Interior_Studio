@@ -1,0 +1,148 @@
+@use "../../utils/variables" as *;
+
+.one-project-cta {
+  &__container {
+    padding-top: 94px;
+
+    @media screen and (min-width: $bp-768) {
+      padding-top: 124px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding-top: 142px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      padding-top: 0;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: $bp-1440) {
+      display: none;
+    }
+  }
+
+  &__projects-bottom {
+    display: none;
+
+    @media screen and (min-width: $bp-1440) {
+      display: block;
+    }
+
+    .projects__bottom-layout {
+      @media screen and (min-width: $bp-1440) {
+        margin-bottom: 300px;
+      }
+    }
+  }
+
+  &__title {
+    max-width: 291px;
+    margin-bottom: 22px;
+
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 121%;
+
+    @media screen and (min-width: $bp-768) {
+      max-width: 361px;
+
+      font-size: 32px;
+      line-height: 142%;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 171%;
+
+    @media screen and (min-width: $bp-768) {
+      max-width: 455px;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin-top: 36px;
+    margin-bottom: 96px;
+    padding: 14px 50px;
+
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: $color-dark;
+    background-color: $color-white;
+
+    @media screen and (min-width: $bp-768) {
+      margin-top: 48px;
+      margin-bottom: 124px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      margin-top: 68px;
+      margin-bottom: 142px;
+    }
+  }
+
+  &__next {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__label {
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 134%;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $bp-768) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__next-title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 26px;
+    color: $color-surface;
+
+    @media screen and (min-width: $bp-768) {
+      margin-bottom: 72px;
+      font-size: 32px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      margin-bottom: 96px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      font-size: 36px;
+      margin-bottom: 128px;
+    }
+  }
+
+  &__picture {
+    display: block;
+    width: 100%;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,64 @@
+@use "../../utils/variables" as *;
+
+.one-project-article {
+  padding-block: 78px 80px;
+  padding-inline: 25px;
+
+  @media screen and (min-width: $bp-768) {
+    padding-block: 102px 104px;
+    padding-inline: 124px;
+  }
+
+  @media screen and (min-width: $bp-1024) {
+    padding-block: 122px 124px;
+    padding-inline: 160px;
+  }
+
+  @media screen and (min-width: $bp-1440) {
+    padding-block: 142px 140px;
+    padding-inline: 197px;
+  }
+
+  &__container {
+    padding: 0;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 137%;
+
+    @media screen and (min-width: $bp-768) {
+      max-width: 419px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 34px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 171%;
+    opacity: 0.7;
+
+    @media screen and (min-width: $bp-1024) {
+      max-width: 602px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      max-width: 715px;
+    }
+  }
+
+  &__discover {
+    color: $color-dark;
+
+    .btn-discover__line {
+      background-color: rgba($color-dark, 0.4);
+    }
+  }
+}

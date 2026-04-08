@@ -1,0 +1,56 @@
+<section class="one-project-cta theme-dark">
+  <div class="container one-project-cta__container">
+    <div class="one-project-cta__top">
+      <h2 class="one-project-cta__title">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </h2>
+
+      <p class="one-project-cta__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+        ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante
+        felis, aliquam eu enim sed, ornare pretium velit.
+      </p>
+
+      <button class="one-project-cta__button js-open-request" type="button">
+        Make request
+      </button>
+    </div>
+
+    <div class="one-project-cta__projects-bottom">
+      {{> pages/main/main-projects-bottom buttonClass="js-open-request"}}
+    </div>
+
+    <a class="one-project-cta__next" href="#">
+      <span class="one-project-cta__label">Next project</span>
+
+      <h3 class="one-project-cta__next-title">Perfect proportions</h3>
+
+      <picture class="one-project-cta__picture">
+        <source
+          media="(min-width: 1440px)"
+          srcset="
+            /src/assets/images/one-project/cta/one-project-cta-photo1-1440.png
+          "
+        />
+        <source
+          media="(min-width: 1024px)"
+          srcset="
+            /src/assets/images/one-project/cta/one-project-cta-photo1-1024.png
+          "
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            /src/assets/images/one-project/cta/one-project-cta-photo1-768.png
+          "
+        />
+        <img
+          class="one-project-cta__image"
+          src="/src/assets/images/one-project/cta/one-project-cta-photo1-375.png"
+          alt="Perfect proportions project"
+          loading="lazy"
+        />
+      </picture>
+    </a>
+  </div>
+</section>

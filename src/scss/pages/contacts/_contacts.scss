@@ -1,14 +1,44 @@
+@use "../../utils/variables" as *;
+
 .page--contacts {
-  .footer-container {
-    padding-top: 95px;
-    padding-bottom: 24px;
-  }
+  min-height: 100vh;
 
-  .footer__content {
-    padding-top: 0;
-  }
+  .footer {
+    &-container {
+      padding-top: 95px;
+      padding-bottom: 24px;
+    }
 
-  .footer__bottom {
-    padding-bottom: 0;
+    &__content {
+      padding-top: 0;
+
+      @media screen and (min-width: $bp-768) {
+        padding: 247px 76px;
+      }
+
+      @media screen and (min-width: $bp-1024) {
+        padding: 112px 102px 124px 102px;
+      }
+
+      @media screen and (min-width: $bp-1440) {
+        padding: 87px 130px;
+      }
+    }
+
+    &__button {
+      margin-bottom: 35px;
+    }
+
+    &__bottom {
+      padding-bottom: 0;
+    }
+
+    &__brand {
+      transform: translateY(-20px);
+
+      @media screen and (min-width: $bp-768) {
+        transform: translateY(-2px);
+      }
+    }
   }
 }

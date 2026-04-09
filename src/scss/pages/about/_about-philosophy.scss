@@ -1,0 +1,101 @@
+@use "../../utils/variables" as *;
+
+.about-philosophy {
+  padding-block: 64px;
+
+  &__container {
+    overflow: hidden;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 0.93;
+    color: $color-dark;
+  }
+
+  &__text {
+    max-width: 318px;
+    margin-bottom: 38px;
+    font-size: 14px;
+    line-height: 1.36;
+    color: $color-dark;
+  }
+
+  &__pagination {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    color: rgba($color-dark, 0.26);
+  }
+
+  &__arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 0;
+    color: currentColor;
+    background-color: transparent;
+    transition: color 300ms ease;
+
+    &:disabled {
+      opacity: 0.55;
+      cursor: default;
+    }
+  }
+
+  &__arrow-icon {
+    display: block;
+    fill: none;
+    stroke: currentColor;
+  }
+
+  &__pagination-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 12px;
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+
+  &__pagination-progress {
+    width: 88px;
+    height: 1px;
+    background-color: rgba($color-dark, 0.26);
+  }
+
+  &__pagination-progress-line {
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: rgba($color-dark, 0.7);
+    transition: width 350ms ease;
+  }
+
+  &__slider {
+    overflow: visible;
+  }
+
+  &__slider-wrapper {
+    align-items: stretch;
+  }
+
+  &__slide {
+    width: 287px;
+    flex-shrink: 0;
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 287 / 258;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,53 @@
+@use "../../utils/variables" as *;
+
+.page-about {
+  .header {
+    &__logo-text,
+    &__menu-text,
+    &__link,
+    &__lang-select,
+    &__cta {
+      color: $color-dark;
+    }
+
+    &__menu-icon {
+      fill: $color-dark;
+    }
+
+    &__cta {
+      border-color: $color-dark;
+    }
+
+    &.header_scrolled {
+      .header__logo-text,
+      .header__menu-text,
+      .header__link,
+      .header__lang-select,
+      .header__cta {
+        color: $color-white;
+      }
+
+      .header__menu-icon {
+        fill: $color-white;
+      }
+
+      .header__cta {
+        border-color: $color-white;
+      }
+    }
+  }
+}
+
+.about-hero {
+  &__container {
+  }
+
+  &__content {
+  }
+
+  &__title {
+  }
+
+  &__text {
+  }
+}

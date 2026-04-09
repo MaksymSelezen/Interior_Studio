@@ -30,11 +30,58 @@ function getHtmlInputs() {
   return inputs;
 }
 
+function isHtmlPageRequest(req) {
+  if (!req.url) return false;
+  if (req.method !== "GET" && req.method !== "HEAD") return false;
+
+  const acceptHeader = req.headers.accept || "";
+  return acceptHeader.includes("text/html");
+}
+
+function createNotFoundRedirectMiddleware(validHtmlRoutes) {
+  return (req, res, next) => {
+    if (!isHtmlPageRequest(req)) {
+      next();
+      return;
+    }
+
+    const { pathname } = new URL(req.url, "http://localhost");
+
+    if (validHtmlRoutes.has(pathname)) {
+      next();
+      return;
+    }
+
+    res.statusCode = 302;
+    res.setHeader("Location", "/404.html");
+    res.end();
+  };
+}
+
 export default defineConfig(() => {
   const inputs = getHtmlInputs();
+  const validHtmlRoutes = new Set(["/", "/index.html"]);
+
+  Object.keys(inputs).forEach((key) => {
+    const route = key === "index" ? "/" : `/${key}.html`;
+    validHtmlRoutes.add(route);
+  });
+
+  const notFoundRedirectMiddleware =
+    createNotFoundRedirectMiddleware(validHtmlRoutes);
 
   return {
     plugins: [
+      {
+        name: "redirect-invalid-routes-to-404",
+        enforce: "pre",
+        configureServer(server) {
+          server.middlewares.use(notFoundRedirectMiddleware);
+        },
+        configurePreviewServer(server) {
+          server.middlewares.use(notFoundRedirectMiddleware);
+        },
+      },
       handlebars({
         partialDirectory: resolve(rootDir, "src/html"),
 

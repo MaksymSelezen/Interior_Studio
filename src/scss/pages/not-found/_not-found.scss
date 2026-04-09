@@ -1,7 +1,16 @@
 @use "../../utils/variables" as *;
 
 .page--not-found {
-  background-color: $color-dark;
+  background:
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(15, 15, 15, 0.72) 0%,
+      rgba(8, 8, 8, 0.9) 100%
+    ),
+    url("../../../assets/images/footer/footer_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: $color-white;
   min-height: 100vh;
   min-height: 100dvh;

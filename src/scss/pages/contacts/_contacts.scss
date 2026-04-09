@@ -3,8 +3,16 @@
 .page--contacts {
   min-height: 100vh;
   min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
+
+  .loading-content {
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts {
+    flex: 0 0 auto;
+  }
 
   .footer {
     display: flex;
@@ -15,6 +23,7 @@
       display: flex;
       flex: 1 0 auto;
       flex-direction: column;
+      width: 100%;
       padding-top: 95px;
       padding-bottom: 24px;
 

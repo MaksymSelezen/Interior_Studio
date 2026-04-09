@@ -4,3 +4,5 @@ import "./header";
 import "./swiper";
 import "./swiper-latest";
 import "./blog-footer-validation";
+
+import "./preloader";

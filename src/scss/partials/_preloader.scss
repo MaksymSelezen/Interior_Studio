@@ -1,0 +1,36 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background-color: #080808;
+  transform: translateX(0);
+}
+
+.preloader.loaded {
+  transform: translateX(-100%);
+  pointer-events: none;
+  transition: transform 0.5s ease;
+}
+
+.preloader__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  color: rgb(255 255 255 / 65%);
+  font-size: 24px;
+  font-weight: 300;
+}
+
+body.loading .loading-content {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+body:not(.loading) .loading-content {
+  opacity: 1;
+  pointer-events: auto;
+}

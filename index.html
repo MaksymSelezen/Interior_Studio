@@ -4,13 +4,17 @@
     {{> partials/base/head}}
   </head>
 
-  <body class="page page--main">
-    {{> partials/base/header}}
+  <body class="loading page page--main">
+    {{> partials/base/preloader}}
 
-    <main class="main">{{> pages/main/main}}</main>
+    <div class="loading-content">
+      {{> partials/base/header}}
 
-    {{> partials/base/footer}} {{> partials/base/popup-request}} {{>
-    partials/base/popup-success}}
+      <main class="main">{{> pages/main/main}}</main>
+
+      {{> partials/base/footer}} {{> partials/base/popup-request}} {{>
+      partials/base/popup-success}}
+    </div>
 
     <script type="module" src="/src/js/main.js"></script>
   </body>

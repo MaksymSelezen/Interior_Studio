@@ -3,12 +3,16 @@
   <head>
     {{> partials/base/head}}
   </head>
-  <body class="blog-page">
-    {{> partials/base/header}}
+  <body class="loading blog-page">
+    {{> partials/base/preloader}}
 
-    <main>{{> pages/blog/blog}}</main>
+    <div class="loading-content">
+      {{> partials/base/header}}
 
-    {{> partials/base/popup-request}}
+      <main>{{> pages/blog/blog}}</main>
+
+      {{> partials/base/popup-request}}
+    </div>
 
     <script type="module" src="/src/js/main.js"></script>
   </body>

@@ -4,13 +4,17 @@
     {{> partials/base/head}}
   </head>
 
-  <body class="page page--contacts">
-    {{> partials/base/header}}
+  <body class="loading page page--contacts">
+    {{> partials/base/preloader}}
 
-    <main class="contacts">{{> pages/contacts/contacts}}</main>
+    <div class="loading-content">
+      {{> partials/base/header}}
 
-    {{> partials/base/footer}} {{> partials/base/popup-request}} {{>
-    partials/base/popup-success}}
+      <main class="contacts">{{> pages/contacts/contacts}}</main>
+
+      {{> partials/base/footer}} {{> partials/base/popup-request}} {{>
+      partials/base/popup-success}}
+    </div>
 
     <script type="module" src="/src/js/main.js"></script>
   </body>

@@ -4,12 +4,16 @@
     {{> partials/base/head}}
   </head>
 
-  <body class="page page-projects">
-    {{> partials/base/header}}
+  <body class="loading page page-projects">
+    {{> partials/base/preloader}}
 
-    <main class="projects">{{> pages/projects/projects}}</main>
+    <div class="loading-content">
+      {{> partials/base/header}}
 
-    {{> partials/base/popup-request}} {{> partials/base/popup-success}}
+      <main class="projects">{{> pages/projects/projects}}</main>
+
+      {{> partials/base/popup-request}} {{> partials/base/popup-success}}
+    </div>
 
     <script type="module" src="/src/js/main.js"></script>
   </body>

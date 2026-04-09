@@ -15,10 +15,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
   disablePageScroll();
 
+  const finishPreloader = () => {
+    setTimeout(() => {
+      if (preloaderText) {
+        preloaderText.innerText = "";
+      }
+
+      if (preloaderPercent) {
+        preloaderPercent.innerText = "HILIGHT";
+      }
+
+      setTimeout(() => {
+        preloader.classList.add("loaded");
+        document.body.classList.remove("loading");
+        enablePageScroll();
+        preloader.addEventListener(
+          "transitionend",
+          () => {
+            preloader.remove();
+          },
+          { once: true },
+        );
+      }, 500);
+    }, 200);
+  };
+
   if (totalImages === 0) {
-    document.body.classList.remove("loading");
-    enablePageScroll();
-    preloader.style.display = "none";
+    const completeWithoutImages = () => {
+      if (preloaderPercent) {
+        preloaderPercent.innerText = "100%";
+      }
+
+      finishPreloader();
+    };
+
+    if (document.readyState === "complete") {
+      completeWithoutImages();
+    } else {
+      window.addEventListener("load", completeWithoutImages, { once: true });
+    }
+
     return;
   }
 
@@ -35,28 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         preloaderPercent.innerText = "100%";
       }
 
-      setTimeout(() => {
-        if (preloaderText) {
-          preloaderText.innerText = "";
-        }
-
-        if (preloaderPercent) {
-          preloaderPercent.innerText = "HILIGHT";
-        }
-
-        setTimeout(() => {
-          preloader.classList.add("loaded");
-          document.body.classList.remove("loading");
-          enablePageScroll();
-          preloader.addEventListener(
-            "transitionend",
-            () => {
-              preloader.remove();
-            },
-            { once: true },
-          );
-        }, 500);
-      }, 200);
+      finishPreloader();
     }
   };
 

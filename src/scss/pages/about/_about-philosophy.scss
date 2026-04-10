@@ -16,13 +16,14 @@
   }
 
   &__container {
+    padding-right: 0;
+
     @media screen and (min-width: $bp-1440) {
       display: grid;
       grid-template-columns: minmax(320px, 383px) minmax(0, 670px);
       grid-template-rows: 1fr auto auto auto 1fr;
-      column-gap: 88px;
+      column-gap: 132px;
       justify-content: end;
-      padding-right: 0;
     }
   }
 
@@ -226,16 +227,7 @@
 
   &__swiper {
     width: 100%;
-    margin-right: -$container-pad-375;
     overflow: hidden;
-
-    @media screen and (min-width: $bp-768) {
-      margin-right: -$container-pad-768;
-    }
-
-    @media screen and (min-width: $bp-1024) {
-      margin-right: -$container-pad-1024;
-    }
 
     @media screen and (min-width: $bp-1440) {
       grid-column: 2;
@@ -243,7 +235,6 @@
       align-self: center;
       justify-self: end;
       max-width: 670px;
-      margin-right: 0;
     }
   }
 

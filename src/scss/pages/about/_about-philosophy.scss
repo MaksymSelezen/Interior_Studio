@@ -3,6 +3,14 @@
 .about-philosophy {
   padding-block: 64px;
 
+  @media screen and (min-width: $bp-768) {
+    padding-block: 96px;
+  }
+
+  @media screen and (min-width: $bp-1024) {
+    padding-block: 120px;
+  }
+
   @media screen and (min-width: $bp-1440) {
     padding-block: 140px;
   }
@@ -10,11 +18,10 @@
   &__container {
     @media screen and (min-width: $bp-1440) {
       display: grid;
-      grid-template-columns: 383px minmax(0, 670px);
+      grid-template-columns: minmax(320px, 383px) minmax(0, 670px);
       grid-template-rows: 1fr auto auto auto 1fr;
-      column-gap: 132px;
+      column-gap: 88px;
       justify-content: end;
-      min-height: 444px;
       padding-right: 0;
     }
   }
@@ -26,12 +33,19 @@
     font-size: 26px;
 
     @media screen and (min-width: $bp-768) {
+      margin-bottom: 22px;
       font-size: 32px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      margin-bottom: 20px;
+      font-size: 34px;
     }
 
     @media screen and (min-width: $bp-1440) {
       grid-column: 1;
       grid-row: 2;
+      margin-bottom: 24px;
       font-size: 36px;
     }
 
@@ -54,7 +68,13 @@
     line-height: 171%;
 
     @media screen and (min-width: $bp-768) {
-      max-width: 470px;
+      max-width: 78%;
+      margin-bottom: 42px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      max-width: 64%;
+      margin-bottom: 48px;
     }
 
     @media screen and (min-width: $bp-1440) {
@@ -73,6 +93,11 @@
     color: rgba($color-dark, 0.26);
 
     @media screen and (min-width: $bp-768) {
+      gap: 14px;
+      margin-bottom: 44px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
       gap: 16px;
       margin-bottom: 48px;
     }
@@ -99,6 +124,11 @@
     transition: color 300ms ease;
 
     @media screen and (min-width: $bp-768) {
+      width: 16px;
+      height: 16px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
       width: 18px;
       height: 18px;
     }
@@ -141,6 +171,12 @@
     letter-spacing: 0.02em;
 
     @media screen and (min-width: $bp-768) {
+      min-width: 22px;
+      height: 16px;
+      font-size: 13px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
       min-width: 24px;
       height: 18px;
       font-size: 14px;
@@ -161,8 +197,16 @@
     background-color: rgba($color-dark, 0.26);
 
     @media screen and (min-width: $bp-768) {
-      width: 120px;
+      width: 18vw;
+      min-width: 110px;
+      max-width: 160px;
       height: 2px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      width: 20vw;
+      min-width: 140px;
+      max-width: 200px;
     }
 
     @media screen and (min-width: $bp-1440) {
@@ -181,17 +225,15 @@
   }
 
   &__swiper {
-    width: calc(100% + $container-pad-375);
+    width: 100%;
     margin-right: -$container-pad-375;
     overflow: hidden;
 
     @media screen and (min-width: $bp-768) {
-      width: calc(100% + $container-pad-768);
       margin-right: -$container-pad-768;
     }
 
     @media screen and (min-width: $bp-1024) {
-      width: calc(100% + $container-pad-1024);
       margin-right: -$container-pad-1024;
     }
 
@@ -200,7 +242,6 @@
       grid-row: 1 / 6;
       align-self: center;
       justify-self: end;
-      width: 100%;
       max-width: 670px;
       margin-right: 0;
     }
@@ -218,11 +259,11 @@
   &__image {
     display: block;
     width: 100%;
-    max-width: 552px;
+    max-width: 100%;
     aspect-ratio: 287 / 258;
     object-fit: cover;
 
-    @media screen and (min-width: $bp-1440) {
+    @media screen and (min-width: $bp-768) {
       aspect-ratio: 552 / 444;
     }
   }

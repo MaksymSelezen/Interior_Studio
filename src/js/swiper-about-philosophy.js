@@ -41,7 +41,7 @@ if (aboutPhilosophySwiperEl) {
     grabCursor: true,
     speed: 800,
     spaceBetween: 12,
-    slidesPerView: 1.19,
+    slidesPerView: 1.2,
     navigation: {
       nextEl: ".about-philosophy__pagination .swiper-navigation__arrow_right",
       prevEl: ".about-philosophy__pagination .swiper-navigation__arrow_left",

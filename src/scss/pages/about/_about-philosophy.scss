@@ -84,6 +84,7 @@
   }
 
   &__swiper-slide {
+    width: calc((100% - 12px) / 1.2);
     height: auto;
   }
 

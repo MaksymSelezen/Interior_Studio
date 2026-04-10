@@ -4,50 +4,50 @@ import "swiper/css";
 
 const formatSlideNumber = (number) => String(number).padStart(2, "0");
 
-const aboutPhilosophySwiperEl = document.querySelector(
-  ".about-philosophy__swiper",
-);
-const currentSlideEl = document.querySelector(
-  ".js-about-philosophy-current-slide",
-);
-const totalSlidesEl = document.querySelector(
-  ".js-about-philosophy-total-slides",
-);
-const progressbarEl = document.querySelector(
-  ".js-about-philosophy-progressbar",
-);
+const sectionEl = document.querySelector(".about-philosophy");
 
-if (aboutPhilosophySwiperEl) {
-  const totalSlides =
-    aboutPhilosophySwiperEl.querySelectorAll(".swiper-slide").length;
+if (sectionEl) {
+  const swiperEl = sectionEl.querySelector(".about-philosophy__swiper");
 
-  const updatePagination = (swiper) => {
-    if (!totalSlides || !currentSlideEl || !totalSlidesEl || !progressbarEl) {
-      return;
-    }
+  if (swiperEl) {
+    const currentSlideEl = sectionEl.querySelector(
+      ".js-about-philosophy-current-slide",
+    );
+    const totalSlidesEl = sectionEl.querySelector(
+      ".js-about-philosophy-total-slides",
+    );
+    const progressbarEl = sectionEl.querySelector(
+      ".js-about-philosophy-progressbar",
+    );
+    const totalSlides = swiperEl.querySelectorAll(".swiper-slide").length;
 
-    const currentSlide = swiper.realIndex + 1;
+    const updatePagination = (swiper) => {
+      if (!totalSlides || !currentSlideEl || !totalSlidesEl || !progressbarEl) {
+        return;
+      }
 
-    currentSlideEl.textContent = formatSlideNumber(currentSlide);
-    totalSlidesEl.textContent = formatSlideNumber(totalSlides);
-    progressbarEl.style.width = `${(currentSlide / totalSlides) * 100}%`;
-  };
+      const currentSlide = swiper.realIndex + 1;
 
-  new Swiper(aboutPhilosophySwiperEl, {
-    modules: [Navigation],
-    loop: true,
-    grabCursor: true,
-    speed: 800,
-    spaceBetween: 12,
-    slidesPerView: 1.19,
-    centeredSlides: false,
-    navigation: {
-      nextEl: ".about-philosophy__pagination .swiper-navigation__arrow_right",
-      prevEl: ".about-philosophy__pagination .swiper-navigation__arrow_left",
-    },
-    on: {
-      init: updatePagination,
-      slideChange: updatePagination,
-    },
-  });
+      currentSlideEl.textContent = formatSlideNumber(currentSlide);
+      totalSlidesEl.textContent = formatSlideNumber(totalSlides);
+      progressbarEl.style.width = `${(currentSlide / totalSlides) * 100}%`;
+    };
+
+    new Swiper(swiperEl, {
+      modules: [Navigation],
+      loop: true,
+      grabCursor: true,
+      speed: 800,
+      spaceBetween: 12,
+      slidesPerView: 1.19,
+      navigation: {
+        nextEl: ".about-philosophy__arrow--next",
+        prevEl: ".about-philosophy__arrow--prev",
+      },
+      on: {
+        init: updatePagination,
+        slideChange: updatePagination,
+      },
+    });
+  }
 }

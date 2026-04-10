@@ -77,19 +77,14 @@
     transition: width 350ms ease;
   }
 
-  &__slider {
+  &__swiper {
     width: calc(100% + $container-pad-375);
     margin-right: -$container-pad-375;
     overflow: hidden;
   }
 
-  &__slider-wrapper {
-    align-items: stretch;
-  }
-
-  &__slide {
-    width: 287px;
-    flex-shrink: 0;
+  &__swiper-slide {
+    height: auto;
   }
 
   &__image {

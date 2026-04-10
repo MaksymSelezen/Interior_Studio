@@ -2,69 +2,53 @@ import Swiper from "swiper";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 
-const formatSlideNumber = (value) => String(value).padStart(2, "0");
-
-const getAboutPhilosophyElements = (root) => ({
-  current: root?.querySelector(".js-about-philosophy-current"),
-  total: root?.querySelector(".js-about-philosophy-total"),
-  progress: root?.querySelector(".js-about-philosophy-progress"),
-});
-
-const updateAboutPhilosophyPagination = (swiper, elements) => {
-  const totalSlides = swiper.slides.filter(
-    (slide) => !slide.classList.contains("swiper-slide-duplicate"),
-  ).length;
-
-  if (
-    !totalSlides ||
-    !elements.current ||
-    !elements.total ||
-    !elements.progress
-  ) {
-    return;
-  }
-
-  const currentSlide = swiper.realIndex + 1;
-
-  elements.current.textContent = formatSlideNumber(currentSlide);
-  elements.total.textContent = formatSlideNumber(totalSlides);
-  elements.progress.style.width = `${(currentSlide / totalSlides) * 100}%`;
+const formatSlideNumber = (number) => String(number).padStart(2, "0");
+const paginationElements = {
+  currentSlide: document.querySelector(".js-about-philosophy-current-slide"),
+  totalSlides: document.querySelector(".js-about-philosophy-total-slides"),
+  progressbar: document.querySelector(".js-about-philosophy-progressbar"),
 };
 
-const initAboutPhilosophySwiper = () => {
-  const philosophySlider = document.querySelector(
-    ".js-about-philosophy-swiper",
-  );
+const swiperProgressbarChangeSlide = (swiper) => {
+  const totalSlides = swiper.slides.length - swiper.loopedSlides * 2;
+  const {
+    currentSlide,
+    totalSlides: totalSlidesEl,
+    progressbar,
+  } = paginationElements;
 
-  if (!philosophySlider) {
+  if (!totalSlides || !currentSlide || !totalSlidesEl || !progressbar) {
     return;
   }
 
-  const paginationRoot = document.querySelector(
-    ".js-about-philosophy-pagination",
-  );
-  const paginationElements = getAboutPhilosophyElements(paginationRoot);
+  const currentSlideIndex = swiper.realIndex + 1;
 
-  return new Swiper(philosophySlider, {
-    loop: true,
+  currentSlide.textContent = formatSlideNumber(currentSlideIndex);
+  totalSlidesEl.textContent = formatSlideNumber(totalSlides);
+  progressbar.style.width = `${(currentSlideIndex / totalSlides) * 100}%`;
+};
+
+const swiperProgressbarInit = (swiper) => swiperProgressbarChangeSlide(swiper);
+
+const aboutPhilosophySwiperEl = document.querySelector(
+  ".about-philosophy__swiper",
+);
+
+if (aboutPhilosophySwiperEl) {
+  new Swiper(aboutPhilosophySwiperEl, {
     modules: [Navigation],
-    speed: 650,
+    loop: true,
     grabCursor: true,
-    slidesPerView: 1.2,
+    speed: 800,
     spaceBetween: 12,
+    slidesPerView: 1.19,
     navigation: {
-      prevEl: ".js-about-philosophy-prev",
-      nextEl: ".js-about-philosophy-next",
+      nextEl: ".about-philosophy__pagination .swiper-navigation__arrow_right",
+      prevEl: ".about-philosophy__pagination .swiper-navigation__arrow_left",
     },
     on: {
-      init(swiper) {
-        updateAboutPhilosophyPagination(swiper, paginationElements);
-      },
-      slideChange(swiper) {
-        updateAboutPhilosophyPagination(swiper, paginationElements);
-      },
+      init: swiperProgressbarInit,
+      slideChange: swiperProgressbarChangeSlide,
     },
   });
-};
-
-initAboutPhilosophySwiper();
+}

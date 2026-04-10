@@ -50,7 +50,7 @@ const initAboutPhilosophySwiper = () => {
     modules: [Navigation],
     speed: 650,
     grabCursor: true,
-    slidesPerView: "auto",
+    slidesPerView: 1.2,
     spaceBetween: 12,
     navigation: {
       prevEl: ".js-about-philosophy-prev",

@@ -3,24 +3,21 @@
 .about-philosophy {
   padding-block: 64px;
 
-  &__container {
-    overflow: hidden;
-  }
-
   &__title {
-    margin-bottom: 16px;
     font-weight: 700;
-    font-size: 44px;
-    line-height: 0.93;
+    font-size: 26px;
+    color: #080808;
     color: $color-dark;
+    margin-bottom: 24px;
   }
 
   &__text {
-    max-width: 318px;
-    margin-bottom: 38px;
+    font-weight: 300;
     font-size: 14px;
-    line-height: 1.36;
+    line-height: 171%;
     color: $color-dark;
+
+    margin-bottom: 36px;
   }
 
   &__pagination {
@@ -81,7 +78,9 @@
   }
 
   &__slider {
-    overflow: visible;
+    width: calc(100% + $container-pad-375);
+    margin-right: -$container-pad-375;
+    overflow: hidden;
   }
 
   &__slider-wrapper {

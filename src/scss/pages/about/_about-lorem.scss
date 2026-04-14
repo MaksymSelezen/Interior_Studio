@@ -1,0 +1,12 @@
+@use "../../utils/variables" as *;
+
+.about-lorem {
+  .lorem {
+    background-color: $color-dark;
+  }
+
+  .lorem__title,
+  .lorem__text {
+    color: $color-white;
+  }
+}

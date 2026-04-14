@@ -10,10 +10,20 @@
   &__inner {
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: $bp-1440) {
+      padding-left: 66px;
+      flex-direction: row;
+      gap: 132px;
+    }
   }
 
   &__media {
     width: 100%;
+
+    @media screen and (min-width: $bp-1440) {
+      flex: 0 1 42%;
+    }
   }
 
   &__image {
@@ -24,6 +34,12 @@
 
   &__content {
     width: 100%;
+
+    @media screen and (min-width: $bp-1440) {
+      flex: 1 1 48%;
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__list {
@@ -44,12 +60,23 @@
     @media screen and (min-width: $bp-1024) {
       flex-wrap: nowrap;
     }
+
+    @media screen and (min-width: $bp-1440) {
+      flex-wrap: wrap;
+      align-content: flex-start;
+      max-width: 55%;
+      padding-inline: 0;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     flex: 0 1 40%;
+
+    @media screen and (min-width: $bp-1440) {
+      flex: 0 1 calc((100% - 31px) / 2);
+    }
   }
 
   &__value {
@@ -81,6 +108,11 @@
     @media screen and (min-width: $bp-768) {
       margin-top: 56px;
     }
+
+    @media screen and (min-width: $bp-1440) {
+      display: flex;
+      gap: 112px;
+    }
   }
 
   &__text {
@@ -92,15 +124,26 @@
     @media screen and (min-width: $bp-768) {
       margin-top: 0;
       max-width: 82%;
-      font-size: 16px;
       line-height: 175%;
       margin: 0 auto;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      flex: 0 1 68%;
+      max-width: 382px;
+      margin: 0;
     }
   }
 
   &__extra {
     &_desktop {
       display: none;
+
+      @media screen and (min-width: $bp-1440) {
+        display: block;
+        min-width: 168px;
+        transform: translateX(62px);
+      }
     }
   }
 

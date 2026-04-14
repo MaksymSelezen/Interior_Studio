@@ -1,0 +1,89 @@
+.about-founder {
+  &__container {
+  }
+
+  &__inner {
+  }
+
+  &__intro {
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  &__position {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 137%;
+    margin-bottom: 30px;
+    &-break {
+    }
+  }
+
+  &__quote {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    &-icon {
+      flex-shrink: 0;
+    }
+
+    &-text {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 171%;
+      opacity: 0.7;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__portrait {
+    &-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__team {
+    &_desktop {
+    }
+
+    &-image {
+      display: none;
+    }
+  }
+
+  &__content {
+  }
+
+  &__stats {
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    &-item {
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: 40px;
+    }
+
+    &-label {
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 132%;
+    }
+  }
+
+  &__text {
+  }
+}

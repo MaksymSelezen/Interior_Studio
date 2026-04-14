@@ -1,5 +1,16 @@
+@use "../../utils/variables" as *;
+
 .about-founder {
+  padding-bottom: 70px;
+
   &__container {
+    @media screen and (min-width: $bp-768) {
+      padding-inline: 80px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding-inline: 120px;
+    }
   }
 
   &__inner {
@@ -12,6 +23,10 @@
     font-weight: 700;
     font-size: 26px;
     margin-bottom: 16px;
+
+    @media screen and (min-width: $bp-768) {
+      font-size: 36px;
+    }
   }
 
   &__position {
@@ -19,7 +34,11 @@
     font-size: 16px;
     line-height: 137%;
     margin-bottom: 30px;
+
     &-break {
+      @media screen and (min-width: $bp-768) {
+        display: none;
+      }
     }
   }
 
@@ -38,15 +57,26 @@
       line-height: 171%;
       opacity: 0.7;
       margin-bottom: 32px;
+
+      @media screen and (min-width: $bp-768) {
+        font-size: 20px;
+      }
     }
   }
 
   &__portrait {
+    @media screen and (min-width: $bp-1024) {
+      padding-inline: 80px;
+    }
     &-image {
       display: block;
       width: 100%;
       height: auto;
       margin-bottom: 40px;
+
+      @media screen and (min-width: $bp-1440) {
+        max-width: 516px;
+      }
     }
   }
 
@@ -56,17 +86,30 @@
 
     &-image {
       display: none;
+
+      @media screen and (min-width: $bp-1440) {
+        display: block;
+      }
     }
   }
 
   &__content {
+    width: 100%;
   }
 
   &__stats {
     &-list {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
+
       gap: 32px;
+      margin-bottom: 40px;
+      padding-inline: 20px;
+
+      @media screen and (min-width: $bp-1024) {
+        margin-bottom: 56px;
+        padding-inline: 64px;
+      }
     }
 
     &-item {
@@ -81,9 +124,16 @@
       font-weight: 300;
       font-size: 11px;
       line-height: 132%;
+
+      @media screen and (min-width: $bp-768) {
+        max-width: 94px;
+      }
     }
   }
 
   &__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 171%;
   }
 }

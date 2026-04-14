@@ -3,6 +3,10 @@
 .about-founder {
   padding-bottom: 70px;
 
+  @media screen and (min-width: $bp-1440) {
+    padding-block: 120px 104px;
+  }
+
   &__container {
     @media screen and (min-width: $bp-768) {
       padding-inline: 80px;
@@ -14,9 +18,24 @@
   }
 
   &__inner {
+    @media screen and (min-width: $bp-1440) {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr);
+      grid-template-areas:
+        "intro portrait"
+        "team content";
+      column-gap: 132px;
+      row-gap: 100px;
+      align-items: start;
+    }
   }
 
   &__intro {
+    @media screen and (min-width: $bp-1440) {
+      grid-area: intro;
+      padding-top: 66px;
+      padding-left: 149px;
+    }
   }
 
   &__name {
@@ -27,6 +46,12 @@
     @media screen and (min-width: $bp-768) {
       font-size: 36px;
     }
+
+    @media screen and (min-width: $bp-1440) {
+      margin-bottom: 32px;
+      font-size: 36px;
+      white-space: nowrap;
+    }
   }
 
   &__position {
@@ -35,9 +60,19 @@
     line-height: 137%;
     margin-bottom: 30px;
 
+    @media screen and (min-width: $bp-1440) {
+      margin-bottom: 56px;
+      font-size: 16px;
+      line-height: 137%;
+    }
+
     &-break {
       @media screen and (min-width: $bp-768) {
         display: none;
+      }
+
+      @media screen and (min-width: $bp-1440) {
+        display: block;
       }
     }
   }
@@ -46,6 +81,13 @@
     display: flex;
     align-items: flex-start;
     gap: 16px;
+
+    @media screen and (min-width: $bp-1440) {
+      display: grid;
+      grid-template-columns: 24px minmax(0, 1fr);
+      gap: 32px;
+      transform: translateX(-55px);
+    }
 
     &-icon {
       flex-shrink: 0;
@@ -61,6 +103,11 @@
       @media screen and (min-width: $bp-768) {
         font-size: 20px;
       }
+
+      @media screen and (min-width: $bp-1440) {
+        margin-bottom: 0;
+        min-width: 383px;
+      }
     }
   }
 
@@ -68,6 +115,12 @@
     @media screen and (min-width: $bp-1024) {
       padding-inline: 80px;
     }
+
+    @media screen and (min-width: $bp-1440) {
+      grid-area: portrait;
+      padding-inline: 0;
+    }
+
     &-image {
       display: block;
       width: 100%;
@@ -82,6 +135,9 @@
 
   &__team {
     &_desktop {
+      @media screen and (min-width: $bp-1440) {
+        grid-area: team;
+      }
     }
 
     &-image {
@@ -89,19 +145,24 @@
 
       @media screen and (min-width: $bp-1440) {
         display: block;
+        transform: translateX(80px) translateY(-210px);
       }
     }
   }
 
   &__content {
     width: 100%;
+
+    @media screen and (min-width: $bp-1440) {
+      grid-area: content;
+      max-width: 560px;
+    }
   }
 
   &__stats {
     &-list {
       display: flex;
       justify-content: space-around;
-
       gap: 32px;
       margin-bottom: 40px;
       padding-inline: 20px;
@@ -109,6 +170,14 @@
       @media screen and (min-width: $bp-1024) {
         margin-bottom: 56px;
         padding-inline: 64px;
+      }
+
+      @media screen and (min-width: $bp-1440) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 32px;
+        margin-bottom: 37px;
+        padding-inline: 0;
       }
     }
 
@@ -118,6 +187,13 @@
     &-value {
       font-weight: 700;
       font-size: 40px;
+
+      @media screen and (min-width: $bp-1440) {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 56px;
+        line-height: 1;
+      }
     }
 
     &-label {
@@ -128,6 +204,12 @@
       @media screen and (min-width: $bp-768) {
         max-width: 94px;
       }
+
+      @media screen and (min-width: $bp-1440) {
+        max-width: 96px;
+        font-size: 14px;
+        line-height: 143%;
+      }
     }
   }
 
@@ -135,5 +217,10 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 171%;
+
+    @media screen and (min-width: $bp-1440) {
+      max-width: 540px;
+      opacity: 0.7;
+    }
   }
 }

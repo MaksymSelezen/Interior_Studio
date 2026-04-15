@@ -9,12 +9,19 @@
             in our team?
           </h2>
 
-          <form class="about-join__form" action="#" method="post">
+          <form
+            class="about-join__form js-about-join-form"
+            action="#"
+            method="post"
+            novalidate
+          >
             <label class="about-join__field">
               <input
                 class="about-join__input"
                 type="email"
                 name="email"
+                autocomplete="email"
+                required
                 placeholder="Email"
               />
             </label>

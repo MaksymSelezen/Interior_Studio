@@ -5,5 +5,6 @@ import "./swiper";
 import "./swiper-about-philosophy";
 import "./swiper-latest";
 import "./blog-footer-validation";
+import "./about-join-validation";
 
 import "./preloader";

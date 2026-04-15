@@ -65,7 +65,7 @@
   &__top {
     display: flex;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 21px;
     padding-inline: 24px;
 
     @media screen and (min-width: $bp-768) {
@@ -75,7 +75,7 @@
 
     @media screen and (min-width: $bp-1024) {
       padding-inline: $container-pad-1024;
-      padding-top: 32px;
+      padding-top: 25px;
     }
   }
 
@@ -85,15 +85,15 @@
 
   &__close {
     flex-shrink: 0;
-    margin-left: 42px;
+    margin-left: 54px;
 
     @media screen and (min-width: $bp-768) {
       order: -1;
-      margin-left: 70px;
+      margin-left: 95px;
     }
 
     @media screen and (min-width: $bp-1024) {
-      margin-left: 85px;
+      margin-left: 99px;
     }
   }
 
@@ -107,7 +107,6 @@
 
   &__close-icon {
     fill: $color-white;
-    transform: translateX(6px);
   }
 
   &__lang {

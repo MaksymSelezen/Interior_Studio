@@ -38,13 +38,11 @@ function selectLanguage(option) {
 }
 
 burgerBtn?.addEventListener("click", () => {
-  if (!burgerMenu) return;
-
-  burgerMenu.classList.contains("is-open") ? closeMenu() : openMenu();
+  openMenu();
 });
 
 burgerMenu?.addEventListener("click", (event) => {
-  if (event.target.closest(".js-burger-close, .js-burger-link")) {
+  if (event.target.closest(".js-burger-close")) {
     closeMenu();
     return;
   }

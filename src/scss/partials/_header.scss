@@ -7,10 +7,7 @@
   width: 100%;
   z-index: $z-header;
   padding-top: 21px;
-  transition:
-    background-color 250ms ease,
-    backdrop-filter 250ms ease,
-    -webkit-backdrop-filter 250ms ease;
+  transition: background-color 250ms ease;
 
   @media screen and (min-width: $bp-1440) {
     padding-top: 25px;
@@ -22,8 +19,6 @@
 
   &.header_scrolled {
     background-color: rgba($color-dark, 0.78);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     padding-bottom: 12px;
 
     @media screen and (min-width: $bp-1440) {

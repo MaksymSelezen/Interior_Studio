@@ -155,29 +155,9 @@ document.addEventListener("click", (event) => {
     return;
   }
 
-  if (event.target.closest(".js-send-again")) {
-    closePopup(successPopup);
-    openPopup(requestPopup);
-    return;
-  }
-
-  const overlay = event.target.closest(".js-popup-overlay");
-
-  if (overlay) {
-    closePopup(overlay.closest(".popup"));
-    return;
-  }
-
   const closeButton = event.target.closest(".js-popup-close");
 
   if (closeButton) {
     closePopup(closeButton.closest(".popup"));
   }
 });
-
-
-
-
-
-
-

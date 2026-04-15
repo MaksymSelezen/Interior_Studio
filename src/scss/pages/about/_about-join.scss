@@ -113,14 +113,9 @@
     flex: 1 1 auto;
     min-width: 0;
 
-    @media screen and (min-width: $bp-768) {
-      flex: 1 1 auto;
-    }
-
     @media screen and (min-width: $bp-1440) {
       display: flex;
       align-items: flex-start;
-      min-width: 0;
     }
   }
 
@@ -136,11 +131,6 @@
     font-size: 14px;
     line-height: 171%;
 
-    @media screen and (min-width: $bp-768) {
-      font-size: 14px;
-      line-height: 171%;
-    }
-
     @media screen and (min-width: $bp-1440) {
       height: 35px;
       font-size: 20px;
@@ -153,14 +143,13 @@
 
       @media screen and (min-width: $bp-1440) {
         color: $color-dark;
-        opacity: 0.7;
       }
     }
   }
 
   &__error-label {
     position: absolute;
-    top: calc(100% + 8px);
+    top: calc(100% + 15px);
     left: 0;
     display: block;
     font-size: 10px;
@@ -181,15 +170,9 @@
     background-color: transparent;
     cursor: pointer;
 
-    @media screen and (min-width: $bp-768) {
-      width: 17px;
-      height: 13px;
-    }
-
     @media screen and (min-width: $bp-1440) {
       width: 24px;
       height: 35px;
-      margin-right: 0;
       margin-left: auto;
       align-items: center;
       justify-content: flex-end;
@@ -266,11 +249,11 @@
     @media screen and (min-width: $bp-1440) {
       gap: 16px;
     }
+  }
 
-    &-link {
-      font-weight: 600;
-      font-size: 11px;
-    }
+  &__socials-link {
+    font-weight: 600;
+    font-size: 11px;
   }
 
   &__bottom {
@@ -286,18 +269,13 @@
     }
   }
 
-  &__copyright {
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 152%;
-  }
-
   &__brand-group {
     display: flex;
     align-items: flex-end;
     gap: 23px;
   }
 
+  &__copyright,
   &__made {
     font-weight: 300;
     font-size: 12px;

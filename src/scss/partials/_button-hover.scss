@@ -1,0 +1,74 @@
+@use "../utils/variables" as *;
+
+$hover-ease: 220ms ease;
+$hover-lift: translateY(-1px);
+$hover-shadow: 0 10px 22px rgba($color-black, 0.2);
+
+.btn-discover,
+.header__cta,
+.burger-menu__cta,
+.footer__button,
+.projects__bottom-button,
+.one-project-cta__button,
+.one-project-gallery__button,
+.popup-request__submit,
+.popup-success__submit,
+.projects__cta,
+.about-join__submit,
+.blog-footer__submit,
+.header__menu-toggle,
+.popup__close,
+.burger-menu__close,
+.burger-menu__lang-current,
+.burger-menu__lang-option,
+.bottom-nav__city {
+  transition:
+    transform $hover-ease,
+    box-shadow $hover-ease,
+    opacity $hover-ease,
+    filter $hover-ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-discover:hover,
+  .btn-discover:focus-visible,
+  .header__cta:hover,
+  .header__cta:focus-visible,
+  .burger-menu__cta:hover,
+  .burger-menu__cta:focus-visible,
+  .footer__button:hover,
+  .footer__button:focus-visible,
+  .projects__bottom-button:hover,
+  .projects__bottom-button:focus-visible,
+  .one-project-cta__button:hover,
+  .one-project-cta__button:focus-visible,
+  .one-project-gallery__button:hover,
+  .one-project-gallery__button:focus-visible,
+  .popup-request__submit:hover,
+  .popup-request__submit:focus-visible,
+  .popup-success__submit:hover,
+  .popup-success__submit:focus-visible,
+  .projects__cta:hover,
+  .projects__cta:focus-visible,
+  .about-join__submit:hover,
+  .about-join__submit:focus-visible,
+  .blog-footer__submit:hover,
+  .blog-footer__submit:focus-visible,
+  .header__menu-toggle:hover,
+  .header__menu-toggle:focus-visible,
+  .popup__close:hover,
+  .popup__close:focus-visible,
+  .burger-menu__close:hover,
+  .burger-menu__close:focus-visible,
+  .burger-menu__lang-current:hover,
+  .burger-menu__lang-current:focus-visible,
+  .burger-menu__lang-option:hover,
+  .burger-menu__lang-option:focus-visible,
+  .bottom-nav__city:hover,
+  .bottom-nav__city:focus-visible {
+    transform: $hover-lift;
+    box-shadow: $hover-shadow;
+    opacity: 0.92;
+    filter: brightness(0.96);
+  }
+}

@@ -139,10 +139,16 @@
     object-fit: cover;
   }
 
-  &__content {
+  &__card-link {
     position: absolute;
     inset: 0;
     z-index: 1;
+  }
+
+  &__content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

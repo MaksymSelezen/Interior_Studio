@@ -26,6 +26,10 @@ function closeMenu() {
   unlock(burgerScrollable);
 }
 
+function isMenuOpen() {
+  return burgerMenu?.classList.contains("is-open");
+}
+
 function selectLanguage(option) {
   if (!langWrap || !langToggle) return;
 
@@ -64,4 +68,10 @@ document.addEventListener("click", (event) => {
   if (!langWrap?.contains(event.target)) {
     langWrap?.classList.remove("is-open");
   }
+});
+
+window.addEventListener("resize", () => {
+  if (!isMenuOpen()) return;
+
+  closeMenu();
 });

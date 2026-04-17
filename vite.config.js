@@ -5,8 +5,6 @@ import { readdirSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const rootDir = fileURLToPath(new URL(".", import.meta.url));
-const repoBasePath = "/Interior_Studio/";
-
 function getHtmlInputs() {
   const inputs = {};
 
@@ -73,8 +71,10 @@ function createNotFoundRedirectMiddleware(validHtmlRoutes, basePath) {
   };
 }
 
-export default defineConfig(({ command }) => {
-  const base = command === "serve" ? "/" : repoBasePath;
+export default defineConfig(({ command, mode }) => {
+  const isDevServer = command === "serve" && mode !== "preview";
+  const configuredBasePath = normalizeBase(process.env.VITE_BASE_PATH || "/");
+  const base = isDevServer ? "/" : configuredBasePath;
   const inputs = getHtmlInputs();
   const validHtmlRoutes = new Set(["/", "/index.html"]);
 

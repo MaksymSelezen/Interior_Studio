@@ -44,6 +44,16 @@ function normalizeBase(basePath) {
   return prefixed.endsWith("/") ? prefixed : `${prefixed}/`;
 }
 
+function getGithubPagesBasePath() {
+  const repository = process.env.GITHUB_REPOSITORY;
+  if (!repository || !repository.includes("/")) return "/";
+
+  const [, repoName] = repository.split("/");
+  if (!repoName) return "/";
+
+  return `/${repoName}/`;
+}
+
 function createNotFoundRedirectMiddleware(validHtmlRoutes, basePath) {
   const normalizedBase = normalizeBase(basePath);
 
@@ -73,7 +83,10 @@ function createNotFoundRedirectMiddleware(validHtmlRoutes, basePath) {
 
 export default defineConfig(({ command, mode }) => {
   const isDevServer = command === "serve" && mode !== "preview";
-  const configuredBasePath = normalizeBase(process.env.VITE_BASE_PATH || "/");
+  const configuredBasePath = normalizeBase(
+    process.env.VITE_BASE_PATH ||
+      (process.env.GITHUB_ACTIONS ? getGithubPagesBasePath() : "/"),
+  );
   const base = isDevServer ? "/" : configuredBasePath;
   const inputs = getHtmlInputs();
   const validHtmlRoutes = new Set(["/", "/index.html"]);

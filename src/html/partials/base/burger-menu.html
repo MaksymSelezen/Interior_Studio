@@ -3,7 +3,7 @@
 
   <div class="burger-menu__panel js-scroll-lock-scrollable">
     <div class="burger-menu__top">
-      <a class="burger-menu__logo" href="/">
+      <a class="burger-menu__logo" href="{{BASE_URL}}">
         <span class="burger-menu__logo-text">LOGO</span>
       </a>
 
@@ -48,29 +48,35 @@
       <nav class="burger-menu__nav" aria-label="Burger menu navigation">
         <ul class="burger-menu__list">
           <li class="burger-menu__item">
-            <a class="burger-menu__link js-burger-link" href="/">Home</a>
+            <a class="burger-menu__link js-burger-link" href="{{BASE_URL}}"
+              >Home</a
+            >
           </li>
           <li class="burger-menu__item">
             <a
               class="burger-menu__link js-burger-link"
-              href="/pages/projects.html"
+              href="{{BASE_URL}}pages/projects.html"
               >Projects</a
             >
           </li>
           <li class="burger-menu__item">
-            <a class="burger-menu__link js-burger-link" href="/pages/about.html"
+            <a
+              class="burger-menu__link js-burger-link"
+              href="{{BASE_URL}}pages/about.html"
               >About us</a
             >
           </li>
           <li class="burger-menu__item">
-            <a class="burger-menu__link js-burger-link" href="/pages/blog.html"
+            <a
+              class="burger-menu__link js-burger-link"
+              href="{{BASE_URL}}pages/blog.html"
               >Blog</a
             >
           </li>
           <li class="burger-menu__item">
             <a
               class="burger-menu__link js-burger-link"
-              href="/pages/contacts.html"
+              href="{{BASE_URL}}pages/contacts.html"
               >Contacts</a
             >
           </li>

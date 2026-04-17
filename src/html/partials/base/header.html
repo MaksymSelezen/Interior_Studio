@@ -1,6 +1,6 @@
 <header class="header">
   <div class="container header__container">
-    <a href="/">
+    <a href="{{BASE_URL}}">
       <span class="header__logo-text">LOGO</span>
     </a>
 
@@ -14,16 +14,22 @@
     <nav class="header__nav">
       <ul class="header__menu">
         <li class="header__item">
-          <a class="header__link" href="/pages/projects.html">Projects</a>
+          <a class="header__link" href="{{BASE_URL}}pages/projects.html"
+            >Projects</a
+          >
         </li>
         <li class="header__item">
-          <a class="header__link" href="/pages/about.html">About us</a>
+          <a class="header__link" href="{{BASE_URL}}pages/about.html"
+            >About us</a
+          >
         </li>
         <li class="header__item">
-          <a class="header__link" href="/pages/blog.html">Blog</a>
+          <a class="header__link" href="{{BASE_URL}}pages/blog.html">Blog</a>
         </li>
         <li class="header__item">
-          <a class="header__link" href="/pages/contacts.html">Contacts</a>
+          <a class="header__link" href="{{BASE_URL}}pages/contacts.html"
+            >Contacts</a
+          >
         </li>
       </ul>
     </nav>

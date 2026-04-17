@@ -5,6 +5,7 @@ import { readdirSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const rootDir = fileURLToPath(new URL(".", import.meta.url));
+const repoBasePath = "/Interior_Studio/";
 
 function getHtmlInputs() {
   const inputs = {};
@@ -38,7 +39,16 @@ function isHtmlPageRequest(req) {
   return acceptHeader.includes("text/html");
 }
 
-function createNotFoundRedirectMiddleware(validHtmlRoutes) {
+function normalizeBase(basePath) {
+  if (!basePath || basePath === "/") return "/";
+
+  const prefixed = basePath.startsWith("/") ? basePath : `/${basePath}`;
+  return prefixed.endsWith("/") ? prefixed : `${prefixed}/`;
+}
+
+function createNotFoundRedirectMiddleware(validHtmlRoutes, basePath) {
+  const normalizedBase = normalizeBase(basePath);
+
   return (req, res, next) => {
     if (!isHtmlPageRequest(req)) {
       next();
@@ -47,18 +57,24 @@ function createNotFoundRedirectMiddleware(validHtmlRoutes) {
 
     const { pathname } = new URL(req.url, "http://localhost");
 
-    if (validHtmlRoutes.has(pathname)) {
+    const normalizedPath =
+      normalizedBase !== "/" && pathname.startsWith(normalizedBase)
+        ? pathname.slice(normalizedBase.length - 1)
+        : pathname;
+
+    if (validHtmlRoutes.has(normalizedPath)) {
       next();
       return;
     }
 
     res.statusCode = 302;
-    res.setHeader("Location", "/404.html");
+    res.setHeader("Location", `${normalizedBase}404.html`);
     res.end();
   };
 }
 
-export default defineConfig(() => {
+export default defineConfig(({ command }) => {
+  const base = command === "serve" ? "/" : repoBasePath;
   const inputs = getHtmlInputs();
   const validHtmlRoutes = new Set(["/", "/index.html"]);
 
@@ -67,10 +83,14 @@ export default defineConfig(() => {
     validHtmlRoutes.add(route);
   });
 
-  const notFoundRedirectMiddleware =
-    createNotFoundRedirectMiddleware(validHtmlRoutes);
+  const notFoundRedirectMiddleware = createNotFoundRedirectMiddleware(
+    validHtmlRoutes,
+    base,
+  );
 
   return {
+    base,
+
     plugins: [
       {
         name: "redirect-invalid-routes-to-404",
@@ -86,7 +106,7 @@ export default defineConfig(() => {
         partialDirectory: resolve(rootDir, "src/html"),
 
         context: () => ({
-          BASE_URL: "/",
+          BASE_URL: base,
         }),
       }),
     ],

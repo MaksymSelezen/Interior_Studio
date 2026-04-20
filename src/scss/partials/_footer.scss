@@ -266,3 +266,58 @@
     }
   }
 }
+
+.page--main,
+.page--contacts {
+  .footer-container {
+    background:
+      radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(15, 15, 15, 0.72) 0%,
+        rgba(8, 8, 8, 0.9) 100%
+      ),
+      url("../../assets/images/footer/footer_background_375.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (min-width: $bp-768) {
+      background:
+        radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(15, 15, 15, 0.72) 0%,
+          rgba(8, 8, 8, 0.9) 100%
+        ),
+        url("../../assets/images/footer/footer_background_768.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      background:
+        radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(15, 15, 15, 0.72) 0%,
+          rgba(8, 8, 8, 0.9) 100%
+        ),
+        url("../../assets/images/footer/footer_background_1024.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      background:
+        radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(15, 15, 15, 0.72) 0%,
+          rgba(8, 8, 8, 0.9) 100%
+        ),
+        url("../../assets/images/footer/footer_background_1440.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}

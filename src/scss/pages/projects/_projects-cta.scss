@@ -15,9 +15,10 @@
     @media screen and (min-width: $bp-1024) {
       padding-block: 120px 24px;
     }
-  }
 
-  &__inner {
+    @media screen and (min-width: $bp-1440) {
+      padding-block: 0 24px;
+    }
   }
 
   &__content {
@@ -26,6 +27,24 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      display: none;
+    }
+  }
+
+  &__projects-bottom {
+    display: none;
+
+    @media screen and (min-width: $bp-1440) {
+      display: block;
+    }
+
+    .projects__bottom-layout {
+      @media screen and (min-width: $bp-1440) {
+        margin-bottom: 300px;
+      }
     }
   }
 
@@ -108,9 +127,6 @@
     @media screen and (min-width: $bp-768) {
       transform: translateX(-9px) translateY(-2px);
     }
-  }
-
-  &__made-with-text {
   }
 
   &__logo {

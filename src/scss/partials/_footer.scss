@@ -3,16 +3,6 @@
 .footer {
   &-container {
     color: $color-bg;
-    background:
-      radial-gradient(
-        50% 50% at 50% 50%,
-        rgba(15, 15, 15, 0.72) 0%,
-        rgba(8, 8, 8, 0.9) 100%
-      ),
-      url("../../assets/images/footer/footer_background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
   }
 
   &__content {
